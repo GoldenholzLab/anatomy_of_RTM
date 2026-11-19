@@ -1,0 +1,141 @@
+{
+ "n_subsample": 50000,
+ "seed": 20261112,
+ "conditions": {
+  "type3_sensitivity_90": {
+   "patients_with_any_flag_mismatch_vs_saved": 0,
+   "selected": 30930,
+   "code_reference": {
+    "measured_rtm_pct": 55.13094083414161,
+    "true_rtm_pct": 54.14161008729389,
+    "type3_pct": 3.9864209505334625,
+    "true_only_pct": 2.997090203685742,
+    "type3_share_of_measured": 7.23082336382829
+   },
+   "expected_corrected_reference": {
+    "measured_rtm_pct": 55.16003879728419,
+    "type3_pct": 3.9993533785968314,
+    "true_only_pct": 2.980924668606531,
+    "type3_share_of_measured": 7.250454252388488
+   },
+   "empirical_measured_reference": {
+    "measured_rtm_pct": 55.192369867442615,
+    "type3_pct": 3.902360168121565,
+    "true_only_pct": 2.8516003879728418,
+    "type3_share_of_measured": 7.0704703883779505
+   },
+   "mean_expected_ref_minus_code_ref": -7.520118809379031e-16,
+   "median_expected_ref_minus_code_ref": 0.0,
+   "selected_not_true_eligible_pct": 0.0,
+   "type3_from_not_true_eligible_share": 0.0
+  },
+  "type3_sensitivity_70": {
+   "patients_with_any_flag_mismatch_vs_saved": 0,
+   "selected": 27505,
+   "code_reference": {
+    "measured_rtm_pct": 58.91656062534085,
+    "true_rtm_pct": 55.69169241956008,
+    "type3_pct": 8.002181421559717,
+    "true_only_pct": 4.777313215778949,
+    "type3_share_of_measured": 13.582227707497687
+   },
+   "expected_corrected_reference": {
+    "measured_rtm_pct": 58.9238320305399,
+    "type3_pct": 8.005817124159243,
+    "true_only_pct": 4.773677513179422,
+    "type3_share_of_measured": 13.586721786882212
+   },
+   "empirical_measured_reference": {
+    "measured_rtm_pct": 59.03653881112525,
+    "type3_pct": 7.900381748772951,
+    "true_only_pct": 4.555535357207781,
+    "type3_share_of_measured": 13.382189924867594
+   },
+   "mean_expected_ref_minus_code_ref": 1.4354269454576416e-15,
+   "median_expected_ref_minus_code_ref": 8.881784197001252e-16,
+   "selected_not_true_eligible_pct": 0.0,
+   "type3_from_not_true_eligible_share": 0.0
+  },
+  "type3_far_1_per_month": {
+   "patients_with_any_flag_mismatch_vs_saved": 0,
+   "selected": 34678,
+   "code_reference": {
+    "measured_rtm_pct": 56.2719880039218,
+    "true_rtm_pct": 52.20024222850222,
+    "type3_pct": 7.731126362535325,
+    "true_only_pct": 3.6593805871157508,
+    "type3_share_of_measured": 13.738854155990571
+   },
+   "expected_corrected_reference": {
+    "measured_rtm_pct": 56.211430878366684,
+    "type3_pct": 7.690754945498587,
+    "true_only_pct": 3.6795662956341197,
+    "type3_share_of_measured": 13.681834504693994
+   },
+   "empirical_measured_reference": {
+    "measured_rtm_pct": 56.1941288424938,
+    "type3_pct": 7.483130515023935,
+    "true_only_pct": 3.4892439010323546,
+    "type3_share_of_measured": 13.316570021039668
+   },
+   "mean_expected_ref_minus_code_ref": 0.030282672629447567,
+   "median_expected_ref_minus_code_ref": 0.010218873365873904,
+   "selected_not_true_eligible_pct": 8.134840532902706,
+   "type3_from_not_true_eligible_share": 0.13539723983588214
+  },
+  "type3_far_1_per_week": {
+   "patients_with_any_flag_mismatch_vs_saved": 0,
+   "selected": 38319,
+   "code_reference": {
+    "measured_rtm_pct": 64.00219212401159,
+    "true_rtm_pct": 47.999686839426914,
+    "type3_pct": 20.59291735170542,
+    "true_only_pct": 4.59041206712075,
+    "type3_share_of_measured": 32.17533129459735
+   },
+   "expected_corrected_reference": {
+    "measured_rtm_pct": 63.19841331976304,
+    "type3_pct": 20.157102220830396,
+    "true_only_pct": 4.958375740494271,
+    "type3_share_of_measured": 31.89494982863278
+   },
+   "empirical_measured_reference": {
+    "measured_rtm_pct": 63.28975182024583,
+    "type3_pct": 20.01878963438503,
+    "true_only_pct": 4.728724653566116,
+    "type3_share_of_measured": 31.630380999505196
+   },
+   "mean_expected_ref_minus_code_ref": 0.1715185935722121,
+   "median_expected_ref_minus_code_ref": 0.09143924031523198,
+   "selected_not_true_eligible_pct": 17.231660533938776,
+   "type3_from_not_true_eligible_share": 0.33329109111646177
+  },
+  "type3_far_1_per_day": {
+   "patients_with_any_flag_mismatch_vs_saved": 0,
+   "selected": 49256,
+   "code_reference": {
+    "measured_rtm_pct": 69.6443072925126,
+    "true_rtm_pct": 34.144063667370474,
+    "type3_pct": 41.19701153159006,
+    "true_only_pct": 5.6967679064479455,
+    "type3_share_of_measured": 59.153451492537314
+   },
+   "expected_corrected_reference": {
+    "measured_rtm_pct": 63.39126197823615,
+    "type3_pct": 37.01274971577067,
+    "true_only_pct": 7.765551404904986,
+    "type3_share_of_measured": 58.387778631821675
+   },
+   "empirical_measured_reference": {
+    "measured_rtm_pct": 64.20334578528504,
+    "type3_pct": 37.28885821016729,
+    "true_only_pct": 7.229576092252721,
+    "type3_share_of_measured": 58.079306855552744
+   },
+   "mean_expected_ref_minus_code_ref": 1.0935446569192098,
+   "median_expected_ref_minus_code_ref": 1.1175848774307344,
+   "selected_not_true_eligible_pct": 34.37753776189703,
+   "type3_from_not_true_eligible_share": 0.5253794598856693
+  }
+ }
+}

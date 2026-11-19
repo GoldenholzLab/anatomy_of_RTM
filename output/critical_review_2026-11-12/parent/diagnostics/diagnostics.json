@@ -1,0 +1,84 @@
+{
+  "post_hoc": true,
+  "full_cohort_n": 1000000,
+  "checks": [
+    {
+      "condition": "baseline_perfect",
+      "primary_partition_and_n": "PASS"
+    },
+    {
+      "condition": "type1_transient_msf",
+      "primary_partition_and_n": "PASS"
+    },
+    {
+      "condition": "type2_threshold_8",
+      "primary_partition_and_n": "PASS"
+    },
+    {
+      "condition": "type3_sensitivity_90",
+      "primary_partition_and_n": "PASS"
+    },
+    {
+      "condition": "type3_sensitivity_80",
+      "primary_partition_and_n": "PASS"
+    },
+    {
+      "condition": "type3_sensitivity_70",
+      "primary_partition_and_n": "PASS"
+    },
+    {
+      "condition": "type3_far_1_per_month",
+      "primary_partition_and_n": "PASS"
+    },
+    {
+      "condition": "type3_far_1_per_week",
+      "primary_partition_and_n": "PASS"
+    },
+    {
+      "condition": "type3_far_1_per_day",
+      "primary_partition_and_n": "PASS"
+    }
+  ],
+  "reference_definition": "Average conditional expectation of max(true monthly count + Poisson(expected monthly alarms) - expected monthly alarms, 0) over the retained 36-month true path. Enrollment, windows and true RTM flags remain primary. Alternative references change the measured estimand. Strict floating margin tolerance is 1e-10 events/month.",
+  "transient": {
+    "rate_ratio_quantiles_5_50_95": [
+      0.06975408546394957,
+      0.9977172787852284,
+      14.411220238064436
+    ],
+    "baseline_only_n": 130289,
+    "baseline_only_never_perfect_eligible_n": 101344,
+    "baseline_only_never_perfect_eligible_pct": 77.7840032543039
+  },
+  "comparator": {
+    "seed": 20261113,
+    "selected_window": {
+      "n": 649098,
+      "rtm_n": 349143,
+      "rtm_pct": 53.78895020474567,
+      "mpc_n": 649098,
+      "zero_baseline_n": 0,
+      "MPC": 26.66666666666667
+    },
+    "random_window_same_perfect_selected_people": {
+      "n": 649098,
+      "rtm_n": 167049,
+      "rtm_pct": 25.73555919137018,
+      "mpc_n": 641362,
+      "zero_baseline_n": 7736,
+      "MPC": 0.0
+    },
+    "all_people_random_window": {
+      "n": 1000000,
+      "rtm_n": 246068,
+      "rtm_pct": 24.6068,
+      "mpc_n": 865669,
+      "zero_baseline_n": 134331,
+      "MPC": 3.703703703703709
+    },
+    "interpretation": "Post hoc descriptive comparator. Membership remains selected in the same-people row. Random windows need not meet eligibility. Differences are not additive causal effects."
+  },
+  "analysis_source_sha256": "fd9266049bb14272258d8084da240cbf2546283e368ea33b6a55a2ad383c0f54",
+  "diagnostic_source_sha256": "af618853863d5894075b210b91641672e0edbf48c44f95a641ddeb0e9cec856c",
+  "numpy_version": "2.2.5"
+}

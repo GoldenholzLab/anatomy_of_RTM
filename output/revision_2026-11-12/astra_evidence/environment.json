@@ -1,0 +1,14 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "pillow": "13.0.0",
+  "lxml": [
+    6,
+    1,
+    1,
+    0
+  ],
+  "scientific_pythonpath": "/private/tmp/rtm_revision_python",
+  "python_executable": "/Users/dgoldenh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+}

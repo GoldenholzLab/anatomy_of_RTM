@@ -1,0 +1,25 @@
+{
+  "acronym_list": [
+    "CHOCOLATES",
+    "FAR",
+    "MPC",
+    "RTM"
+  ],
+  "avg_paragraph_length": 47.0,
+  "avg_sentence_length": 13.6,
+  "flesch_kincaid_grade": 13.3,
+  "flesch_reading_ease": 24.1,
+  "hedge_density_per_1k": 3.5,
+  "long_sentences_pct": 1.3,
+  "max_sentence_length": 36,
+  "paragraph_count": 43,
+  "passive_voice_pct": 13.4,
+  "sentence_count": 149,
+  "undefined_acronym_candidates": [
+    "CHOCOLATES",
+    "FAR"
+  ],
+  "undefined_acronym_count": 2,
+  "unique_acronyms": 4,
+  "word_count": 2023
+}

@@ -1,0 +1,60 @@
+{
+  "sample_n": 12000,
+  "sample_seed": 633791,
+  "sample_ids_sha256": "b104a678a4f2b6a4d5fc0561d3dacafc0c5d5baf39d0889b26e2885c924e3bd2",
+  "sample_selected_n": 11845,
+  "primary_window_and_classification_replay": "PASS",
+  "scenarios": [
+    {
+      "scenario": "primary_floored_internal_true_reference",
+      "selected_n": 11845,
+      "measured_rtm_pct": 69.59054453355846,
+      "type3_pct": 40.99620092866188,
+      "MPC": 45.945945945945944,
+      "measured_classifications_changed_vs_primary": 0
+    },
+    {
+      "scenario": "floored_conditional_expected_reference",
+      "selected_n": 11845,
+      "measured_rtm_pct": 63.089911355002116,
+      "type3_pct": 36.8172224567328,
+      "MPC": 45.945945945945944,
+      "measured_classifications_changed_vs_primary": 770
+    },
+    {
+      "scenario": "floored_measured_full_history_reference",
+      "selected_n": 11845,
+      "measured_rtm_pct": 63.841283241874216,
+      "type3_pct": 37.13803292528493,
+      "MPC": 45.945945945945944,
+      "measured_classifications_changed_vs_primary": 827
+    },
+    {
+      "scenario": "unfloored_test_internal_true_reference",
+      "selected_n": 11845,
+      "measured_rtm_pct": 65.96032081046856,
+      "type3_pct": 38.85183621781342,
+      "MPC": 55.84988962472406,
+      "measured_classifications_changed_vs_primary": 812
+    }
+  ],
+  "reference_gap_selected": {
+    "median": 1.0989435242976398,
+    "mean": 1.0812133855212929
+  },
+  "daily_rule_sensitivity": [
+    {
+      "daily_rule": "recorded_events_no_daily_subtraction",
+      "selected_n": 11845,
+      "windows_changed": 0,
+      "membership_changed": 0
+    },
+    {
+      "daily_rule": "oracle_true_daily_events",
+      "selected_n": 9227,
+      "windows_changed": 5134,
+      "membership_changed": 2618
+    }
+  ],
+  "limitations": "Exploratory sample, not a replacement analysis. Alternative references change the estimand. Unfloored corrected values may be negative. The conditional expectation reference averages the retained true monthly path, not a newly simulated independent reference diary."
+}

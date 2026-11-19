@@ -1,0 +1,9 @@
+{
+  "n_sampled": 1000,
+  "sample_seed": 98173,
+  "mismatch_patient_indices": [],
+  "passed": true,
+  "simulator_sha256": "b038553df164160290b427e577ba53cb6b983db38f00a281f9a773a91a1d6b99",
+  "numpy_version": "2.5.4",
+  "scope": "Sample regeneration under the currently pinned simulator and environment; not a contemporaneous provenance record for original generation."
+}

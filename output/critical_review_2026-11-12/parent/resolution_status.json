@@ -1,0 +1,50 @@
+{
+  "reviews": {
+    "Opus 5.5 Extra High": "completed; all numbered concerns adjudicated",
+    "Astra Extra High": "completed; all numbered concerns adjudicated",
+    "Sol 6.1 Extra High": "completed; all numbered concerns adjudicated",
+    "Fable 5.2 Extra High": "completed; all numbered concerns adjudicated"
+  },
+  "numbered_findings_reviewed": 30,
+  "review_copies_complete": true,
+  "review_copies": [
+    {
+      "path": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/output/critical_review_2026-11-12/parent/consolidated_draft/anatomy_of_RTM_Seizure_critical_review.docx",
+      "sha256": "953cf78224b523ed8d4b7ea7efeb533e1fc9f653be7b3aff444145d905dcc316",
+      "pages": 17,
+      "native_word_visual_review_complete": true,
+      "native_word_final_save_complete": true,
+      "tables": 1
+    },
+    {
+      "path": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/output/critical_review_2026-11-12/parent/consolidated_draft/anatomy_of_RTM_Seizure_Supplement_critical_review.docx",
+      "sha256": "4c07db19873a5d082476a8adffdc41ea261052fdf4eadf80923813522cf820ec",
+      "pages": 12,
+      "native_word_visual_review_complete": true,
+      "native_word_final_save_complete": true,
+      "tables": 11
+    }
+  ],
+  "primary_analysis_and_original_documents_unchanged": true,
+  "zotero_imports": {
+    "approved": true,
+    "collection": "My Library / anatomy_of_RTM",
+    "item_keys": [
+      "3IXGDVMV",
+      "ACT35WDA"
+    ],
+    "verified_in_collection": true,
+    "word_refresh_complete": true
+  },
+  "author_confirmation": {
+    "name": "M. Brandon Westover",
+    "affiliations": [
+      "Harvard Medical School",
+      "Stanford University"
+    ],
+    "applied": true
+  },
+  "public_reproducibility_release": "pending; local snapshot is not a public immutable release",
+  "original_files_replaced": false,
+  "commit_or_push_performed": false
+}

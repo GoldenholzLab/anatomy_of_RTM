@@ -1,0 +1,26 @@
+[
+  {
+    "source": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/anatomy_of_RTM_Seizure.docx",
+    "source_sha256": "6119f8107c62b4de9f48c852894f795cbcbee88bfc9804ef68da64bd63b40ce0",
+    "destination": "output/critical_review_2026-11-12/parent/revised/anatomy_of_RTM_Seizure.docx",
+    "destination_sha256": "6c62a0f7cb6b58b281f3f220ccdb536379a9c96b7cce07aba3304a4ee678c47d",
+    "live_field_instructions_sha256": "6be9c1eb0152490044a47507919f65392be60502a0547abd68b4a0c5f6f99cc2",
+    "changes": [
+      "Methods 2.1: qualify the daily cycle configuration and refer to supplementary methods.",
+      "Methods 2.4: locate the reported median intervals.",
+      "Results 3.2: report direction heterogeneity and cite Table S4.",
+      "Limitations 4.4: state the restricted cycle settings.",
+      "Data and code availability: acknowledge the historical provenance gap."
+    ]
+  },
+  {
+    "source": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/anatomy_of_RTM_Seizure_Supplement.docx",
+    "source_sha256": "cd7195edc9e75b6a171a6b4ca9eb4f57fa02d597b90ffa4bc8a19617f0699110",
+    "destination": "output/critical_review_2026-11-12/parent/revised/anatomy_of_RTM_Seizure_Supplement.docx",
+    "destination_sha256": "74eb747872c0721fd2395359dce4c45d13fdbe372ecfc159f6cbe24a827ccaad",
+    "live_field_instructions_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changes": [
+      "Supplement: add complete Type 1 overlap/direction strata, primary and fixed median intervals, and generator/provenance details."
+    ]
+  }
+]

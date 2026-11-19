@@ -1,0 +1,65 @@
+P000 [Title] Supplementary paired classifications and fixed enrollment results
+P001 [] All counts describe synthetic participants from the Anatomy simulation. The four paired categories use each condition's enrolled participants and its selected trial windows. Type 3 is the measured-only category. Fixed enrollment retains the perfect-detector participants and their baseline windows. These comparisons do not separate additive causal components.
+TABLE002
+  R00 | Condition | Eligible n | Both RTM n | Type 3 n | True only n | Neither n
+  R01 | Baseline: perfect detector, 4/month | 649,098 | 349,143 | 0 | 0 | 299,955
+  R02 | Type 1: transient 2-month mSF change | 756,179 | 440,818 | 0 | 0 | 315,361
+  R03 | Type 2: eligibility threshold 8/month | 404,268 | 234,163 | 0 | 0 | 170,105
+  R04 | Sensitivity 90%, FAR 0/day | 621,144 | 319,707 | 24,125 | 19,056 | 258,256
+  R05 | Sensitivity 80%, FAR 0/day | 589,758 | 302,023 | 34,506 | 24,404 | 228,825
+  R06 | Sensitivity 70%, FAR 0/day | 551,890 | 282,937 | 42,608 | 26,499 | 199,846
+  R07 | FAR 1/month, sensitivity 100% | 695,712 | 338,773 | 54,257 | 25,240 | 277,442
+  R08 | FAR 1/week, sensitivity 100% | 769,320 | 334,498 | 159,768 | 35,208 | 239,846
+  R09 | FAR 1/day, sensitivity 100% | 985,321 | 279,589 | 409,581 | 55,966 | 240,185
+P003 [Figurecaption] Table S1. Paired classifications among all condition-selected participants
+P004 [] The four category counts sum to eligible n in every row. True-count eligibility is not applied as an additional filter.
+P005 [] 
+TABLE006
+  R00 | Condition | Type 3 % | 95% Wilson CI | Share of measured RTM % | Net difference pp
+  R01 | Baseline: perfect detector, 4/month | 0.0 | 0.0 to 0.0 | 0.0 | 0.0
+  R02 | Type 1: transient 2-month mSF change | 0.0 | 0.0 to 0.0 | 0.0 | 0.0
+  R03 | Type 2: eligibility threshold 8/month | 0.0 | 0.0 to 0.0 | 0.0 | 0.0
+  R04 | Sensitivity 90%, FAR 0/day | 3.9 | 3.8 to 3.9 | 7.0 | 0.8
+  R05 | Sensitivity 80%, FAR 0/day | 5.9 | 5.8 to 5.9 | 10.3 | 1.7
+  R06 | Sensitivity 70%, FAR 0/day | 7.7 | 7.7 to 7.8 | 13.1 | 2.9
+  R07 | FAR 1/month, sensitivity 100% | 7.8 | 7.7 to 7.9 | 13.8 | 4.2
+  R08 | FAR 1/week, sensitivity 100% | 20.8 | 20.7 to 20.9 | 32.3 | 16.2
+  R09 | FAR 1/day, sensitivity 100% | 41.6 | 41.5 to 41.7 | 59.4 | 35.9
+P007 [Figurecaption] Table S2. Type 3 prevalence, share of measured RTM and net measurement difference
+P008 [] The net difference equals measured-only minus true-only prevalence. Confidence intervals describe Monte Carlo precision under the model. Perfect detection has no disagreement by construction; any small positive Wilson upper bound is an interval-formula property.
+P009 [] 
+TABLE010
+  R00 | Condition | Fixed n | RTM % | Type 3 % | Zero B n | MPC n | MPC %
+  R01 | Baseline: perfect detector, 4/month | 649,098 | 53.8 | 0.0 | 0 | 649,098 | 26.7
+  R02 | Sensitivity 90%, FAR 0/day | 649,098 | 52.8 | 3.3 | 0 | 649,098 | 26.7
+  R03 | Sensitivity 80%, FAR 0/day | 649,098 | 51.5 | 4.5 | 0 | 649,098 | 26.7
+  R04 | Sensitivity 70%, FAR 0/day | 649,098 | 50.0 | 5.4 | 8 | 649,090 | 26.3
+  R05 | FAR 1/month, sensitivity 100% | 649,098 | 51.7 | 3.7 | 0 | 649,098 | 25.9
+  R06 | FAR 1/week, sensitivity 100% | 649,098 | 47.5 | 6.1 | 9 | 649,089 | 23.3
+  R07 | FAR 1/day, sensitivity 100% | 649,098 | 41.6 | 9.4 | 17,608 | 631,490 | 17.6
+P011 [Figurecaption] Table S3. Fixed perfect-detector enrollment and baseline windows
+P012 [] RTM and Type 3 percentages use all fixed participants. Zero B n counts zero measured baselines. MPC excludes those baselines and uses MPC n. The people and baseline windows are held fixed, so these rows do not represent enrollment using the imperfect detector. RTM, regression to the mean; MPC, median percentage reduction; FAR, false-alarm rate; CI, confidence interval; pp, percentage points.
+SECTPR
+PART word/footnotes.xml: []
+PART word/endnotes.xml: []
+PART word/header1.xml: ['Regression to the mean in epilepsy trials']
+PART word/footer1.xml: ['{FIELD:  PAGE }<<cached: 1>>']
+RELS:
+   rId8 header header1.xml
+   rId3 styles styles.xml
+   rId7 endnotes endnotes.xml
+   rId2 numbering numbering.xml
+   rId1 customXml ../customXml/item1.xml
+   rId6 footnotes footnotes.xml
+   rId11 theme theme/theme1.xml
+   rId5 webSettings webSettings.xml
+   rId10 fontTable fontTable.xml
+   rId4 settings settings.xml
+   rId9 footer footer1.xml
+PART docProps/core.xml: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>Supplementary paired classifications and fixed enrollment results</dc:title><dc:subject>Prepared for Seizure: European Journal of Epilepsy</dc:subject><dc:creator>Daniel M. Goldenholz; Rohan Bhansali; Ted J. Kaptchuk; Brandon Westover</dc:creator><cp:keywords>regression to the mean; clinical trials; simulation; eligibility; measurement error; placebo response; epilepsy</cp:keywords><dc:description>generated by python-docx</dc:description><cp:lastModifiedBy>Goldenholz, Daniel M (HMFP - Neurology )</cp:lastModifiedBy><cp:revision>33</cp:revision><dcterms:created xsi:type="dcterms:W3CDTF">2026-06-08T02:05:00Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">2026-11-13T03:09:00Z</dcterms:modified><cp:category></cp:category></cp:coreProperties>
+PART docProps/app.xml: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"><Template>Normal.dotm</Template><TotalTime>48</TotalTime><Pages>3</Pages><Words>473</Words><Characters>2701</Characters><Application>Microsoft Office Word</Application><DocSecurity>0</DocSecurity><Lines>22</Lines><Paragraphs>6</Paragraphs><ScaleCrop>false</ScaleCrop><HeadingPairs><vt:vector size="2" baseType="variant"><vt:variant><vt:lpstr>Title</vt:lpstr></vt:variant><vt:variant><vt:i4>1</vt:i4></vt:variant></vt:vector></HeadingPairs><TitlesOfParts><vt:vector size="1" baseType="lpstr"><vt:lpstr>Three sources of regression to the mean in clinical trials: a simulation study using epilepsy as a model</vt:lpstr></vt:vector></TitlesOfParts><Manager></Manager><Company></Company><LinksUpToDate>false</LinksUpToDate><CharactersWithSpaces>3168</CharactersWithSpaces><SharedDoc>false</SharedDoc><HyperlinkBase></HyperlinkBase><HyperlinksChanged>false</HyperlinksChanged><AppVersion>16.0000</AppVersion></Properties>
+PART docProps/custom.xml: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/custom-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"><property fmtid="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" pid="2" name="ZOTERO_PREF_1"><vt:lpwstr>&lt;data data-version="3" zotero-version="9.0.6"&gt;&lt;session id="Tkg0t8cQ"/&gt;&lt;style id="http://www.zotero.org/styles/journal-of-clinical-epidemiology" hasBibliography="1" bibliographyStyleHasBeenSet="1"/&gt;&lt;prefs&gt;&lt;pref name="fieldType" value="Field"/&gt;&lt;pref name="a</vt:lpwstr></property><property fmtid="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" pid="3" name="ZOTERO_PREF_2"><vt:lpwstr>utomaticJournalAbbreviations" value="true"/&gt;&lt;/prefs&gt;&lt;/data&gt;</vt:lpwstr></property></Properties>
+TRACKED: ins=0 del=0

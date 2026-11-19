@@ -1,0 +1,23 @@
+{
+  "acronym_list": [
+    "CHOCOLATES",
+    "MPC",
+    "RTM"
+  ],
+  "avg_paragraph_length": 75.6,
+  "avg_sentence_length": 15.5,
+  "flesch_kincaid_grade": 14.1,
+  "flesch_reading_ease": 21.6,
+  "hedge_density_per_1k": 3.9,
+  "long_sentences_pct": 0.9,
+  "max_sentence_length": 36,
+  "paragraph_count": 24,
+  "passive_voice_pct": 17.1,
+  "sentence_count": 117,
+  "undefined_acronym_candidates": [
+    "CHOCOLATES"
+  ],
+  "undefined_acronym_count": 1,
+  "unique_acronyms": 3,
+  "word_count": 1814
+}

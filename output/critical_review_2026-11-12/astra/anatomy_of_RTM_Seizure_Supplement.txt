@@ -1,0 +1,174 @@
+P001: Supplementary paired classifications and fixed enrollment results
+P002: All counts describe synthetic participants from the Anatomy simulation. The four paired categories use each condition's enrolled participants and its selected trial windows. Type 3 is the measured-only category. Fixed enrollment retains the perfect-detector participants and their baseline windows. These comparisons do not separate additive causal components.
+P003: Condition
+P004: Eligible n
+P005: Both RTM n
+P006: Type 3 n
+P007: True only n
+P008: Neither n
+P009: Baseline: perfect detector, 4/month
+P010: 649,098
+P011: 349,143
+P012: 0
+P013: 0
+P014: 299,955
+P015: Type 1: transient 2-month mSF change
+P016: 756,179
+P017: 440,818
+P018: 0
+P019: 0
+P020: 315,361
+P021: Type 2: eligibility threshold 8/month
+P022: 404,268
+P023: 234,163
+P024: 0
+P025: 0
+P026: 170,105
+P027: Sensitivity 90%, FAR 0/day
+P028: 621,144
+P029: 319,707
+P030: 24,125
+P031: 19,056
+P032: 258,256
+P033: Sensitivity 80%, FAR 0/day
+P034: 589,758
+P035: 302,023
+P036: 34,506
+P037: 24,404
+P038: 228,825
+P039: Sensitivity 70%, FAR 0/day
+P040: 551,890
+P041: 282,937
+P042: 42,608
+P043: 26,499
+P044: 199,846
+P045: FAR 1/month, sensitivity 100%
+P046: 695,712
+P047: 338,773
+P048: 54,257
+P049: 25,240
+P050: 277,442
+P051: FAR 1/week, sensitivity 100%
+P052: 769,320
+P053: 334,498
+P054: 159,768
+P055: 35,208
+P056: 239,846
+P057: FAR 1/day, sensitivity 100%
+P058: 985,321
+P059: 279,589
+P060: 409,581
+P061: 55,966
+P062: 240,185
+P063: Table S1. Paired classifications among all condition-selected participants
+P064: The four category counts sum to eligible n in every row. True-count eligibility is not applied as an additional filter.
+P066: Condition
+P067: Type 3 %
+P068: 95% Wilson CI
+P069: Share of measured RTM %
+P070: Net difference pp
+P071: Baseline: perfect detector, 4/month
+P072: 0.0
+P073: 0.0 to 0.0
+P074: 0.0
+P075: 0.0
+P076: Type 1: transient 2-month mSF change
+P077: 0.0
+P078: 0.0 to 0.0
+P079: 0.0
+P080: 0.0
+P081: Type 2: eligibility threshold 8/month
+P082: 0.0
+P083: 0.0 to 0.0
+P084: 0.0
+P085: 0.0
+P086: Sensitivity 90%, FAR 0/day
+P087: 3.9
+P088: 3.8 to 3.9
+P089: 7.0
+P090: 0.8
+P091: Sensitivity 80%, FAR 0/day
+P092: 5.9
+P093: 5.8 to 5.9
+P094: 10.3
+P095: 1.7
+P096: Sensitivity 70%, FAR 0/day
+P097: 7.7
+P098: 7.7 to 7.8
+P099: 13.1
+P100: 2.9
+P101: FAR 1/month, sensitivity 100%
+P102: 7.8
+P103: 7.7 to 7.9
+P104: 13.8
+P105: 4.2
+P106: FAR 1/week, sensitivity 100%
+P107: 20.8
+P108: 20.7 to 20.9
+P109: 32.3
+P110: 16.2
+P111: FAR 1/day, sensitivity 100%
+P112: 41.6
+P113: 41.5 to 41.7
+P114: 59.4
+P115: 35.9
+P116: Table S2. Type 3 prevalence, share of measured RTM and net measurement difference
+P117: The net difference equals measured-only minus true-only prevalence. Confidence intervals describe Monte Carlo precision under the model. Perfect detection has no disagreement by construction; any small positive Wilson upper bound is an interval-formula property.
+P119: Condition
+P120: Fixed n
+P121: RTM %
+P122: Type 3 %
+P123: Zero B n
+P124: MPC n
+P125: MPC %
+P126: Baseline: perfect detector, 4/month
+P127: 649,098
+P128: 53.8
+P129: 0.0
+P130: 0
+P131: 649,098
+P132: 26.7
+P133: Sensitivity 90%, FAR 0/day
+P134: 649,098
+P135: 52.8
+P136: 3.3
+P137: 0
+P138: 649,098
+P139: 26.7
+P140: Sensitivity 80%, FAR 0/day
+P141: 649,098
+P142: 51.5
+P143: 4.5
+P144: 0
+P145: 649,098
+P146: 26.7
+P147: Sensitivity 70%, FAR 0/day
+P148: 649,098
+P149: 50.0
+P150: 5.4
+P151: 8
+P152: 649,090
+P153: 26.3
+P154: FAR 1/month, sensitivity 100%
+P155: 649,098
+P156: 51.7
+P157: 3.7
+P158: 0
+P159: 649,098
+P160: 25.9
+P161: FAR 1/week, sensitivity 100%
+P162: 649,098
+P163: 47.5
+P164: 6.1
+P165: 9
+P166: 649,089
+P167: 23.3
+P168: FAR 1/day, sensitivity 100%
+P169: 649,098
+P170: 41.6
+P171: 9.4
+P172: 17,608
+P173: 631,490
+P174: 17.6
+P175: Table S3. Fixed perfect-detector enrollment and baseline windows
+P176: RTM and Type 3 percentages use all fixed participants. Zero B n counts zero measured baselines. MPC excludes those baselines and uses MPC n. The people and baseline windows are held fixed, so these rows do not represent enrollment using the imperfect detector. RTM, regression to the mean; MPC, median percentage reduction; FAR, false-alarm rate; CI, confidence interval; pp, percentage points.

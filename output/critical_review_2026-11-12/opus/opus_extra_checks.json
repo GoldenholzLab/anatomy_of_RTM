@@ -1,0 +1,73 @@
+{
+ "fixed_enrollment_true_only": {
+  "type3_sensitivity_90": {
+   "n": 649098,
+   "fixed_measured_rtm_pct": 52.84564118207112,
+   "fixed_true_rtm_pct": 53.78895020474566,
+   "fixed_type3_pct": 3.333086837426706,
+   "fixed_true_only_pct": 4.276395860101248,
+   "fixed_net_pp": -0.9433090226745422
+  },
+  "type3_sensitivity_80": {
+   "n": 649098,
+   "fixed_measured_rtm_pct": 51.52211222342389,
+   "fixed_true_rtm_pct": 53.78895020474566,
+   "fixed_type3_pct": 4.5349084421766825,
+   "fixed_true_only_pct": 6.801746423498455,
+   "fixed_net_pp": -2.2668379813217725
+  },
+  "type3_sensitivity_70": {
+   "n": 649098,
+   "fixed_measured_rtm_pct": 50.04668016231756,
+   "fixed_true_rtm_pct": 53.78895020474566,
+   "fixed_type3_pct": 5.377770382900579,
+   "fixed_true_only_pct": 9.120040425328687,
+   "fixed_net_pp": -3.742270042428108
+  },
+  "type3_far_1_per_month": {
+   "n": 649098,
+   "fixed_measured_rtm_pct": 51.683104862439876,
+   "fixed_true_rtm_pct": 53.78895020474566,
+   "fixed_type3_pct": 3.7146933128741733,
+   "fixed_true_only_pct": 5.820538655179957,
+   "fixed_net_pp": -2.105845342305784
+  },
+  "type3_far_1_per_week": {
+   "n": 649098,
+   "fixed_measured_rtm_pct": 47.509312923472265,
+   "fixed_true_rtm_pct": 53.78895020474566,
+   "fixed_type3_pct": 6.060101864433414,
+   "fixed_true_only_pct": 12.339739145706812,
+   "fixed_net_pp": -6.279637281273398
+  },
+  "type3_far_1_per_day": {
+   "n": 649098,
+   "fixed_measured_rtm_pct": 41.60373318050587,
+   "fixed_true_rtm_pct": 53.78895020474566,
+   "fixed_type3_pct": 9.415835513281507,
+   "fixed_true_only_pct": 21.601052537521298,
+   "fixed_net_pp": -12.18521702423979
+  }
+ },
+ "type1_ratio_quantiles_5_25_50_75_95": [
+  0.06975408546394957,
+  0.33536583011720655,
+  0.9977172787852284,
+  2.97465782978088,
+  14.411220238064436
+ ],
+ "type1_share_ratio_gt10_or_lt0.1": 0.155118,
+ "latent_msf_quantiles_5_25_50_75_95": [
+  0.5191723376512527,
+  1.576474130153656,
+  3.4182558059692383,
+  7.382477164268494,
+  22.457406520843502
+ ],
+ "type1_baseline_only_n": 130289,
+ "type1_baseline_only_not_perfect_eligible_share": 0.7778400325430389,
+ "type1_baseline_only_median_latent_msf": 1.4256489276885986,
+ "type1_baseline_only_median_ratio": 6.465188136861956,
+ "type1_eligible_not_perfect_eligible": 110188,
+ "type1_perfect_eligible_not_type1_eligible": 3107
+}

@@ -1,0 +1,89 @@
+Critical review resolution
+November 13, 2026
+
+Opus 5.5, Astra, Sol 6.1 and Fable 5.2 completed their requested reviews. All four found that the reported primary numbers agree with the saved results. Their independent replays also agreed with the saved classifications. Each ran the same 23 existing unit tests successfully; repeated use of that test suite is shared evidence, not four independent validations of the scientific model.
+
+My assessment is that the primary calculations can stand, but the manuscript needs material reporting changes before submission. The operational definitions are coherent under the stated model. Their numerical prevalences depend on enrollment, screening, correction and reference choices. They do not identify additive causal mechanisms, clinical detector effects, or trial efficiency.
+
+The original manuscript, supplement, existing analysis code and saved primary outputs remain unchanged. The revised review copies are separate files in consolidated_draft, with filenames ending in _critical_review.docx. Both were visually checked and saved in Microsoft Word. The decision ledger is resolution_ledger.json. It maps every numbered finding from all four reviews to the decisions below.
+
+1. Detector-selected enrollment at high false-alarm rates
+
+Accepted as a material interpretation issue. Applying the original entry rule to true counts in the same detector-selected window gives the following full-cohort results at one false alarm/day. Of 985,321 detector-selected participants, 391,290 meet the true-count rule. Type 3 occurs in 61,303 of those participants, or 15.7%, and in 348,278 of the 594,031 who fail it. The latter group supplies 85.0% of the 409,581 primary Type 3 cases.
+
+The 41.6% primary prevalence is correct for the detector-selected population. Substituting 15.7% would change the population and answer a different question. The revised abstract specifies the detector-selected denominator and reports the 85.0% composition. Results and Table S7 give the split and its denominators. These data describe composition; they do not prove that a particular fraction of Type 3 is caused by false enrollment.
+
+2. Flooring and the measured reference
+
+Accepted as a material sensitivity, rather than a demonstrated programming error. The primary reference follows the Methods. It is not the conditional expected value of corrected measured counts after flooring at zero.
+
+I calculated that alternative reference over the complete retained cohort, holding enrollment, windows, measured counts and true RTM labels fixed. At one false alarm/day, measured RTM changes from 69.9% to 63.6%, and Type 3 changes from 41.6% to 37.3%. The alternative reference is 1.09 events/month higher on average among selected participants. Table S8 reports all three false-alarm settings. The revised Results identifies this dependence. The alternative changes the estimand and does not replace the primary result or quantify model uncertainty.
+
+3. Classification can change in either direction
+
+Accepted. The revised abstract pairs the sensitivity-70% Type 3 prevalence of 7.7% with 4.8% true-only RTM. Table S3 now reports true-only prevalence and the net measured-minus-true difference for fixed enrollment. In that fixed population at 70% sensitivity, measured-only and true-only prevalences are 5.4% and 9.1%, giving a net reduction of 3.7 percentage points. A measured-only prevalence is not the net amount of RTM added by a detector.
+
+4. First and later eligible screens
+
+Accepted. Of the 649,098 perfect-detector enrollees, 330,389 qualify at the first screen and have 38.3% RTM and 14.6% median percentage reduction. The remaining 318,709 qualify later and have 69.8% RTM and 40.0% median reduction. Results and Tables S9 and S10 now show the screening split. The limitations describe up to 32 monthly screens and distinguish this design from a single prospective baseline.
+
+The split helps explain why related designs yield different numbers. It does not isolate a causal effect of rescreening, since the groups differ in who qualifies and when. Medians cannot be decomposed by averaging subgroup medians.
+
+5. Random-window comparator
+
+Accepted as descriptive context. I drew one start month uniformly from 0 to 31 for each perfect-detector enrollee, using seed 20261113 and no window-level eligibility check. Operational RTM was 25.7%. Median reduction was 0.0% among 641,362 positive baselines; 7,736 zero baselines were excluded from that median only. Table S11 gives the comparison.
+
+I do not accept the stronger interpretation that subtracting this rate from 53.8% estimates a causal contribution of selection, or that the original 53.8% is an arithmetic overstatement. Membership is still selected, and random windows need not meet the trial rule. The revised manuscript makes this distinction explicit.
+
+6. Transient changes, cycles and uncertainty reporting
+
+Accepted. Table S4 contains every overlap and direction stratum, including subgroup sizes and the never-eligible group. The text distinguishes the bidirectional experiment from the upward-change illustration. The sampled rate-ratio distribution has 5th and 95th percentiles 0.07 and 14.41. In the baseline-only overlap group, 77.8% never qualify without the transient. These are model-defined selected strata, not estimates of clinical transient worsening.
+
+The supplementary methods describe the daily cycle configuration. Weekly amplitude and 4-to-45-day selection probability are zero; the retained 90-to-450-day component has probability 0.011649. Most histories therefore lack an explicit cycle waveform, although stochastic variability and clustering remain. Robustness to other cycle distributions has not been established.
+
+Tables S5 and S6 report the computed primary and fixed-enrollment median intervals. A note explains tied, discrete percentage-change values and repeated or collapsed median intervals. I retained the existing median estimator. Changing it to an interpolated statistic solely to avoid ties is unnecessary. These intervals describe Monte Carlo precision under the model, not clinical or model uncertainty.
+
+7. Method details and presentation
+
+Accepted. The draft now states that sensitivity acts through independent binomial thinning and that detected counts are not divided by sensitivity before applying entry thresholds. The daily rounded alarm subtraction is zero at one alarm/month and one alarm/week. Window starts are months 0 through 31. The 25-day limit follows the Krauss trial, whereas Chung used 21 days; this analysis uses 30-day months instead of four-week segments.
+
+Supplement condition names now match Table 1. The undefined mSF abbreviation was removed. Captions explain the Figure 1 type labels, its full-sensitivity reference illustration, and Figure 2 condition-family colors. Notes explain independent rounding and the discrete medians. The two distinct quantities rounding to 41.6% are retained with their denominators; numerical coincidence is not an error. A live citation to the existing reference 1 was added to the Introduction sentence about prior seizure-trial simulations.
+
+8. Related work
+
+Accepted as an important omission. Primary records verify three relevant works, including a published software re-review that reversed the earlier efficiency conclusion. It supports the manuscript's caution that reducing apparent RTM need not improve simulated trial efficiency. The two medRxiv records are preprints, and the earlier anatomy preprint is a prior version of this manuscript rather than an independent study.
+
+The author approved importing both verified preprints into My Library, anatomy_of_RTM. Both imports were verified in that collection. The published paper was already in the local Zotero library. All three related works now have live citations in the review copy, and Zotero refreshed them and the 21-entry bibliography through Microsoft Word.
+
+Addition to Discussion 4.2:
+A subsequent re-review of earlier work found that separating eligibility from baseline reduced RTM yet worsened simulated trial efficiency. This reinforces the need to evaluate randomized contrasts and resource burden directly.
+Source: https://pubmed.ncbi.nlm.nih.gov/42715842/
+DOI: 10.1016/j.seizure.2026.09.002
+
+Addition to Discussion 4.3:
+A related device-sensitivity preprint used a single baseline and reported 38.2% RTM and 14.7% MPC with perfect detection. Our first-screen subset gives 38.3% and 14.6%. This descriptive comparison illustrates design dependence. It is not a replication of that study or a claim that screening explains every cross-study difference.
+Source: https://pubmed.ncbi.nlm.nih.gov/42619957/
+DOI: 10.64898/2026.07.30.26359361
+
+Addition to Methods 2.1:
+An earlier preprint of this manuscript described measurement conditions as Type 3. The present revision uses a participant-level paired definition and reports condition totals separately.
+Source: https://pubmed.ncbi.nlm.nih.gov/42619962/
+DOI: 10.64898/2026.07.27.26359051
+
+The authors should disclose the related preprints in their eventual cover letter. I did not assess a cover letter or establish the companion manuscript's submission status.
+
+9. Reproducibility and author details
+
+Accepted as a release requirement. The exact current external simulator source is preserved locally with hashes and an implementation snapshot. The primary analysis source hash agrees with its run manifest. Successful sampled regenerations show current compatibility with retained histories. They do not prove the identity of the historical generator or recover its original environment. The historical fingerprint remains unknown.
+
+The local snapshot is not a public immutable archive, and it does not contain the full retained cohort. Public reproduction still requires an obtainable version of the exact simulator, its license, revised analysis, retained inputs or a documented regeneration route, outputs and numerical environment. No commit, push, public data deposit or publication was performed. The availability text continues to say public release is pending.
+
+The author confirmed M. Brandon Westover as the preferred publication name and confirmed both Harvard Medical School and Stanford affiliations on November 13, 2026. The draft uses that name on the author line, in disclosures and in contributions, with both existing affiliations retained. The draft AI declaration now includes OpenAI Codex and Anthropic Claude. The two reviewed draft documents' title and keyword metadata were updated. Highlights were not revised or finalized during this parent pass.
+
+10. Verification and release status
+
+The added diagnostics read retained arrays without regenerating or overwriting the cohort. All nine primary partitions and sample sizes passed independent checks. The conditional Poisson expectation formula was checked against direct probability sums. The main result table is unchanged. All numerical entries from the three original supplementary tables are retained, with two new columns in S3. Existing Zotero field instructions, package relationships, styles and figures are preserved.
+
+The appendix has 11 tables across 12 pages in Word. I visually checked all 12 pages and saved a native Word review copy. I also checked all 17 manuscript pages after the live Zotero refresh and saved that review copy in Word. The main document contains 15 live citation fields and one live bibliography field, with 21 displayed references and no pending citation text. The two review copies retain the original result values and figures.
+
+The scientific review and document revisions are complete in these separate review copies. Public reproducibility release remains a later requirement. The author should also disclose the related preprints in the eventual cover letter. The original manuscripts have not been replaced, and no repository changes were committed or pushed.

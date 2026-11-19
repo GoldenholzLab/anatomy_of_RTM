@@ -1,0 +1,20 @@
+{
+  "anatomy_of_RTM_Seizure.docx": {
+    "field_boundary_counts": {
+      "end": 12,
+      "begin": 12,
+      "separate": 12
+    },
+    "instruction_pieces": 12,
+    "ZOTERO_ITEM_pieces": 11,
+    "ZOTERO_BIBL_pieces": 1
+  },
+  "anatomy_of_RTM_Seizure_Supplement.docx": {
+    "field_boundary_counts": {},
+    "instruction_pieces": 0,
+    "ZOTERO_ITEM_pieces": 0,
+    "ZOTERO_BIBL_pieces": 0
+  },
+  "master_seed_reproduction": true,
+  "duplicate_patient_seeds": 0
+}

@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "finalised_local_date": "2026-11-12",
+  "scientific_review": "Astra extra-high, completed before Seizure packaging",
+  "native_visual_verification": {
+    "application": "Microsoft Word",
+    "main_pages": 15,
+    "highlights_pages": 1,
+    "supplement_pages": 3,
+    "all_pages_inspected": true
+  },
+  "PDF_proof": {
+    "exported_by": "Word",
+    "pages": 15,
+    "viewed_in": "Apple Preview",
+    "no_blank_pages": true
+  },
+  "numeric_table_cells_verified": {
+    "main": 45,
+    "S1": 45,
+    "S2": 36,
+    "S3": 42
+  },
+  "live_Zotero_instructions": 12,
+  "field_boundary_markers": 36,
+  "citation_identities_preserved": true,
+  "Zotero_style": "Seizure: European Journal of Epilepsy",
+  "reference_13_page_range_refreshed_in_Word_and_verified_in_PDF": "e2311-e2322",
+  "highlights_characters": [
+    81,
+    81,
+    81,
+    82
+  ],
+  "protected_reference_and_original_manuscript_files_unchanged": 4,
+  "original_cohort_and_output_files_unchanged": 24,
+  "RTM3_files_modified": false,
+  "public_release_or_submission_performed": false,
+  "files": {
+    "anatomy_of_RTM_Seizure.docx": {
+      "sha256": "6119f8107c62b4de9f48c852894f795cbcbee88bfc9804ef68da64bd63b40ce0",
+      "native_Word_save_verified": true,
+      "changes_limited_to_verified_reference_metadata": true,
+      "other_text_and_field_instructions_preserved": true
+    },
+    "anatomy_of_RTM_Seizure_Supplement.docx": {
+      "sha256": "cd7195edc9e75b6a171a6b4ca9eb4f57fa02d597b90ffa4bc8a19617f0699110",
+      "native_Word_save_verified": true,
+      "changes_limited_to_verified_reference_metadata": false,
+      "other_text_and_field_instructions_preserved": true
+    },
+    "anatomy_of_RTM_Seizure_Highlights.docx": {
+      "sha256": "f959a38e5388a3b23aa30a2a6f20fd494fda2740abc65b7bd4e6951ee47e1000",
+      "native_Word_save_verified": true,
+      "changes_limited_to_verified_reference_metadata": false,
+      "other_text_and_field_instructions_preserved": true
+    },
+    "anatomy_of_RTM_Seizure.pdf": {
+      "sha256": "207f4b115ad7433b1bc3436bd7f0e7f06f2b60e1ab7910f7745c5626148f7b12"
+    },
+    "anatomy_of_RTM_Seizure_Figure_1.pdf": {
+      "sha256": "8b2c29f21f1a7142a41f0ee67e9ca79642aa910638a6dda6dcba19f0449d1b35"
+    },
+    "anatomy_of_RTM_Seizure_Figure_2.pdf": {
+      "sha256": "bf57e608a9c96dcf382574efa172c2cb577211aef84f5a36033c42a484075f68"
+    }
+  }
+}

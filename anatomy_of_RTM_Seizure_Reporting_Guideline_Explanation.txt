@@ -1,0 +1,18 @@
+Reporting-guideline explanation
+
+The anatomy of regression to the mean in simulated epilepsy trials
+
+This is a descriptive computational simulation using synthetic seizure
+histories. It includes no human participants, observational patient sample,
+randomised treatment comparison, diagnostic-accuracy validation or systematic
+review. The corresponding clinical reporting checklists do not match this
+study design, so no completed clinical checklist is supplied.
+
+The manuscript reports the simulation cohort and generating process in
+Section 2.1, selection and trial-window rules in Section 2.2, condition
+transforms in Section 2.3, and outcome definitions, denominators and Monte
+Carlo intervals in Section 2.4. Sections 3.1 to 3.4 and supplementary Tables
+S1 to S3 give the results. Section 4.4 describes model and design limitations.
+The revised analysis files include the protocol, source and input/output
+hashes, deterministic seeds, numerical environment and reproduction commands.
+Public release of the revised files remains pending.

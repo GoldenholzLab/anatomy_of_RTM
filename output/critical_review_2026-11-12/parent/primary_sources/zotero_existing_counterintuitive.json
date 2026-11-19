@@ -1,0 +1,126 @@
+{
+  "key": "FRMK7A2F",
+  "version": 19,
+  "library": {
+    "type": "user",
+    "id": 1538114,
+    "name": "My Library",
+    "links": {
+      "self": {
+        "href": "http://localhost:23119/api/users/1538114",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/users/1538114",
+        "type": "text/html"
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "http://localhost:23119/api/users/1538114/items/FRMK7A2F",
+      "type": "application/json"
+    },
+    "alternate": {
+      "href": "https://www.zotero.org/users/1538114/items/FRMK7A2F",
+      "type": "text/html"
+    },
+    "attachment": {
+      "href": "http://localhost:23119/api/users/1538114/items/HZF75KZM",
+      "type": "application/json",
+      "attachmentType": "application/pdf",
+      "attachmentSize": 719879
+    }
+  },
+  "meta": {
+    "creatorSummary": "Goldenholz et al.",
+    "parsedDate": "2026-09-03",
+    "numChildren": 2
+  },
+  "data": {
+    "key": "FRMK7A2F",
+    "version": 19,
+    "itemType": "journalArticle",
+    "title": "Counterintuitive: reducing regression-to-the-mean worsens efficiency in simulated clinical trials",
+    "abstractNote": "OBJECTIVE: Our lab previously showed in simulation that excluding the formal baseline from the eligibility window would reduce regression-to-the-mean (RTM), lower apparent placebo response, and improve antiseizure medication (ASM) trial efficiency. A recent software re-review revealed a reversal on the final point: excluding baseline worsened trial efficiency. We investigated this paradoxical finding further by comparing two otherwise identical designs that differed only in whether baseline contributed to eligibility.\nMETHODS: The calibrated seizure-diary simulator CHOCOLATES generated a shared pool of approximately 220,000 simulated candidates. In the Overlap design, the 3-month eligibility window included the 2-month formal baseline (3 prospective months total). In the Separate design, eligibility was determined during a 3-month qualification window; candidates meeting eligibility then completed a separate 2-month baseline (5 prospective months total). Eligibility thresholds were 3, 4, or 5 seizures/month. Placebo and proportional drug effects of 20%, 30%, and 40% were simulated. Endpoints were median percent change (MPC) and 50% responder rate (RR50). Empirical type I error was calibrated using 100,000 null trials per cell; sample size for 90% empirical power (N90) and prospective candidate-month burden were estimated.\nRESULTS: Separate reduced baseline inflation (1.20 vs 1.60 seizures/month at the 4/month threshold), placebo MPC (-2.1% vs 6.7%), and placebo RR50 (12.1%vs 14.7%). However, Separate required more randomized participants in every scenario, increasing N90 by 5.7%-8.8% for MPC and 6.9%-17.9% for RR50. At the conventional 4/month threshold and 20% drug effect, RR50 required 620 randomized participants with Overlap versus 700 with Separate. Separate candidate-month burden was 1.32-1.45 times that of Overlap.\nSIGNIFICANCE: Reducing RTM did not improve trial efficiency. The formal baseline both introduces RTM bias and verifies that randomized patients carry sufficient endpoint information; separating baseline from eligibility reduces the former but weakens the latter. In this simulation, the baseline-inclusive design was more efficient across every threshold, endpoint, and drug effect. Trial designers should evaluate eligibility and baseline rules as an integrated measurement system, not by apparent placebo response alone.",
+    "date": "2026-09-03",
+    "language": "eng",
+    "shortTitle": "Counterintuitive",
+    "libraryCatalog": "PubMed",
+    "volume": "142",
+    "pages": "168-174",
+    "publicationTitle": "Seizure",
+    "DOI": "10.1016/j.seizure.2026.09.002",
+    "journalAbbreviation": "Seizure",
+    "ISSN": "1532-2688",
+    "PMID": "42715842",
+    "PMCID": "PMC13580671",
+    "creators": [
+      {
+        "firstName": "Daniel M.",
+        "lastName": "Goldenholz",
+        "creatorType": "author"
+      },
+      {
+        "firstName": "Shira R.",
+        "lastName": "Goldenholz",
+        "creatorType": "author"
+      },
+      {
+        "firstName": "Rohan",
+        "lastName": "Bhansali",
+        "creatorType": "author"
+      },
+      {
+        "firstName": "Ted J.",
+        "lastName": "Kaptchuk",
+        "creatorType": "author"
+      },
+      {
+        "firstName": "M. Brandon",
+        "lastName": "Westover",
+        "creatorType": "author"
+      }
+    ],
+    "tags": [
+      {
+        "tag": "Epilepsy",
+        "type": 1
+      },
+      {
+        "tag": "Randomized clinical trial",
+        "type": 1
+      },
+      {
+        "tag": "Simulation",
+        "type": 1
+      },
+      {
+        "tag": "Placebo response",
+        "type": 1
+      },
+      {
+        "tag": "Regression to the mean",
+        "type": 1
+      },
+      {
+        "tag": "Antiseizure medication",
+        "type": 1
+      },
+      {
+        "tag": "Clinical trial design",
+        "type": 1
+      },
+      {
+        "tag": "Sample size",
+        "type": 1
+      }
+    ],
+    "collections": [
+      "GNQ3KPR9"
+    ],
+    "relations": {},
+    "dateAdded": "2026-10-01T01:57:14Z",
+    "dateModified": "2026-10-01T01:57:14Z"
+  }
+}

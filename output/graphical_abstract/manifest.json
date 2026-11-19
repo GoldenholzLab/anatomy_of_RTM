@@ -1,0 +1,22 @@
+{
+  "title": "Different mechanisms. Same apparent improvement.",
+  "journal": "Journal of Clinical Epidemiology",
+  "canvas_cm": {
+    "width": 13.28,
+    "height": 5.31
+  },
+  "raster_dpi": 300,
+  "exports": {
+    "editable_vector": "output/graphical_abstract/anatomy_of_RTM_JCE_graphical_abstract.svg",
+    "submission_vector": "output/pdf/anatomy_of_RTM_JCE_graphical_abstract.pdf",
+    "submission_raster": "output/graphical_abstract/anatomy_of_RTM_JCE_graphical_abstract.tif",
+    "review_preview": "output/graphical_abstract/anatomy_of_RTM_JCE_graphical_abstract_preview.png"
+  },
+  "exact_claims": [
+    "1,000,000 synthetic patients",
+    "fixed cohort",
+    "epilepsy model",
+    "treatment effect = 0"
+  ],
+  "accessibility": "Color is redundant with numbering, direct labels, and distinct diagrams."
+}

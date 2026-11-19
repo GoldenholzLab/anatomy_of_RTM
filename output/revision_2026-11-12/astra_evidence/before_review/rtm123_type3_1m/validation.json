@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "condition": "baseline_perfect",
+      "n_selected": 649098,
+      "paired_partition": "PASS",
+      "fraction_oracle_n": 2000,
+      "fraction_oracle": "PASS",
+      "n_type3": 0,
+      "n_true_only": 0
+    },
+    {
+      "condition": "type1_transient_msf",
+      "n_selected": 756179,
+      "paired_partition": "PASS",
+      "fraction_oracle_n": 2000,
+      "fraction_oracle": "PASS",
+      "n_type3": 0,
+      "n_true_only": 0
+    },
+    {
+      "condition": "type2_threshold_8",
+      "n_selected": 404268,
+      "paired_partition": "PASS",
+      "fraction_oracle_n": 2000,
+      "fraction_oracle": "PASS",
+      "n_type3": 0,
+      "n_true_only": 0
+    },
+    {
+      "condition": "type3_sensitivity_90",
+      "n_selected": 621144,
+      "paired_partition": "PASS",
+      "fraction_oracle_n": 2000,
+      "fraction_oracle": "PASS",
+      "n_type3": 24125,
+      "n_true_only": 19056
+    },
+    {
+      "condition": "type3_sensitivity_80",
+      "n_selected": 589758,
+      "paired_partition": "PASS",
+      "fraction_oracle_n": 2000,
+      "fraction_oracle": "PASS",
+      "n_type3": 34506,
+      "n_true_only": 24404
+    },
+    {
+      "condition": "type3_sensitivity_70",
+      "n_selected": 551890,
+      "paired_partition": "PASS",
+      "fraction_oracle_n": 2000,
+      "fraction_oracle": "PASS",
+      "n_type3": 42608,
+      "n_true_only": 26499
+    },
+    {
+      "condition": "type3_far_1_per_month",
+      "n_selected": 695712,
+      "paired_partition": "PASS",
+      "fraction_oracle_n": 2000,
+      "fraction_oracle": "PASS",
+      "n_type3": 54257,
+      "n_true_only": 25240
+    },
+    {
+      "condition": "type3_far_1_per_week",
+      "n_selected": 769320,
+      "paired_partition": "PASS",
+      "fraction_oracle_n": 2000,
+      "fraction_oracle": "PASS",
+      "n_type3": 159768,
+      "n_true_only": 35208
+    },
+    {
+      "condition": "type3_far_1_per_day",
+      "n_selected": 985321,
+      "paired_partition": "PASS",
+      "fraction_oracle_n": 2000,
+      "fraction_oracle": "PASS",
+      "n_type3": 409581,
+      "n_true_only": 55966
+    }
+  ],
+  "source_sha256": "0dcc5e894f6b4ab4fdd06896c75add80a0f94d9fba4442e222b12755bbb8021b",
+  "passed": true
+}

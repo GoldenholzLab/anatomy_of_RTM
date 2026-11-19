@@ -1,0 +1,30 @@
+{
+ "simulator_sha256": "b038553df164160290b427e577ba53cb6b983db38f00a281f9a773a91a1d6b99",
+ "numpy_version": "2.2.5",
+ "n": 1500,
+ "first_id": 400000,
+ "cohort_rows_not_regenerated": 0,
+ "type1_differences_vs_saved": {
+  "shock_start": 0,
+  "shock_msf": 0,
+  "first_start": 0,
+  "rtm": 0,
+  "true_reference": 0,
+  "baseline": 0,
+  "test": 0
+ },
+ "type1_replay_matches_saved": true,
+ "pct_people_with_active_cycle_at_daily_sampling": 1.17,
+ "transient_vs_own_latent_rate": {
+  "pct_higher": 49.939499999999995,
+  "ratio_quantiles_5_25_50_75_95": [
+   0.06975408546394957,
+   0.33536583011720655,
+   0.9977172787852284,
+   2.97465782978088,
+   14.411220238064436
+  ],
+  "pct_ratio_above_3": 24.825400000000002,
+  "pct_ratio_below_one_third": 24.8777
+ }
+}

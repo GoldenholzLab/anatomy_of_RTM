@@ -1,0 +1,32 @@
+ M README.md
+ M notebooks/for_the_paper.ipynb
+ M rtm_anatomy/rtm123.py
+ M scripts/build_rtm123_notebook.py
+ M scripts/rtm123/02_run_conditions.py
+ M scripts/rtm123/05_make_explainer_figure.py
+ M tests/test_rtm123.py
+?? anatomy_of_RTM_JCE.docx
+?? anatomy_of_RTM_JCE_Figure_1.pdf
+?? anatomy_of_RTM_JCE_Figure_2.pdf
+?? anatomy_of_RTM_JCE_Highlights.docx
+?? anatomy_of_RTM_Seizure.docx
+?? anatomy_of_RTM_Seizure.pdf
+?? anatomy_of_RTM_Seizure_Figure_1.pdf
+?? anatomy_of_RTM_Seizure_Figure_2.pdf
+?? anatomy_of_RTM_Seizure_Highlights.docx
+?? anatomy_of_RTM_Seizure_Reporting_Guideline_Explanation.txt
+?? anatomy_of_RTM_Seizure_Supplement.docx
+?? anatomy_of_RTM_revised.docx
+?? output/
+?? scripts/build_jce_graphical_abstract.py
+?? scripts/build_jce_manuscript.py
+?? scripts/build_seizure_figures.py
+?? scripts/build_seizure_graphical_abstract.py
+?? scripts/finalize_word_layout.py
+?? scripts/prepare_seizure_submission.py
+?? scripts/replay_paired_type3.py
+?? scripts/revise_anatomy_manuscript.py
+?? scripts/validate_paired_type3.py
+?? tmp/
+?? ~$atomy_of_RTM_Seizure.docx
+?? ~$atomy_of_RTM_Seizure_Highlights.docx

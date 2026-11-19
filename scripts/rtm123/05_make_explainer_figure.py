@@ -38,7 +38,7 @@ def draw_mini_bars(
         ax.text(
             (left + right) / 2,
             temp_y + 0.023,
-            "temp ref",
+            "temp rate",
             ha="center",
             va="bottom",
             fontsize=7.0,
@@ -61,7 +61,7 @@ def draw_mini_bars(
         )
 
     if show_measurement_error:
-        true_values = [0.51, 0.50, 0.49, 0.51, 0.50]
+        true_values = [0.50] * 5
         true_color = "#94A3B8"
         measured_color = color
         bar_w = group_w * 0.26
@@ -198,11 +198,11 @@ def make_explainer_figure(output_dir: Path, dpi: int = 300) -> dict[str, Path]:
     ax.set_ylim(0, 1)
     ax.axis("off")
 
-    ax.text(0.5, 0.94, "RTM subtype context", ha="center", va="center", fontsize=13.2, fontweight="bold", color="#111827")
+    ax.text(0.5, 0.94, "Operational RTM definitions", ha="center", va="center", fontsize=13.2, fontweight="bold", color="#111827")
     ax.text(
         0.5,
         0.895,
-        "same cohort | first eligible window | 2B + 3T",
+        "Common potential participants; enrollment re-evaluated",
         ha="center",
         va="center",
         fontsize=7.6,
@@ -219,7 +219,7 @@ def make_explainer_figure(output_dir: Path, dpi: int = 300) -> dict[str, Path]:
         starts[0],
         width,
         "RTM 1",
-        "temporarily\nmuch more sick\nthan usual",
+        "temporary\nstate worsening",
         "true rate change",
         "#2563EB",
         [0.86, 0.80, 0.42, 0.47, 0.44],
@@ -241,8 +241,8 @@ def make_explainer_figure(output_dir: Path, dpi: int = 300) -> dict[str, Path]:
         starts[2],
         width,
         "RTM 3",
-        "measurement\nerror",
-        "observed counts",
+        "measured RTM;\ntrue RTM absent",
+        "paired classification",
         "#7C3AED",
         [0.77, 0.72, 0.48, 0.39, 0.43],
         "type3",
@@ -272,6 +272,8 @@ def make_explainer_figure(output_dir: Path, dpi: int = 300) -> dict[str, Path]:
         fontsize=7.4,
         color="#475569",
     )
+    ax.text(0.5, 0.035, "Type 3 compares both scales in the same person and window.",
+            ha="center", va="center", fontsize=6.6, color="#475569")
 
     png_path = output_dir / "rtm123_explainer.png"
     pdf_path = output_dir / "rtm123_explainer.pdf"

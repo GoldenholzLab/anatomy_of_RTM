@@ -1,0 +1,350 @@
+{
+ "n_replayed": 100000,
+ "numpy_version": "2.2.5",
+ "conditions": {
+  "baseline_perfect": {
+   "differences_vs_saved": {
+    "first_start": 0,
+    "rtm": 0,
+    "true_rtm": 0,
+    "baseline": 0,
+    "test": 0,
+    "true_baseline": 0,
+    "true_test": 0,
+    "true_reference": 0
+   },
+   "replay_matches_saved": true,
+   "n_selected": 64835,
+   "pct_eligible": 64.835,
+   "as_reported": {
+    "measured_rtm": 53.615,
+    "true_rtm": 53.615,
+    "type3": 0.0,
+    "true_only": 0.0
+   },
+   "unfloored_test_counts": {
+    "measured_rtm": 53.615,
+    "type3": 0.0
+   },
+   "own_measured_36mo_mean_as_reference": {
+    "measured_rtm": 53.615,
+    "type3": 0.0
+   },
+   "reference_excluding_trial_window": {
+    "measured_rtm": 53.215,
+    "true_rtm": 53.215,
+    "type3": 0.0,
+    "true_only": 0.0
+   },
+   "pct_selected_passing_eligibility_on_true_counts_same_window": 100.0,
+   "type3_split_pct_of_selected": {
+    "true_eligible": 0.0,
+    "true_ineligible": 0.0
+   },
+   "pct_selected_with_a_floored_test_month": 0.0,
+   "mean_own_measured_reference": 10.0534,
+   "mean_sensitivity_scaled_true_reference": 10.0534
+  },
+  "type2_threshold_8": {
+   "differences_vs_saved": {
+    "first_start": 0,
+    "rtm": 0,
+    "true_rtm": 0,
+    "baseline": 0,
+    "test": 0,
+    "true_baseline": 0,
+    "true_test": 0,
+    "true_reference": 0
+   },
+   "replay_matches_saved": true,
+   "n_selected": 40506,
+   "pct_eligible": 40.506,
+   "as_reported": {
+    "measured_rtm": 58.009,
+    "true_rtm": 58.009,
+    "type3": 0.0,
+    "true_only": 0.0
+   },
+   "unfloored_test_counts": {
+    "measured_rtm": 58.009,
+    "type3": 0.0
+   },
+   "own_measured_36mo_mean_as_reference": {
+    "measured_rtm": 58.009,
+    "type3": 0.0
+   },
+   "reference_excluding_trial_window": {
+    "measured_rtm": 57.542,
+    "true_rtm": 57.542,
+    "type3": 0.0,
+    "true_only": 0.0
+   },
+   "pct_selected_passing_eligibility_on_true_counts_same_window": 100.0,
+   "type3_split_pct_of_selected": {
+    "true_eligible": 0.0,
+    "true_ineligible": 0.0
+   },
+   "pct_selected_with_a_floored_test_month": 0.0,
+   "mean_own_measured_reference": 14.4675,
+   "mean_sensitivity_scaled_true_reference": 14.4675
+  },
+  "type3_sensitivity_90": {
+   "differences_vs_saved": {
+    "first_start": 0,
+    "rtm": 0,
+    "true_rtm": 0,
+    "baseline": 0,
+    "test": 0,
+    "true_baseline": 0,
+    "true_test": 0,
+    "true_reference": 0
+   },
+   "replay_matches_saved": true,
+   "n_selected": 62032,
+   "pct_eligible": 62.032,
+   "as_reported": {
+    "measured_rtm": 55.043,
+    "true_rtm": 54.187,
+    "type3": 3.896,
+    "true_only": 3.04
+   },
+   "unfloored_test_counts": {
+    "measured_rtm": 55.043,
+    "type3": 3.896
+   },
+   "own_measured_36mo_mean_as_reference": {
+    "measured_rtm": 54.938,
+    "type3": 3.737
+   },
+   "reference_excluding_trial_window": {
+    "measured_rtm": 54.583,
+    "true_rtm": 53.769,
+    "type3": 3.705,
+    "true_only": 2.89
+   },
+   "pct_selected_passing_eligibility_on_true_counts_same_window": 100.0,
+   "type3_split_pct_of_selected": {
+    "true_eligible": 3.896,
+    "true_ineligible": 0.0
+   },
+   "pct_selected_with_a_floored_test_month": 0.0,
+   "mean_own_measured_reference": 9.3842,
+   "mean_sensitivity_scaled_true_reference": 9.3823
+  },
+  "type3_sensitivity_80": {
+   "differences_vs_saved": {
+    "first_start": 0,
+    "rtm": 0,
+    "true_rtm": 0,
+    "baseline": 0,
+    "test": 0,
+    "true_baseline": 0,
+    "true_test": 0,
+    "true_reference": 0
+   },
+   "replay_matches_saved": true,
+   "n_selected": 58951,
+   "pct_eligible": 58.951,
+   "as_reported": {
+    "measured_rtm": 56.674,
+    "true_rtm": 55.039,
+    "type3": 5.786,
+    "true_only": 4.151
+   },
+   "unfloored_test_counts": {
+    "measured_rtm": 56.674,
+    "type3": 5.786
+   },
+   "own_measured_36mo_mean_as_reference": {
+    "measured_rtm": 56.661,
+    "type3": 5.674
+   },
+   "reference_excluding_trial_window": {
+    "measured_rtm": 56.208,
+    "true_rtm": 54.634,
+    "type3": 5.505,
+    "true_only": 3.93
+   },
+   "pct_selected_passing_eligibility_on_true_counts_same_window": 100.0,
+   "type3_split_pct_of_selected": {
+    "true_eligible": 5.786,
+    "true_ineligible": 0.0
+   },
+   "pct_selected_with_a_floored_test_month": 0.0,
+   "mean_own_measured_reference": 8.6917,
+   "mean_sensitivity_scaled_true_reference": 8.6906
+  },
+  "type3_sensitivity_70": {
+   "differences_vs_saved": {
+    "first_start": 0,
+    "rtm": 0,
+    "true_rtm": 0,
+    "baseline": 0,
+    "test": 0,
+    "true_baseline": 0,
+    "true_test": 0,
+    "true_reference": 0
+   },
+   "replay_matches_saved": true,
+   "n_selected": 55249,
+   "pct_eligible": 55.249,
+   "as_reported": {
+    "measured_rtm": 58.946,
+    "true_rtm": 55.858,
+    "type3": 7.919,
+    "true_only": 4.831
+   },
+   "unfloored_test_counts": {
+    "measured_rtm": 58.946,
+    "type3": 7.919
+   },
+   "own_measured_36mo_mean_as_reference": {
+    "measured_rtm": 58.873,
+    "type3": 7.707
+   },
+   "reference_excluding_trial_window": {
+    "measured_rtm": 58.537,
+    "true_rtm": 55.476,
+    "type3": 7.653,
+    "true_only": 4.592
+   },
+   "pct_selected_passing_eligibility_on_true_counts_same_window": 100.0,
+   "type3_split_pct_of_selected": {
+    "true_eligible": 7.919,
+    "true_ineligible": 0.0
+   },
+   "pct_selected_with_a_floored_test_month": 0.0,
+   "mean_own_measured_reference": 8.0073,
+   "mean_sensitivity_scaled_true_reference": 8.0049
+  },
+  "type3_far_1_per_month": {
+   "differences_vs_saved": {
+    "first_start": 0,
+    "rtm": 0,
+    "true_rtm": 0,
+    "baseline": 0,
+    "test": 0,
+    "true_baseline": 0,
+    "true_test": 0,
+    "true_reference": 0
+   },
+   "replay_matches_saved": true,
+   "n_selected": 69578,
+   "pct_eligible": 69.578,
+   "as_reported": {
+    "measured_rtm": 56.292,
+    "true_rtm": 52.114,
+    "type3": 7.876,
+    "true_only": 3.698
+   },
+   "unfloored_test_counts": {
+    "measured_rtm": 56.064,
+    "type3": 7.761
+   },
+   "own_measured_36mo_mean_as_reference": {
+    "measured_rtm": 56.143,
+    "type3": 7.676
+   },
+   "reference_excluding_trial_window": {
+    "measured_rtm": 55.969,
+    "true_rtm": 51.735,
+    "type3": 7.678,
+    "true_only": 3.444
+   },
+   "pct_selected_passing_eligibility_on_true_counts_same_window": 76.097,
+   "type3_split_pct_of_selected": {
+    "true_eligible": 3.107,
+    "true_ineligible": 4.769
+   },
+   "pct_selected_with_a_floored_test_month": 8.573,
+   "mean_own_measured_reference": 9.4977,
+   "mean_sensitivity_scaled_true_reference": 9.4613
+  },
+  "type3_far_1_per_week": {
+   "differences_vs_saved": {
+    "first_start": 0,
+    "rtm": 0,
+    "true_rtm": 0,
+    "baseline": 0,
+    "test": 0,
+    "true_baseline": 0,
+    "true_test": 0,
+    "true_reference": 0
+   },
+   "replay_matches_saved": true,
+   "n_selected": 76798,
+   "pct_eligible": 76.798,
+   "as_reported": {
+    "measured_rtm": 64.313,
+    "true_rtm": 47.742,
+    "type3": 21.094,
+    "true_only": 4.524
+   },
+   "unfloored_test_counts": {
+    "measured_rtm": 63.373,
+    "type3": 20.584
+   },
+   "own_measured_36mo_mean_as_reference": {
+    "measured_rtm": 63.496,
+    "type3": 20.456
+   },
+   "reference_excluding_trial_window": {
+    "measured_rtm": 63.877,
+    "true_rtm": 47.422,
+    "type3": 20.736,
+    "true_only": 4.281
+   },
+   "pct_selected_passing_eligibility_on_true_counts_same_window": 60.979,
+   "type3_split_pct_of_selected": {
+    "true_eligible": 5.182,
+    "true_ineligible": 15.912
+   },
+   "pct_selected_with_a_floored_test_month": 33.994,
+   "mean_own_measured_reference": 8.8397,
+   "mean_sensitivity_scaled_true_reference": 8.6474
+  },
+  "type3_far_1_per_day": {
+   "differences_vs_saved": {
+    "first_start": 0,
+    "rtm": 0,
+    "true_rtm": 0,
+    "baseline": 0,
+    "test": 0,
+    "true_baseline": 0,
+    "true_test": 0,
+    "true_reference": 0
+   },
+   "replay_matches_saved": true,
+   "n_selected": 98563,
+   "pct_eligible": 98.563,
+   "as_reported": {
+    "measured_rtm": 69.838,
+    "true_rtm": 34.076,
+    "type3": 41.361,
+    "true_only": 5.599
+   },
+   "unfloored_test_counts": {
+    "measured_rtm": 66.262,
+    "type3": 39.078
+   },
+   "own_measured_36mo_mean_as_reference": {
+    "measured_rtm": 64.148,
+    "type3": 37.366
+   },
+   "reference_excluding_trial_window": {
+    "measured_rtm": 69.673,
+    "true_rtm": 33.852,
+    "type3": 41.189,
+    "true_only": 5.368
+   },
+   "pct_selected_passing_eligibility_on_true_counts_same_window": 39.712,
+   "type3_split_pct_of_selected": {
+    "true_eligible": 6.105,
+    "true_ineligible": 35.257
+   },
+   "pct_selected_with_a_floored_test_month": 55.561,
+   "mean_own_measured_reference": 7.9836,
+   "mean_sensitivity_scaled_true_reference": 6.8822
+  }
+ }
+}

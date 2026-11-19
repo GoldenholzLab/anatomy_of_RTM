@@ -1,0 +1,1477 @@
+{
+ "n_checks": 245,
+ "n_fail": 0,
+ "failures": [],
+ "checks": [
+  {
+   "where": "T1 baseline_perfect n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "T1 baseline_perfect measured",
+   "doc": "53.8",
+   "calc": "53.8",
+   "ok": true
+  },
+  {
+   "where": "T1 baseline_perfect true",
+   "doc": "53.8",
+   "calc": "53.8",
+   "ok": true
+  },
+  {
+   "where": "T1 baseline_perfect type3",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "T1 baseline_perfect MPC",
+   "doc": "26.7",
+   "calc": "26.7",
+   "ok": true
+  },
+  {
+   "where": "T1 type1_transient_msf n",
+   "doc": "756,179",
+   "calc": "756,179",
+   "ok": true
+  },
+  {
+   "where": "T1 type1_transient_msf measured",
+   "doc": "58.3",
+   "calc": "58.3",
+   "ok": true
+  },
+  {
+   "where": "T1 type1_transient_msf true",
+   "doc": "58.3",
+   "calc": "58.3",
+   "ok": true
+  },
+  {
+   "where": "T1 type1_transient_msf type3",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "T1 type1_transient_msf MPC",
+   "doc": "36.8",
+   "calc": "36.8",
+   "ok": true
+  },
+  {
+   "where": "T1 type2_threshold_8 n",
+   "doc": "404,268",
+   "calc": "404,268",
+   "ok": true
+  },
+  {
+   "where": "T1 type2_threshold_8 measured",
+   "doc": "57.9",
+   "calc": "57.9",
+   "ok": true
+  },
+  {
+   "where": "T1 type2_threshold_8 true",
+   "doc": "57.9",
+   "calc": "57.9",
+   "ok": true
+  },
+  {
+   "where": "T1 type2_threshold_8 type3",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "T1 type2_threshold_8 MPC",
+   "doc": "29.4",
+   "calc": "29.4",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_90 n",
+   "doc": "621,144",
+   "calc": "621,144",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_90 measured",
+   "doc": "55.4",
+   "calc": "55.4",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_90 true",
+   "doc": "54.5",
+   "calc": "54.5",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_90 type3",
+   "doc": "3.9",
+   "calc": "3.9",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_90 MPC",
+   "doc": "28.5",
+   "calc": "28.5",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_80 n",
+   "doc": "589,758",
+   "calc": "589,758",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_80 measured",
+   "doc": "57.1",
+   "calc": "57.1",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_80 true",
+   "doc": "55.3",
+   "calc": "55.3",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_80 type3",
+   "doc": "5.9",
+   "calc": "5.9",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_80 MPC",
+   "doc": "33.3",
+   "calc": "33.3",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_70 n",
+   "doc": "551,890",
+   "calc": "551,890",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_70 measured",
+   "doc": "59.0",
+   "calc": "59.0",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_70 true",
+   "doc": "56.1",
+   "calc": "56.1",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_70 type3",
+   "doc": "7.7",
+   "calc": "7.7",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_sensitivity_70 MPC",
+   "doc": "33.3",
+   "calc": "33.3",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_month n",
+   "doc": "695,712",
+   "calc": "695,712",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_month measured",
+   "doc": "56.5",
+   "calc": "56.5",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_month true",
+   "doc": "52.3",
+   "calc": "52.3",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_month type3",
+   "doc": "7.8",
+   "calc": "7.8",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_month MPC",
+   "doc": "33.3",
+   "calc": "33.3",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_week n",
+   "doc": "769,320",
+   "calc": "769,320",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_week measured",
+   "doc": "64.2",
+   "calc": "64.2",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_week true",
+   "doc": "48.1",
+   "calc": "48.1",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_week type3",
+   "doc": "20.8",
+   "calc": "20.8",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_week MPC",
+   "doc": "39.7",
+   "calc": "39.7",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_day n",
+   "doc": "985,321",
+   "calc": "985,321",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_day measured",
+   "doc": "69.9",
+   "calc": "69.9",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_day true",
+   "doc": "34.1",
+   "calc": "34.1",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_day type3",
+   "doc": "41.6",
+   "calc": "41.6",
+   "ok": true
+  },
+  {
+   "where": "T1 type3_far_1_per_day MPC",
+   "doc": "46.0",
+   "calc": "46.0",
+   "ok": true
+  },
+  {
+   "where": "S1 baseline_perfect label",
+   "doc": "Baseline: perfect detector, 4/month",
+   "calc": "Baseline: perfect detector, 4/month",
+   "ok": true
+  },
+  {
+   "where": "S1 baseline_perfect n_eligible",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S1 baseline_perfect both_count",
+   "doc": "349,143",
+   "calc": "349,143",
+   "ok": true
+  },
+  {
+   "where": "S1 baseline_perfect type3_count",
+   "doc": "0",
+   "calc": "0",
+   "ok": true
+  },
+  {
+   "where": "S1 baseline_perfect true_only_count",
+   "doc": "0",
+   "calc": "0",
+   "ok": true
+  },
+  {
+   "where": "S1 baseline_perfect neither_count",
+   "doc": "299,955",
+   "calc": "299,955",
+   "ok": true
+  },
+  {
+   "where": "S1 baseline_perfect partition sums",
+   "doc": 649098,
+   "calc": 649098,
+   "ok": true
+  },
+  {
+   "where": "S1 baseline_perfect measured=both+type3",
+   "doc": 349143,
+   "calc": 349143,
+   "ok": true
+  },
+  {
+   "where": "S1 baseline_perfect true=both+trueonly",
+   "doc": 349143,
+   "calc": 349143,
+   "ok": true
+  },
+  {
+   "where": "S1 type1_transient_msf label",
+   "doc": "Type 1: transient 2-month mSF change",
+   "calc": "Type 1: transient 2-month mSF change",
+   "ok": true
+  },
+  {
+   "where": "S1 type1_transient_msf n_eligible",
+   "doc": "756,179",
+   "calc": "756,179",
+   "ok": true
+  },
+  {
+   "where": "S1 type1_transient_msf both_count",
+   "doc": "440,818",
+   "calc": "440,818",
+   "ok": true
+  },
+  {
+   "where": "S1 type1_transient_msf type3_count",
+   "doc": "0",
+   "calc": "0",
+   "ok": true
+  },
+  {
+   "where": "S1 type1_transient_msf true_only_count",
+   "doc": "0",
+   "calc": "0",
+   "ok": true
+  },
+  {
+   "where": "S1 type1_transient_msf neither_count",
+   "doc": "315,361",
+   "calc": "315,361",
+   "ok": true
+  },
+  {
+   "where": "S1 type1_transient_msf partition sums",
+   "doc": 756179,
+   "calc": 756179,
+   "ok": true
+  },
+  {
+   "where": "S1 type1_transient_msf measured=both+type3",
+   "doc": 440818,
+   "calc": 440818,
+   "ok": true
+  },
+  {
+   "where": "S1 type1_transient_msf true=both+trueonly",
+   "doc": 440818,
+   "calc": 440818,
+   "ok": true
+  },
+  {
+   "where": "S1 type2_threshold_8 label",
+   "doc": "Type 2: eligibility threshold 8/month",
+   "calc": "Type 2: eligibility threshold 8/month",
+   "ok": true
+  },
+  {
+   "where": "S1 type2_threshold_8 n_eligible",
+   "doc": "404,268",
+   "calc": "404,268",
+   "ok": true
+  },
+  {
+   "where": "S1 type2_threshold_8 both_count",
+   "doc": "234,163",
+   "calc": "234,163",
+   "ok": true
+  },
+  {
+   "where": "S1 type2_threshold_8 type3_count",
+   "doc": "0",
+   "calc": "0",
+   "ok": true
+  },
+  {
+   "where": "S1 type2_threshold_8 true_only_count",
+   "doc": "0",
+   "calc": "0",
+   "ok": true
+  },
+  {
+   "where": "S1 type2_threshold_8 neither_count",
+   "doc": "170,105",
+   "calc": "170,105",
+   "ok": true
+  },
+  {
+   "where": "S1 type2_threshold_8 partition sums",
+   "doc": 404268,
+   "calc": 404268,
+   "ok": true
+  },
+  {
+   "where": "S1 type2_threshold_8 measured=both+type3",
+   "doc": 234163,
+   "calc": 234163,
+   "ok": true
+  },
+  {
+   "where": "S1 type2_threshold_8 true=both+trueonly",
+   "doc": 234163,
+   "calc": 234163,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_90 label",
+   "doc": "Sensitivity 90%, FAR 0/day",
+   "calc": "Sensitivity 90%, FAR 0/day",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_90 n_eligible",
+   "doc": "621,144",
+   "calc": "621,144",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_90 both_count",
+   "doc": "319,707",
+   "calc": "319,707",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_90 type3_count",
+   "doc": "24,125",
+   "calc": "24,125",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_90 true_only_count",
+   "doc": "19,056",
+   "calc": "19,056",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_90 neither_count",
+   "doc": "258,256",
+   "calc": "258,256",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_90 partition sums",
+   "doc": 621144,
+   "calc": 621144,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_90 measured=both+type3",
+   "doc": 343832,
+   "calc": 343832,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_90 true=both+trueonly",
+   "doc": 338763,
+   "calc": 338763,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_80 label",
+   "doc": "Sensitivity 80%, FAR 0/day",
+   "calc": "Sensitivity 80%, FAR 0/day",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_80 n_eligible",
+   "doc": "589,758",
+   "calc": "589,758",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_80 both_count",
+   "doc": "302,023",
+   "calc": "302,023",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_80 type3_count",
+   "doc": "34,506",
+   "calc": "34,506",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_80 true_only_count",
+   "doc": "24,404",
+   "calc": "24,404",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_80 neither_count",
+   "doc": "228,825",
+   "calc": "228,825",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_80 partition sums",
+   "doc": 589758,
+   "calc": 589758,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_80 measured=both+type3",
+   "doc": 336529,
+   "calc": 336529,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_80 true=both+trueonly",
+   "doc": 326427,
+   "calc": 326427,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_70 label",
+   "doc": "Sensitivity 70%, FAR 0/day",
+   "calc": "Sensitivity 70%, FAR 0/day",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_70 n_eligible",
+   "doc": "551,890",
+   "calc": "551,890",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_70 both_count",
+   "doc": "282,937",
+   "calc": "282,937",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_70 type3_count",
+   "doc": "42,608",
+   "calc": "42,608",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_70 true_only_count",
+   "doc": "26,499",
+   "calc": "26,499",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_70 neither_count",
+   "doc": "199,846",
+   "calc": "199,846",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_70 partition sums",
+   "doc": 551890,
+   "calc": 551890,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_70 measured=both+type3",
+   "doc": 325545,
+   "calc": 325545,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_sensitivity_70 true=both+trueonly",
+   "doc": 309436,
+   "calc": 309436,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_month label",
+   "doc": "FAR 1/month, sensitivity 100%",
+   "calc": "FAR 1/month, sensitivity 100%",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_month n_eligible",
+   "doc": "695,712",
+   "calc": "695,712",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_month both_count",
+   "doc": "338,773",
+   "calc": "338,773",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_month type3_count",
+   "doc": "54,257",
+   "calc": "54,257",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_month true_only_count",
+   "doc": "25,240",
+   "calc": "25,240",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_month neither_count",
+   "doc": "277,442",
+   "calc": "277,442",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_month partition sums",
+   "doc": 695712,
+   "calc": 695712,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_month measured=both+type3",
+   "doc": 393030,
+   "calc": 393030,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_month true=both+trueonly",
+   "doc": 364013,
+   "calc": 364013,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_week label",
+   "doc": "FAR 1/week, sensitivity 100%",
+   "calc": "FAR 1/week, sensitivity 100%",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_week n_eligible",
+   "doc": "769,320",
+   "calc": "769,320",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_week both_count",
+   "doc": "334,498",
+   "calc": "334,498",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_week type3_count",
+   "doc": "159,768",
+   "calc": "159,768",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_week true_only_count",
+   "doc": "35,208",
+   "calc": "35,208",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_week neither_count",
+   "doc": "239,846",
+   "calc": "239,846",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_week partition sums",
+   "doc": 769320,
+   "calc": 769320,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_week measured=both+type3",
+   "doc": 494266,
+   "calc": 494266,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_week true=both+trueonly",
+   "doc": 369706,
+   "calc": 369706,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_day label",
+   "doc": "FAR 1/day, sensitivity 100%",
+   "calc": "FAR 1/day, sensitivity 100%",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_day n_eligible",
+   "doc": "985,321",
+   "calc": "985,321",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_day both_count",
+   "doc": "279,589",
+   "calc": "279,589",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_day type3_count",
+   "doc": "409,581",
+   "calc": "409,581",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_day true_only_count",
+   "doc": "55,966",
+   "calc": "55,966",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_day neither_count",
+   "doc": "240,185",
+   "calc": "240,185",
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_day partition sums",
+   "doc": 985321,
+   "calc": 985321,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_day measured=both+type3",
+   "doc": 689170,
+   "calc": 689170,
+   "ok": true
+  },
+  {
+   "where": "S1 type3_far_1_per_day true=both+trueonly",
+   "doc": 335555,
+   "calc": 335555,
+   "ok": true
+  },
+  {
+   "where": "S2 baseline_perfect type3%",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 baseline_perfect CI",
+   "doc": "0.0 to 0.0",
+   "calc": "0.0 to 0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 baseline_perfect share",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 baseline_perfect net",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 baseline_perfect net==measured-true",
+   "doc": 0.0,
+   "calc": 0.0,
+   "ok": true
+  },
+  {
+   "where": "S2 type1_transient_msf type3%",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 type1_transient_msf CI",
+   "doc": "0.0 to 0.0",
+   "calc": "0.0 to 0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 type1_transient_msf share",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 type1_transient_msf net",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 type1_transient_msf net==measured-true",
+   "doc": 0.0,
+   "calc": 0.0,
+   "ok": true
+  },
+  {
+   "where": "S2 type2_threshold_8 type3%",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 type2_threshold_8 CI",
+   "doc": "0.0 to 0.0",
+   "calc": "0.0 to 0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 type2_threshold_8 share",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 type2_threshold_8 net",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "S2 type2_threshold_8 net==measured-true",
+   "doc": 0.0,
+   "calc": 0.0,
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_90 type3%",
+   "doc": "3.9",
+   "calc": "3.9",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_90 CI",
+   "doc": "3.8 to 3.9",
+   "calc": "3.8 to 3.9",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_90 share",
+   "doc": "7.0",
+   "calc": "7.0",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_90 net",
+   "doc": "0.8",
+   "calc": "0.8",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_90 net==measured-true",
+   "doc": 0.816074855,
+   "calc": 0.816074855,
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_80 type3%",
+   "doc": "5.9",
+   "calc": "5.9",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_80 CI",
+   "doc": "5.8 to 5.9",
+   "calc": "5.8 to 5.9",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_80 share",
+   "doc": "10.3",
+   "calc": "10.3",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_80 net",
+   "doc": "1.7",
+   "calc": "1.7",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_80 net==measured-true",
+   "doc": 1.712905972,
+   "calc": 1.712905972,
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_70 type3%",
+   "doc": "7.7",
+   "calc": "7.7",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_70 CI",
+   "doc": "7.7 to 7.8",
+   "calc": "7.7 to 7.8",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_70 share",
+   "doc": "13.1",
+   "calc": "13.1",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_70 net",
+   "doc": "2.9",
+   "calc": "2.9",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_sensitivity_70 net==measured-true",
+   "doc": 2.918878762,
+   "calc": 2.918878762,
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_month type3%",
+   "doc": "7.8",
+   "calc": "7.8",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_month CI",
+   "doc": "7.7 to 7.9",
+   "calc": "7.7 to 7.9",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_month share",
+   "doc": "13.8",
+   "calc": "13.8",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_month net",
+   "doc": "4.2",
+   "calc": "4.2",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_month net==measured-true",
+   "doc": 4.170835058,
+   "calc": 4.170835058,
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_week type3%",
+   "doc": "20.8",
+   "calc": "20.8",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_week CI",
+   "doc": "20.7 to 20.9",
+   "calc": "20.7 to 20.9",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_week share",
+   "doc": "32.3",
+   "calc": "32.3",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_week net",
+   "doc": "16.2",
+   "calc": "16.2",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_week net==measured-true",
+   "doc": 16.190921853,
+   "calc": 16.190921853,
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_day type3%",
+   "doc": "41.6",
+   "calc": "41.6",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_day CI",
+   "doc": "41.5 to 41.7",
+   "calc": "41.5 to 41.7",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_day share",
+   "doc": "59.4",
+   "calc": "59.4",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_day net",
+   "doc": "35.9",
+   "calc": "35.9",
+   "ok": true
+  },
+  {
+   "where": "S2 type3_far_1_per_day net==measured-true",
+   "doc": 35.888304421,
+   "calc": 35.888304421,
+   "ok": true
+  },
+  {
+   "where": "S3 baseline_perfect n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 baseline_perfect RTM",
+   "doc": "53.8",
+   "calc": "53.8",
+   "ok": true
+  },
+  {
+   "where": "S3 baseline_perfect type3",
+   "doc": "0.0",
+   "calc": "0.0",
+   "ok": true
+  },
+  {
+   "where": "S3 baseline_perfect zeroB",
+   "doc": "0",
+   "calc": "0",
+   "ok": true
+  },
+  {
+   "where": "S3 baseline_perfect MPC n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 baseline_perfect MPC",
+   "doc": "26.7",
+   "calc": "26.7",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_90 n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_90 RTM",
+   "doc": "52.8",
+   "calc": "52.8",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_90 type3",
+   "doc": "3.3",
+   "calc": "3.3",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_90 zeroB",
+   "doc": "0",
+   "calc": "0",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_90 MPC n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_90 MPC",
+   "doc": "26.7",
+   "calc": "26.7",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_80 n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_80 RTM",
+   "doc": "51.5",
+   "calc": "51.5",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_80 type3",
+   "doc": "4.5",
+   "calc": "4.5",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_80 zeroB",
+   "doc": "0",
+   "calc": "0",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_80 MPC n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_80 MPC",
+   "doc": "26.7",
+   "calc": "26.7",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_70 n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_70 RTM",
+   "doc": "50.0",
+   "calc": "50.0",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_70 type3",
+   "doc": "5.4",
+   "calc": "5.4",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_70 zeroB",
+   "doc": "8",
+   "calc": "8",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_70 MPC n",
+   "doc": "649,090",
+   "calc": "649,090",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_sensitivity_70 MPC",
+   "doc": "26.3",
+   "calc": "26.3",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_month n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_month RTM",
+   "doc": "51.7",
+   "calc": "51.7",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_month type3",
+   "doc": "3.7",
+   "calc": "3.7",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_month zeroB",
+   "doc": "0",
+   "calc": "0",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_month MPC n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_month MPC",
+   "doc": "25.9",
+   "calc": "25.9",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_week n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_week RTM",
+   "doc": "47.5",
+   "calc": "47.5",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_week type3",
+   "doc": "6.1",
+   "calc": "6.1",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_week zeroB",
+   "doc": "9",
+   "calc": "9",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_week MPC n",
+   "doc": "649,089",
+   "calc": "649,089",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_week MPC",
+   "doc": "23.3",
+   "calc": "23.3",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_day n",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_day RTM",
+   "doc": "41.6",
+   "calc": "41.6",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_day type3",
+   "doc": "9.4",
+   "calc": "9.4",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_day zeroB",
+   "doc": "17,608",
+   "calc": "17,608",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_day MPC n",
+   "doc": "631,490",
+   "calc": "631,490",
+   "ok": true
+  },
+  {
+   "where": "S3 type3_far_1_per_day MPC",
+   "doc": "17.6",
+   "calc": "17.6",
+   "ok": true
+  },
+  {
+   "where": "abstract elig 64.9",
+   "doc": "64.9",
+   "calc": "64.9",
+   "ok": true
+  },
+  {
+   "where": "abstract RTM 53.8",
+   "doc": "53.8",
+   "calc": "53.8",
+   "ok": true
+  },
+  {
+   "where": "abstract MPC 26.7",
+   "doc": "26.7",
+   "calc": "26.7",
+   "ok": true
+  },
+  {
+   "where": "abstract transient 58.3",
+   "doc": "58.3",
+   "calc": "58.3",
+   "ok": true
+  },
+  {
+   "where": "abstract threshold 57.9",
+   "doc": "57.9",
+   "calc": "57.9",
+   "ok": true
+  },
+  {
+   "where": "abstract 70% RTM 59.0",
+   "doc": "59.0",
+   "calc": "59.0",
+   "ok": true
+  },
+  {
+   "where": "abstract 70% type3 7.7",
+   "doc": "7.7",
+   "calc": "7.7",
+   "ok": true
+  },
+  {
+   "where": "abstract FAR1d RTM 69.9",
+   "doc": "69.9",
+   "calc": "69.9",
+   "ok": true
+  },
+  {
+   "where": "abstract FAR1d type3 41.6",
+   "doc": "41.6",
+   "calc": "41.6",
+   "ok": true
+  },
+  {
+   "where": "abstract FAR1d share 59.4",
+   "doc": "59.4",
+   "calc": "59.4",
+   "ok": true
+  },
+  {
+   "where": "3.1 649,098",
+   "doc": "649,098",
+   "calc": "649,098",
+   "ok": true
+  },
+  {
+   "where": "3.2 elig 75.6",
+   "doc": "75.6",
+   "calc": "75.6",
+   "ok": true
+  },
+  {
+   "where": "3.2 MPC 36.8",
+   "doc": "36.8",
+   "calc": "36.8",
+   "ok": true
+  },
+  {
+   "where": "3.3 elig 40.4",
+   "doc": "40.4",
+   "calc": "40.4",
+   "ok": true
+  },
+  {
+   "where": "3.3 MPC 29.4",
+   "doc": "29.4",
+   "calc": "29.4",
+   "ok": true
+  },
+  {
+   "where": "3.4 70% elig 55.2",
+   "doc": "55.2",
+   "calc": "55.2",
+   "ok": true
+  },
+  {
+   "where": "3.4 70% MPC 33.3",
+   "doc": "33.3",
+   "calc": "33.3",
+   "ok": true
+  },
+  {
+   "where": "3.4 FAR1d elig 98.5",
+   "doc": "98.5",
+   "calc": "98.5",
+   "ok": true
+  },
+  {
+   "where": "3.4 FAR1d MPC 46.0",
+   "doc": "46.0",
+   "calc": "46.0",
+   "ok": true
+  },
+  {
+   "where": "3.4 409,581",
+   "doc": "409,581",
+   "calc": "409,581",
+   "ok": true
+  },
+  {
+   "where": "3.4 55,966",
+   "doc": "55,966",
+   "calc": "55,966",
+   "ok": true
+  },
+  {
+   "where": "3.4 net 35.9",
+   "doc": "35.9",
+   "calc": "35.9",
+   "ok": true
+  },
+  {
+   "where": "3.4 fixed 70% RTM 50.0",
+   "doc": "50.0",
+   "calc": "50.0",
+   "ok": true
+  },
+  {
+   "where": "3.4 fixed FAR1d RTM 41.6",
+   "doc": "41.6",
+   "calc": "41.6",
+   "ok": true
+  },
+  {
+   "where": "3.4 fixed 70% MPC 26.3",
+   "doc": "26.3",
+   "calc": "26.3",
+   "ok": true
+  },
+  {
+   "where": "3.4 fixed FAR1d MPC 17.6",
+   "doc": "17.6",
+   "calc": "17.6",
+   "ok": true
+  },
+  {
+   "where": "3.4 649,090",
+   "doc": "649,090",
+   "calc": "649,090",
+   "ok": true
+  },
+  {
+   "where": "3.4 631,490",
+   "doc": "631,490",
+   "calc": "631,490",
+   "ok": true
+  },
+  {
+   "where": "3.2 baseline-only RTM 95.1",
+   "doc": "95.1",
+   "calc": "95.1",
+   "ok": true
+  },
+  {
+   "where": "3.2 baseline-only MPC 92.6",
+   "doc": "92.6",
+   "calc": "92.6",
+   "ok": true
+  },
+  {
+   "where": "3.2 neither RTM 51.0",
+   "doc": "51.0",
+   "calc": "51.0",
+   "ok": true
+  },
+  {
+   "where": "3.2 neither MPC 25.9",
+   "doc": "25.9",
+   "calc": "25.9",
+   "ok": true
+  }
+ ]
+}

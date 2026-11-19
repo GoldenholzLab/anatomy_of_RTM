@@ -1,0 +1,5 @@
+word/footnotes.xml:  RTM, regression to the mean; MPC, median percentage change; FAR, false-alarm rate.
+MEDIA:
+  word/media/image1.png 131551
+  word/media/image2.png 309809
+TRACKED ins=0 del=0

@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "source_sha256": "cb472e5bd00879f375e1f4bd91b10238be1b64e26b5e8438d2ef63676660e6c8",
+  "original_cohort_and_outputs_unchanged_n": 24,
+  "protected_docx_unchanged_n": 4,
+  "before_after_patient_arrays": [
+    {
+      "condition": "baseline_perfect",
+      "n_people": 1000000,
+      "n_arrays": 22,
+      "changed_arrays": []
+    },
+    {
+      "condition": "type1_transient_msf",
+      "n_people": 1000000,
+      "n_arrays": 22,
+      "changed_arrays": []
+    },
+    {
+      "condition": "type2_threshold_8",
+      "n_people": 1000000,
+      "n_arrays": 22,
+      "changed_arrays": []
+    },
+    {
+      "condition": "type3_far_1_per_day",
+      "n_people": 1000000,
+      "n_arrays": 22,
+      "changed_arrays": []
+    },
+    {
+      "condition": "type3_far_1_per_month",
+      "n_people": 1000000,
+      "n_arrays": 22,
+      "changed_arrays": []
+    },
+    {
+      "condition": "type3_far_1_per_week",
+      "n_people": 1000000,
+      "n_arrays": 22,
+      "changed_arrays": []
+    },
+    {
+      "condition": "type3_sensitivity_70",
+      "n_people": 1000000,
+      "n_arrays": 22,
+      "changed_arrays": []
+    },
+    {
+      "condition": "type3_sensitivity_80",
+      "n_people": 1000000,
+      "n_arrays": 22,
+      "changed_arrays": []
+    },
+    {
+      "condition": "type3_sensitivity_90",
+      "n_people": 1000000,
+      "n_arrays": 22,
+      "changed_arrays": []
+    }
+  ],
+  "identical_summary_csvs": [
+    "condition_summary.csv",
+    "first_eligible_windows.csv",
+    "type1_overlap_summary.csv",
+    "condition_summary_with_deltas.csv",
+    "paper_table.csv",
+    "paired_classification.csv",
+    "fixed_enrollment_summary.csv"
+  ],
+  "docx": {
+    "changed_package_parts": [
+      "word/document.xml",
+      "word/media/image1.png",
+      "word/media/image2.png"
+    ],
+    "preserved_element_counts": {
+      "w:instrText": 12,
+      "w:fldChar": 36,
+      "w:commentRangeStart": 0,
+      "w:commentRangeEnd": 0,
+      "w:commentReference": 0,
+      "w:bookmarkStart": 0,
+      "w:bookmarkEnd": 0,
+      "w:ins": 0,
+      "w:del": 0,
+      "m:oMath": 0
+    },
+    "table_numeric_cells_checked": 45,
+    "embedded_figures_match": true,
+    "sha256": "0246b1ab00a97eb7cb0a54bb2ab273c0addd4447f0c783454d200bda6ea392e0",
+    "word_visual_verification": "pending coordinator"
+  },
+  "git": {
+    "branch": "main",
+    "head": "1a4955ee9715588868f214836ea394db361a39eb",
+    "unchanged": true
+  }
+}

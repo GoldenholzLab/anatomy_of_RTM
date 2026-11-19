@@ -1,0 +1,17 @@
+condition,overlap,shock_msf_relation,n_raw,n_eligible,fraction_eligible,fraction_RTM,MPC
+type1_transient_msf,all,all,1000000,756179,0.756179,0.5829545649905644,36.8421052631579
+type1_transient_msf,baseline,all,130289,130289,1.0,0.9510089109594824,92.5925925925926
+type1_transient_msf,baseline_and_test,all,23659,23659,1.0,0.6867576820660214,38.46153846153846
+type1_transient_msf,neither,all,546355,546355,1.0,0.5098479926055404,25.92592592592592
+type1_transient_msf,not_eligible,all,243821,0,0.0,nan,nan
+type1_transient_msf,test,all,55876,55876,1.0,0.3956260290643568,40.0
+type1_transient_msf,baseline,higher,122992,122992,1.0,0.9892513334200599,93.33333333333333
+type1_transient_msf,baseline,lower,7297,7297,1.0,0.3064272988899548,-5.555555555555558
+type1_transient_msf,baseline_and_test,higher,18815,18815,1.0,0.7833643369651874,41.666666666666664
+type1_transient_msf,baseline_and_test,lower,4844,4844,1.0,0.3115194054500413,17.287356321839084
+type1_transient_msf,neither,higher,163783,163783,1.0,0.5469859509228675,33.333333333333336
+type1_transient_msf,neither,lower,382572,382572,1.0,0.4939488514580262,21.212121212121215
+type1_transient_msf,not_eligible,higher,175190,0,0.0,nan,nan
+type1_transient_msf,not_eligible,lower,68631,0,0.0,nan,nan
+type1_transient_msf,test,higher,18615,18615,1.0,0.37759871071716355,-8.333333333333325
+type1_transient_msf,test,lower,37261,37261,1.0,0.4046321891521967,53.84615384615385

@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "source_sha256": "3c623ad1f2e2b0ef979d93909d80de68e5895d18c26dcb3324b6d92336614cf0",
+  "run_manifest_sha256": "f5e2d5c94fd0159981392d23e9c3ba8b0919b1ca348db23fe6a1801911b688ca",
+  "sample_seed": 11212026,
+  "sample_ids_sha256": "94a1789fc378e6b685cb878f2457902e856a9bd69bd634abebc92a12b685fa84",
+  "cohort_dir": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/outputs/rtm123_1m",
+  "output_dir": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/outputs/rtm123_type3_1m",
+  "conditions": [
+    {
+      "condition": "baseline_perfect",
+      "sample_n": 500,
+      "differences": []
+    },
+    {
+      "condition": "type1_transient_msf",
+      "sample_n": 500,
+      "differences": []
+    },
+    {
+      "condition": "type2_threshold_8",
+      "sample_n": 500,
+      "differences": []
+    },
+    {
+      "condition": "type3_sensitivity_90",
+      "sample_n": 500,
+      "differences": []
+    },
+    {
+      "condition": "type3_sensitivity_80",
+      "sample_n": 500,
+      "differences": []
+    },
+    {
+      "condition": "type3_sensitivity_70",
+      "sample_n": 500,
+      "differences": []
+    },
+    {
+      "condition": "type3_far_1_per_month",
+      "sample_n": 500,
+      "differences": []
+    },
+    {
+      "condition": "type3_far_1_per_week",
+      "sample_n": 500,
+      "differences": []
+    },
+    {
+      "condition": "type3_far_1_per_day",
+      "sample_n": 500,
+      "differences": []
+    }
+  ],
+  "cohort_generation_sample_n": 500,
+  "cohort_generation_differences": [],
+  "current_simulator": {
+    "source_path": "/Users/dgoldenh/Documents/GitHub/CHOCOLATE/realSim_turbo.py",
+    "source_sha256": "b038553df164160290b427e577ba53cb6b983db38f00a281f9a773a91a1d6b99",
+    "numpy_version": "2.5.4"
+  },
+  "limit": "Type1 replacement segments reuse the production generator; detector, eligibility, rational RTM and fixed-window calculations are independently implemented. Sampled regeneration agreement does not prove the historical generator version or full-cohort identity."
+}

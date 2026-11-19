@@ -1,0 +1,17 @@
+{
+  "all_snapshotted_user_files_unchanged": true,
+  "differences": [],
+  "source_dependency_status": "?? realSim_turbo.py",
+  "simulator_tracked": false,
+  "anatomy_of_RTM_Seizure.docx": {
+    "sha256": "6119f8107c62b4de9f48c852894f795cbcbee88bfc9804ef68da64bd63b40ce0",
+    "field_instructions": 13,
+    "omml_all_parts": 0
+  },
+  "anatomy_of_RTM_Seizure_Supplement.docx": {
+    "sha256": "cd7195edc9e75b6a171a6b4ca9eb4f57fa02d597b90ffa4bc8a19617f0699110",
+    "field_instructions": 1,
+    "omml_all_parts": 0
+  },
+  "type1_overlap_direction_independent_recalculation": "12 strata PASS"
+}

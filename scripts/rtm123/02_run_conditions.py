@@ -19,6 +19,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--cohort-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--chunk-size", type=int, default=512)
+    parser.add_argument("--workers", type=int, default=1)
     parser.add_argument("--resume", action="store_true", default=True)
     parser.add_argument("--no-resume", action="store_false", dest="resume")
     return parser
@@ -31,6 +32,7 @@ def main() -> None:
         output_dir=args.output_dir,
         chunk_size=args.chunk_size,
         resume=args.resume,
+        workers=args.workers,
     )
 
 

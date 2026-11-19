@@ -1,0 +1,34 @@
+{
+  "original_protected_file_hashes_unchanged": true,
+  "analysis_source_sha256": "fd9266049bb14272258d8084da240cbf2546283e368ea33b6a55a2ad383c0f54",
+  "primary_main_table_values_unchanged": true,
+  "original_supplement_numerics_preserved": true,
+  "all_11_supplement_tables_preserved_after_native_save": true,
+  "original_11_citation_fields_remain_live_with_same_item_uris": true,
+  "final_live_citation_fields": 15,
+  "final_live_bibliography_fields": 1,
+  "bibliography_entries": 21,
+  "main_figure_bytes_unchanged": true,
+  "abstract_words": 234,
+  "main_text_words": 2320,
+  "native_word_final_verification_complete": true,
+  "final_review_copies": [
+    {
+      "path": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/output/critical_review_2026-11-12/parent/consolidated_draft/anatomy_of_RTM_Seizure_critical_review.docx",
+      "sha256": "953cf78224b523ed8d4b7ea7efeb533e1fc9f653be7b3aff444145d905dcc316",
+      "pages": 17,
+      "native_word_visual_review_complete": true,
+      "native_word_final_save_complete": true,
+      "tables": 1
+    },
+    {
+      "path": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/output/critical_review_2026-11-12/parent/consolidated_draft/anatomy_of_RTM_Seizure_Supplement_critical_review.docx",
+      "sha256": "4c07db19873a5d082476a8adffdc41ea261052fdf4eadf80923813522cf820ec",
+      "pages": 12,
+      "native_word_visual_review_complete": true,
+      "native_word_final_save_complete": true,
+      "tables": 11
+    }
+  ],
+  "public_release_pending": true
+}

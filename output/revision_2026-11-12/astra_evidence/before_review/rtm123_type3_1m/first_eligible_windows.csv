@@ -1,0 +1,298 @@
+condition,label,first_eligible_month,n_patients,fraction_raw
+baseline_perfect,"Baseline: perfect detector, 4/month",-1,350902,0.350902
+baseline_perfect,"Baseline: perfect detector, 4/month",0,330389,0.330389
+baseline_perfect,"Baseline: perfect detector, 4/month",1,69656,0.069656
+baseline_perfect,"Baseline: perfect detector, 4/month",2,55723,0.055723
+baseline_perfect,"Baseline: perfect detector, 4/month",3,29971,0.029971
+baseline_perfect,"Baseline: perfect detector, 4/month",4,22057,0.022057
+baseline_perfect,"Baseline: perfect detector, 4/month",5,16609,0.016609
+baseline_perfect,"Baseline: perfect detector, 4/month",6,13523,0.013523
+baseline_perfect,"Baseline: perfect detector, 4/month",7,11239,0.011239
+baseline_perfect,"Baseline: perfect detector, 4/month",8,9624,0.009624
+baseline_perfect,"Baseline: perfect detector, 4/month",9,8546,0.008546
+baseline_perfect,"Baseline: perfect detector, 4/month",10,7506,0.007506
+baseline_perfect,"Baseline: perfect detector, 4/month",11,6599,0.006599
+baseline_perfect,"Baseline: perfect detector, 4/month",12,6141,0.006141
+baseline_perfect,"Baseline: perfect detector, 4/month",13,5438,0.005438
+baseline_perfect,"Baseline: perfect detector, 4/month",14,5009,0.005009
+baseline_perfect,"Baseline: perfect detector, 4/month",15,4657,0.004657
+baseline_perfect,"Baseline: perfect detector, 4/month",16,4342,0.004342
+baseline_perfect,"Baseline: perfect detector, 4/month",17,4087,0.004087
+baseline_perfect,"Baseline: perfect detector, 4/month",18,3702,0.003702
+baseline_perfect,"Baseline: perfect detector, 4/month",19,3549,0.003549
+baseline_perfect,"Baseline: perfect detector, 4/month",20,3364,0.003364
+baseline_perfect,"Baseline: perfect detector, 4/month",21,3156,0.003156
+baseline_perfect,"Baseline: perfect detector, 4/month",22,2917,0.002917
+baseline_perfect,"Baseline: perfect detector, 4/month",23,2749,0.002749
+baseline_perfect,"Baseline: perfect detector, 4/month",24,2698,0.002698
+baseline_perfect,"Baseline: perfect detector, 4/month",25,2614,0.002614
+baseline_perfect,"Baseline: perfect detector, 4/month",26,2466,0.002466
+baseline_perfect,"Baseline: perfect detector, 4/month",27,2423,0.002423
+baseline_perfect,"Baseline: perfect detector, 4/month",28,2176,0.002176
+baseline_perfect,"Baseline: perfect detector, 4/month",29,2067,0.002067
+baseline_perfect,"Baseline: perfect detector, 4/month",30,2118,0.002118
+baseline_perfect,"Baseline: perfect detector, 4/month",31,1983,0.001983
+type1_transient_msf,Type 1: transient 2-month mSF change,-1,243821,0.243821
+type1_transient_msf,Type 1: transient 2-month mSF change,0,326853,0.326853
+type1_transient_msf,Type 1: transient 2-month mSF change,1,72535,0.072535
+type1_transient_msf,Type 1: transient 2-month mSF change,2,62539,0.062539
+type1_transient_msf,Type 1: transient 2-month mSF change,3,37449,0.037449
+type1_transient_msf,Type 1: transient 2-month mSF change,4,27302,0.027302
+type1_transient_msf,Type 1: transient 2-month mSF change,5,21291,0.021291
+type1_transient_msf,Type 1: transient 2-month mSF change,6,17749,0.017749
+type1_transient_msf,Type 1: transient 2-month mSF change,7,15334,0.015334
+type1_transient_msf,Type 1: transient 2-month mSF change,8,13277,0.013277
+type1_transient_msf,Type 1: transient 2-month mSF change,9,12069,0.012069
+type1_transient_msf,Type 1: transient 2-month mSF change,10,11020,0.01102
+type1_transient_msf,Type 1: transient 2-month mSF change,11,10102,0.010102
+type1_transient_msf,Type 1: transient 2-month mSF change,12,9541,0.009541
+type1_transient_msf,Type 1: transient 2-month mSF change,13,8819,0.008819
+type1_transient_msf,Type 1: transient 2-month mSF change,14,8324,0.008324
+type1_transient_msf,Type 1: transient 2-month mSF change,15,7915,0.007915
+type1_transient_msf,Type 1: transient 2-month mSF change,16,7556,0.007556
+type1_transient_msf,Type 1: transient 2-month mSF change,17,7162,0.007162
+type1_transient_msf,Type 1: transient 2-month mSF change,18,6827,0.006827
+type1_transient_msf,Type 1: transient 2-month mSF change,19,6642,0.006642
+type1_transient_msf,Type 1: transient 2-month mSF change,20,6370,0.00637
+type1_transient_msf,Type 1: transient 2-month mSF change,21,6198,0.006198
+type1_transient_msf,Type 1: transient 2-month mSF change,22,5962,0.005962
+type1_transient_msf,Type 1: transient 2-month mSF change,23,5766,0.005766
+type1_transient_msf,Type 1: transient 2-month mSF change,24,5537,0.005537
+type1_transient_msf,Type 1: transient 2-month mSF change,25,5556,0.005556
+type1_transient_msf,Type 1: transient 2-month mSF change,26,5343,0.005343
+type1_transient_msf,Type 1: transient 2-month mSF change,27,5293,0.005293
+type1_transient_msf,Type 1: transient 2-month mSF change,28,4999,0.004999
+type1_transient_msf,Type 1: transient 2-month mSF change,29,4981,0.004981
+type1_transient_msf,Type 1: transient 2-month mSF change,30,5066,0.005066
+type1_transient_msf,Type 1: transient 2-month mSF change,31,4802,0.004802
+type2_threshold_8,Type 2: eligibility threshold 8/month,-1,595732,0.595732
+type2_threshold_8,Type 2: eligibility threshold 8/month,0,186294,0.186294
+type2_threshold_8,Type 2: eligibility threshold 8/month,1,47373,0.047373
+type2_threshold_8,Type 2: eligibility threshold 8/month,2,34916,0.034916
+type2_threshold_8,Type 2: eligibility threshold 8/month,3,20616,0.020616
+type2_threshold_8,Type 2: eligibility threshold 8/month,4,14889,0.014889
+type2_threshold_8,Type 2: eligibility threshold 8/month,5,11388,0.011388
+type2_threshold_8,Type 2: eligibility threshold 8/month,6,9202,0.009202
+type2_threshold_8,Type 2: eligibility threshold 8/month,7,7491,0.007491
+type2_threshold_8,Type 2: eligibility threshold 8/month,8,6586,0.006586
+type2_threshold_8,Type 2: eligibility threshold 8/month,9,5662,0.005662
+type2_threshold_8,Type 2: eligibility threshold 8/month,10,5235,0.005235
+type2_threshold_8,Type 2: eligibility threshold 8/month,11,4771,0.004771
+type2_threshold_8,Type 2: eligibility threshold 8/month,12,4222,0.004222
+type2_threshold_8,Type 2: eligibility threshold 8/month,13,3961,0.003961
+type2_threshold_8,Type 2: eligibility threshold 8/month,14,3729,0.003729
+type2_threshold_8,Type 2: eligibility threshold 8/month,15,3376,0.003376
+type2_threshold_8,Type 2: eligibility threshold 8/month,16,3173,0.003173
+type2_threshold_8,Type 2: eligibility threshold 8/month,17,2839,0.002839
+type2_threshold_8,Type 2: eligibility threshold 8/month,18,2716,0.002716
+type2_threshold_8,Type 2: eligibility threshold 8/month,19,2591,0.002591
+type2_threshold_8,Type 2: eligibility threshold 8/month,20,2527,0.002527
+type2_threshold_8,Type 2: eligibility threshold 8/month,21,2369,0.002369
+type2_threshold_8,Type 2: eligibility threshold 8/month,22,2234,0.002234
+type2_threshold_8,Type 2: eligibility threshold 8/month,23,2088,0.002088
+type2_threshold_8,Type 2: eligibility threshold 8/month,24,2049,0.002049
+type2_threshold_8,Type 2: eligibility threshold 8/month,25,1847,0.001847
+type2_threshold_8,Type 2: eligibility threshold 8/month,26,1918,0.001918
+type2_threshold_8,Type 2: eligibility threshold 8/month,27,1848,0.001848
+type2_threshold_8,Type 2: eligibility threshold 8/month,28,1612,0.001612
+type2_threshold_8,Type 2: eligibility threshold 8/month,29,1679,0.001679
+type2_threshold_8,Type 2: eligibility threshold 8/month,30,1571,0.001571
+type2_threshold_8,Type 2: eligibility threshold 8/month,31,1496,0.001496
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",-1,378856,0.378856
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",0,300951,0.300951
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",1,68841,0.068841
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",2,55422,0.055422
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",3,30376,0.030376
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",4,22339,0.022339
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",5,16722,0.016722
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",6,13747,0.013747
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",7,11296,0.011296
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",8,9816,0.009816
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",9,8566,0.008566
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",10,7585,0.007585
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",11,6715,0.006715
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",12,6126,0.006126
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",13,5549,0.005549
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",14,5151,0.005151
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",15,4743,0.004743
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",16,4370,0.00437
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",17,4103,0.004103
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",18,3785,0.003785
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",19,3662,0.003662
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",20,3370,0.00337
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",21,3200,0.0032
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",22,3036,0.003036
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",23,2836,0.002836
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",24,2721,0.002721
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",25,2617,0.002617
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",26,2523,0.002523
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",27,2412,0.002412
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",28,2317,0.002317
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",29,2164,0.002164
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",30,2103,0.002103
+type3_sensitivity_90,"Sensitivity 90%, FAR 0/day",31,1980,0.00198
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",-1,410242,0.410242
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",0,268657,0.268657
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",1,67388,0.067388
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",2,54802,0.054802
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",3,30830,0.03083
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",4,22598,0.022598
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",5,17016,0.017016
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",6,13840,0.01384
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",7,11375,0.011375
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",8,9756,0.009756
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",9,8572,0.008572
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",10,7678,0.007678
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",11,6847,0.006847
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",12,6227,0.006227
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",13,5668,0.005668
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",14,5304,0.005304
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",15,4743,0.004743
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",16,4412,0.004412
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",17,4162,0.004162
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",18,3860,0.00386
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",19,3744,0.003744
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",20,3453,0.003453
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",21,3363,0.003363
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",22,3092,0.003092
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",23,2887,0.002887
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",24,2802,0.002802
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",25,2727,0.002727
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",26,2547,0.002547
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",27,2508,0.002508
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",28,2400,0.0024
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",29,2230,0.00223
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",30,2191,0.002191
+type3_sensitivity_80,"Sensitivity 80%, FAR 0/day",31,2079,0.002079
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",-1,448110,0.44811
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",0,233390,0.23339
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",1,65079,0.065079
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",2,53306,0.053306
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",3,30788,0.030788
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",4,23143,0.023143
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",5,17164,0.017164
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",6,13837,0.013837
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",7,11345,0.011345
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",8,9838,0.009838
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",9,8648,0.008648
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",10,7751,0.007751
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",11,6771,0.006771
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",12,6080,0.00608
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",13,5723,0.005723
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",14,5230,0.00523
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",15,4877,0.004877
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",16,4494,0.004494
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",17,4126,0.004126
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",18,3930,0.00393
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",19,3770,0.00377
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",20,3564,0.003564
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",21,3364,0.003364
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",22,3125,0.003125
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",23,2964,0.002964
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",24,2826,0.002826
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",25,2735,0.002735
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",26,2569,0.002569
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",27,2512,0.002512
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",28,2397,0.002397
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",29,2189,0.002189
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",30,2231,0.002231
+type3_sensitivity_70,"Sensitivity 70%, FAR 0/day",31,2124,0.002124
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",-1,304288,0.304288
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",0,344823,0.344823
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",1,67814,0.067814
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",2,59331,0.059331
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",3,31810,0.03181
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",4,24523,0.024523
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",5,18915,0.018915
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",6,15763,0.015763
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",7,12924,0.012924
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",8,11276,0.011276
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",9,9764,0.009764
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",10,8848,0.008848
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",11,7851,0.007851
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",12,7248,0.007248
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",13,6432,0.006432
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",14,6176,0.006176
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",15,5517,0.005517
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",16,5335,0.005335
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",17,4873,0.004873
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",18,4535,0.004535
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",19,4256,0.004256
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",20,4033,0.004033
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",21,3888,0.003888
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",22,3507,0.003507
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",23,3521,0.003521
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",24,3252,0.003252
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",25,3173,0.003173
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",26,3018,0.003018
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",27,2934,0.002934
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",28,2796,0.002796
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",29,2726,0.002726
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",30,2479,0.002479
+type3_far_1_per_month,"FAR 1/month, sensitivity 100%",31,2371,0.002371
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",-1,230680,0.23068
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",0,315973,0.315973
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",1,70417,0.070417
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",2,69114,0.069114
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",3,39464,0.039464
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",4,31773,0.031773
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",5,24881,0.024881
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",6,21205,0.021205
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",7,18054,0.018054
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",8,15840,0.01584
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",9,14050,0.01405
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",10,12590,0.01259
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",11,11513,0.011513
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",12,10454,0.010454
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",13,9528,0.009528
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",14,9040,0.00904
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",15,8338,0.008338
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",16,7747,0.007747
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",17,7285,0.007285
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",18,7031,0.007031
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",19,6672,0.006672
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",20,6191,0.006191
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",21,5851,0.005851
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",22,5574,0.005574
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",23,5245,0.005245
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",24,5142,0.005142
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",25,4756,0.004756
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",26,4703,0.004703
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",27,4514,0.004514
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",28,4359,0.004359
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",29,4220,0.00422
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",30,3956,0.003956
+type3_far_1_per_week,"FAR 1/week, sensitivity 100%",31,3840,0.00384
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",-1,14679,0.014679
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",0,352616,0.352616
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",1,105686,0.105686
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",2,104257,0.104257
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",3,67317,0.067317
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",4,54845,0.054845
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",5,43526,0.043526
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",6,35806,0.035806
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",7,29958,0.029958
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",8,25354,0.025354
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",9,21674,0.021674
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",10,18550,0.01855
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",11,16168,0.016168
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",12,14066,0.014066
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",13,12092,0.012092
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",14,10732,0.010732
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",15,9479,0.009479
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",16,8276,0.008276
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",17,7237,0.007237
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",18,6457,0.006457
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",19,5660,0.00566
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",20,5073,0.005073
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",21,4555,0.004555
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",22,4083,0.004083
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",23,3554,0.003554
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",24,3229,0.003229
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",25,2943,0.002943
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",26,2614,0.002614
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",27,2295,0.002295
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",28,2067,0.002067
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",29,1884,0.001884
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",30,1713,0.001713
+type3_far_1_per_day,"FAR 1/day, sensitivity 100%",31,1555,0.001555

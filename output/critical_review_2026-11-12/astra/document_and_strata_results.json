@@ -1,0 +1,136 @@
+{
+  "checks_n": 785,
+  "failures": [],
+  "tables": {
+    "main": 1,
+    "supplement": 3
+  },
+  "omml_count": {
+    "main": 0,
+    "supplement": 0
+  },
+  "strata": [
+    {
+      "overlap": "all",
+      "direction": "all",
+      "n": 756179,
+      "rtm_pct": 58.29545649905644,
+      "MPC": 36.8421052631579
+    },
+    {
+      "overlap": "baseline",
+      "direction": "all",
+      "n": 130289,
+      "rtm_pct": 95.10089109594824,
+      "MPC": 92.5925925925926
+    },
+    {
+      "overlap": "baseline_and_test",
+      "direction": "all",
+      "n": 23659,
+      "rtm_pct": 68.67576820660214,
+      "MPC": 38.46153846153846
+    },
+    {
+      "overlap": "neither",
+      "direction": "all",
+      "n": 546355,
+      "rtm_pct": 50.984799260554034,
+      "MPC": 25.92592592592592
+    },
+    {
+      "overlap": "not_eligible",
+      "direction": "all",
+      "n": 0,
+      "rtm_pct": null,
+      "MPC": null
+    },
+    {
+      "overlap": "test",
+      "direction": "all",
+      "n": 55876,
+      "rtm_pct": 39.56260290643568,
+      "MPC": 40.0
+    },
+    {
+      "overlap": "baseline",
+      "direction": "higher",
+      "n": 122992,
+      "rtm_pct": 98.92513334200599,
+      "MPC": 93.33333333333333
+    },
+    {
+      "overlap": "baseline",
+      "direction": "lower",
+      "n": 7297,
+      "rtm_pct": 30.64272988899548,
+      "MPC": -5.555555555555558
+    },
+    {
+      "overlap": "baseline_and_test",
+      "direction": "higher",
+      "n": 18815,
+      "rtm_pct": 78.33643369651874,
+      "MPC": 41.666666666666664
+    },
+    {
+      "overlap": "baseline_and_test",
+      "direction": "lower",
+      "n": 4844,
+      "rtm_pct": 31.15194054500413,
+      "MPC": 17.287356321839084
+    },
+    {
+      "overlap": "neither",
+      "direction": "higher",
+      "n": 163783,
+      "rtm_pct": 54.69859509228675,
+      "MPC": 33.333333333333336
+    },
+    {
+      "overlap": "neither",
+      "direction": "lower",
+      "n": 382572,
+      "rtm_pct": 49.39488514580262,
+      "MPC": 21.212121212121215
+    },
+    {
+      "overlap": "not_eligible",
+      "direction": "higher",
+      "n": 0,
+      "rtm_pct": null,
+      "MPC": null
+    },
+    {
+      "overlap": "not_eligible",
+      "direction": "lower",
+      "n": 0,
+      "rtm_pct": null,
+      "MPC": null
+    },
+    {
+      "overlap": "test",
+      "direction": "higher",
+      "n": 18615,
+      "rtm_pct": 37.759871071716354,
+      "MPC": -8.333333333333325
+    },
+    {
+      "overlap": "test",
+      "direction": "lower",
+      "n": 37261,
+      "rtm_pct": 40.46321891521967,
+      "MPC": 53.84615384615385
+    }
+  ],
+  "cycles": {
+    "sample_n": 1024,
+    "nonzero_cycle_modulation": 10,
+    "raw_diary_matches": 1024,
+    "probability_nonzero_cycle_from_defaults": 0.011649,
+    "half_day_and_daily": "excluded by sampFreq > 2*frequency at sampFreq=1",
+    "weekly": "zero amplitude",
+    "4_to_45_day": "zero selection probability",
+    "90_to_450_day": "probability 0.011649; retained nonzero waveform normalized to unit peak"
+  }
+}

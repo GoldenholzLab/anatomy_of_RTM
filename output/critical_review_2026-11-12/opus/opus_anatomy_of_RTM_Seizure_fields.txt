@@ -1,0 +1,12 @@
+INSTR	=>	CACHED
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"rtm123_1_7","properties":{"unsorted":false,"formattedCitation":"[1\\uc0\\u8211{}7]","plainCitation":"[1–7]","noteIndex":0},"citationItems":[{"id":677,"uri	=>	[1–7]
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"rtm123_1_3","properties":{"unsorted":false,"formattedCitation":"[1\\uc0\\u8211{}3]","plainCitation":"[1–3]","noteIndex":0},"citationItems":[{"id":677,"uri	=>	[1–3]
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"rtm123_8_12","properties":{"unsorted":false,"formattedCitation":"[8\\uc0\\u8211{}12]","plainCitation":"[8–12]","noteIndex":0},"citationItems":[{"id":683,"	=>	[8–12]
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"rtm123_8","properties":{"unsorted":false,"formattedCitation":"[8]","plainCitation":"[8]","noteIndex":0},"citationItems":[{"id":683,"uris":["http://zotero.	=>	[8]
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"rtm123_1_13_14","properties":{"unsorted":false,"formattedCitation":"[1,13,14]","plainCitation":"[1,13,14]","noteIndex":0},"citationItems":[{"id":677,"uris	=>	[1,13,14]
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"nihbfJoj","properties":{"unsorted":false,"formattedCitation":"[12]","plainCitation":"[12]","noteIndex":0},"citationItems":[{"id":687,"uris":["http://zoter	=>	[12]
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"rQg4ZKFn","properties":{"unsorted":false,"formattedCitation":"[1]","plainCitation":"[1]","noteIndex":0},"citationItems":[{"id":677,"uris":["http://zotero.	=>	[1]
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"rtm123_9_12","properties":{"unsorted":false,"formattedCitation":"[9\\uc0\\u8211{}12]","plainCitation":"[9–12]","noteIndex":0},"citationItems":[{"id":684,"	=>	[9–12]
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"rtm123_4_15","properties":{"unsorted":false,"formattedCitation":"[4,15]","plainCitation":"[4,15]","noteIndex":0},"citationItems":[{"id":679,"uris":["http:	=>	[4,15]
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"XmxyCI8b","properties":{"unsorted":false,"formattedCitation":"[16]","plainCitation":"[16]","noteIndex":0},"citationItems":[{"id":691,"uris":["http://zoter	=>	[16]
+ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"SzQszBmA","properties":{"unsorted":false,"formattedCitation":"[17,18]","plainCitation":"[17,18]","noteIndex":0},"citationItems":[{"id":696,"uris":["http:/	=>	[17,18]

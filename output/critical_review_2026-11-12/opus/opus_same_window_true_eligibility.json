@@ -1,0 +1,36 @@
+{
+ "n_subsample": 100000,
+ "seed": 5,
+ "type3_sensitivity_70": {
+  "selected": 55064,
+  "pct_selected_true_eligible_same_window": 100.0,
+  "type3_pct_among_true_eligible_same_window": 7.623855876797908,
+  "type3_pct_among_not_true_eligible_same_window": null,
+  "share_of_type3_not_true_eligible_same_window": 0.0,
+  "measured_rtm_pct_among_true_eligible_same_window": 59.020412610780184
+ },
+ "type3_far_1_per_month": {
+  "selected": 69553,
+  "pct_selected_true_eligible_same_window": 75.85438442626486,
+  "type3_pct_among_true_eligible_same_window": 3.976572717451051,
+  "type3_pct_among_not_true_eligible_same_window": 19.23305942598547,
+  "share_of_type3_not_true_eligible_same_window": 0.6062312312312312,
+  "measured_rtm_pct_among_true_eligible_same_window": 50.76100760059895
+ },
+ "type3_far_1_per_week": {
+  "selected": 76885,
+  "pct_selected_true_eligible_same_window": 60.81160174286272,
+  "type3_pct_among_true_eligible_same_window": 8.157416319110256,
+  "type3_pct_among_not_true_eligible_same_window": 39.93693992698307,
+  "share_of_type3_not_true_eligible_same_window": 0.7593235312677479,
+  "measured_rtm_pct_among_true_eligible_same_window": 52.09710191423377
+ },
+ "type3_far_1_per_day": {
+  "selected": 98530,
+  "pct_selected_true_eligible_same_window": 39.67827057748909,
+  "type3_pct_among_true_eligible_same_window": 15.521166389563884,
+  "type3_pct_among_not_true_eligible_same_window": 58.472280642718935,
+  "share_of_type3_not_true_eligible_same_window": 0.8513510203081747,
+  "measured_rtm_pct_among_true_eligible_same_window": 51.7150530758409
+ }
+}

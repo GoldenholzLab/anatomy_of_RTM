@@ -1,0 +1,20 @@
+{
+  "source": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/anatomy_of_RTM_JCE.docx",
+  "output": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/anatomy_of_RTM_revised.docx",
+  "field_instructions_sha256": "8b133a14385f56e9723f963a61c240304b531689e1f6dde03ab0590943ebbe9e",
+  "source_docx_sha256": "7c98f9281de5ac16acd79ceb550b7fd2a88f475737a44d4555c654e16bbff477",
+  "output_docx_sha256": "0246b1ab00a97eb7cb0a54bb2ab273c0addd4447f0c783454d200bda6ea392e0",
+  "revision_script_sha256": "a8a606912a5563829874d2227fee2dc399a854acba5ffc118d350a929b100b53",
+  "analysis_version": "paired-type3-v3",
+  "analysis_inputs_sha256": {
+    "outputs/rtm123_type3_1m/run_manifest.json": "f5e2d5c94fd0159981392d23e9c3ba8b0919b1ca348db23fe6a1801911b688ca",
+    "outputs/rtm123_type3_1m/condition_summary.csv": "a3a37d0c2805ad71ab97227ddecbce05d0f6dd5a957b630646d68c1d0846b06a",
+    "outputs/rtm123_type3_1m/type1_overlap_summary.csv": "79f86b7ee2e598660a8211cb33c783bee576cdd72753d6afbff49fe726847ff4",
+    "outputs/rtm123_type3_1m/validation.json": "e2eba69f8a16512a37452cffd0ba7a2ff01f83a5bafff4b5473553d8bae4b3cd",
+    "outputs/rtm123_type3_1m/rtm123_explainer.png": "1e55270e5161e2f64c24fcb86f17a605d53a77e2deb6cd3f2ec049b59b964173",
+    "outputs/rtm123_type3_1m/rtm123_summary.png": "e599f344db0fa2a72b85d31c0b3ee35bd3297d87e9db569d7f9e3e4a6bc9eddd",
+    "output/revision_2026-11-12/revision_protocol.md": "8b519cd425889979deaa34d91256d0f2c52eeb6de8b1655979fa8245e897bfc6",
+    "scripts/rtm123/05_make_explainer_figure.py": "e4722fdbb2c950c020e7b2ef2fb7220cb8b6a126007ce1d4d0de7a969a500377"
+  },
+  "word_visual_verification": "pending coordinator verification and final save"
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "part": "word/footnotes.xml",
+    "visible_text": [
+      " RTM, regression to the mean; MPC, median percentage change; FAR, false-alarm rate."
+    ],
+    "instructions": []
+  },
+  {
+    "part": "word/header1.xml",
+    "visible_text": [
+      "Regression to the mean in epilepsy trials"
+    ],
+    "instructions": []
+  },
+  {
+    "part": "word/footer1.xml",
+    "visible_text": [
+      "1"
+    ],
+    "instructions": [
+      " PAGE "
+    ]
+  }
+]

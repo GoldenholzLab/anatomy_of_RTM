@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from concurrent.futures import ProcessPoolExecutor
 from dataclasses import asdict, dataclass
+from fractions import Fraction
 import base64
 import csv
 import hashlib
@@ -21,6 +22,7 @@ import platform
 import subprocess
 import sys
 import time
+import zipfile
 from typing import Callable, Iterable
 
 import numpy as np
@@ -33,8 +35,10 @@ DEFAULT_MASTER_SEED = 20260531
 DEFAULT_MONTHLY_MIN = 3
 DEFAULT_MAX_SEIZURE_FREE_DAYS = 25
 EPSILON = 1e-12
+ANALYSIS_VERSION = "paired-type3-v3"
 
 _CHOCOLATE_MODULE = None
+_CHOCOLATE_SOURCE = None
 
 
 @dataclass(frozen=True)
@@ -89,7 +93,7 @@ def chocolate_repo_path() -> Path:
 def load_chocolate_module():
     """Load CHOCOLATE's `realSim_turbo.py` without modifying that repository."""
 
-    global _CHOCOLATE_MODULE
+    global _CHOCOLATE_MODULE, _CHOCOLATE_SOURCE
     if _CHOCOLATE_MODULE is not None:
         return _CHOCOLATE_MODULE
 
@@ -103,9 +107,57 @@ def load_chocolate_module():
     if spec is None or spec.loader is None:
         raise ImportError(f"Could not load module spec for {module_path}.")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    # The simulator checkout is read-only, including its bytecode cache.
+    previous_bytecode_policy = sys.dont_write_bytecode
+    sys.dont_write_bytecode = True
+    try:
+        spec.loader.exec_module(module)
+    finally:
+        sys.dont_write_bytecode = previous_bytecode_policy
     _CHOCOLATE_MODULE = module
+    _CHOCOLATE_SOURCE = {
+        "source_path": str(module_path.resolve()),
+        "source_sha256": file_sha256(module_path),
+    }
     return module
+
+
+def file_sha256(path: str | Path) -> str:
+    """Hash file contents without loading large cohort files into memory."""
+
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as handle:
+        for block in iter(lambda: handle.read(8 * 1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def simulator_fingerprint() -> dict[str, str]:
+    """Identify the simulator loaded for generation or a transient replacement."""
+
+    load_chocolate_module()
+    source = dict(_CHOCOLATE_SOURCE)
+    current_path = chocolate_repo_path() / "realSim_turbo.py"
+    if (source["source_path"] != str(current_path.resolve())
+            or source["source_sha256"] != file_sha256(current_path)):
+        raise RuntimeError("Simulator source changed after import; restart the analysis process.")
+    return {**source, "numpy_version": np.__version__}
+
+
+def generation_fingerprint() -> dict[str, str]:
+    """Pin the generation wrapper as well as the imported simulator."""
+
+    return {**simulator_fingerprint(), "cohort_generator_sha256": file_sha256(__file__)}
+
+
+def cohort_fingerprint(cohort_dir: str | Path) -> dict[str, object]:
+    """Identify every retained cohort input by content, not filesystem timestamps."""
+
+    paths = cohort_paths(cohort_dir)
+    return {
+        name: {"sha256": file_sha256(paths[name]), "size_bytes": paths[name].stat().st_size}
+        for name in ("daily_counts", "latent_msf", "seeds")
+    }
 
 
 def simple_chocolates(days_needed: int, rng: np.random.Generator, default_msf: float | None = None):
@@ -149,39 +201,39 @@ def default_condition_specs() -> list[ConditionSpec]:
         ),
         ConditionSpec(
             name="type3_sensitivity_90",
-            label="Type 3: sensitivity 90%, FAR 0/day",
+            label="Sensitivity 90%, FAR 0/day",
             rtm_type="type3_sensitivity",
             sensitivity=0.90,
         ),
         ConditionSpec(
             name="type3_sensitivity_80",
-            label="Type 3: sensitivity 80%, FAR 0/day",
+            label="Sensitivity 80%, FAR 0/day",
             rtm_type="type3_sensitivity",
             sensitivity=0.80,
         ),
         ConditionSpec(
             name="type3_sensitivity_70",
-            label="Type 3: sensitivity 70%, FAR 0/day",
+            label="Sensitivity 70%, FAR 0/day",
             rtm_type="type3_sensitivity",
             sensitivity=0.70,
         ),
         ConditionSpec(
             name="type3_far_1_per_month",
-            label="Type 3: FAR 1/month, sensitivity 100%",
+            label="FAR 1/month, sensitivity 100%",
             rtm_type="type3_far",
             far_per_day=1.0 / DAYS_PER_MONTH,
             far_label="1/month",
         ),
         ConditionSpec(
             name="type3_far_1_per_week",
-            label="Type 3: FAR 1/week, sensitivity 100%",
+            label="FAR 1/week, sensitivity 100%",
             rtm_type="type3_far",
             far_per_day=1.0 / 7.0,
             far_label="1/week",
         ),
         ConditionSpec(
             name="type3_far_1_per_day",
-            label="Type 3: FAR 1/day, sensitivity 100%",
+            label="FAR 1/day, sensitivity 100%",
             rtm_type="type3_far",
             far_per_day=1.0,
             far_label="1/day",
@@ -281,7 +333,7 @@ def percent_change(baseline_mean: float, test_mean: float) -> float:
     """Compute patient-level percentage change with baseline-zero protection."""
 
     if baseline_mean <= EPSILON:
-        return 0.0
+        return float("nan")
     return float(100.0 * (1.0 - test_mean / baseline_mean))
 
 
@@ -292,6 +344,72 @@ def rtm_occurs(baseline_mean: float, test_mean: float, reference_mean: float) ->
         baseline_mean > reference_mean
         and (baseline_mean - reference_mean) > abs(test_mean - reference_mean)
     )
+
+
+def rtm_from_totals(
+    baseline_numerator: int,
+    test_numerator: int,
+    reference_total: int,
+    reference_months: int,
+    sensitivity: float = 1.0,
+    count_denominator: int = 1,
+) -> bool:
+    """Strict RTM comparison in integer arithmetic, including exact ties.
+
+    Trial totals are count numerators divided by count_denominator. The
+    reference is the finite true diary rate scaled by sensitivity. Fractions
+    allow exact monthly correction at rates such as one false alarm/week.
+    """
+    scale = Fraction(str(sensitivity)).limit_denominator(1_000_000)
+    denominator = reference_months * scale.denominator
+    ref = int(reference_total) * scale.numerator * count_denominator
+    b_distance = int(baseline_numerator) * denominator - BASELINE_MONTHS * ref
+    t_distance = int(test_numerator) * denominator - TEST_MONTHS * ref
+    return b_distance > 0 and TEST_MONTHS * b_distance > BASELINE_MONTHS * abs(t_distance)
+
+
+def paired_rtm_at_window(
+    measured_monthly: np.ndarray,
+    true_monthly: np.ndarray,
+    first_start: int,
+    sensitivity: float,
+    far_per_day: float,
+    days_per_month: int,
+) -> dict[str, object]:
+    """Compare both scales for the same selected person and trial window.
+
+    No additional true-count eligibility filter is applied. Type 3 is the
+    measured-only classification, not a difference between condition means.
+    """
+    months = len(true_monthly)
+    true_total = int(np.sum(true_monthly, dtype=np.int64))
+    reference = sensitivity * true_total / months
+    result = {"reference": reference, "true_reference": true_total / months,
+              "rtm": False, "true_rtm": False, "type3_rtm": False,
+              "true_only_rtm": False, "both_rtm": False,
+              "baseline": float("nan"), "test": float("nan"),
+              "true_baseline": float("nan"), "true_test": float("nan"),
+              "pc": float("nan")}
+    if first_start < 0:
+        return result
+    correction = Fraction(str(far_per_day)).limit_denominator(1_000_000) * days_per_month
+    q = correction.denominator
+    measured_numerators = np.rint(np.asarray(measured_monthly) * q).astype(np.int64)
+    b = slice(first_start, first_start + BASELINE_MONTHS)
+    t = slice(first_start + BASELINE_MONTHS, first_start + BASELINE_MONTHS + TEST_MONTHS)
+    bn, tn = int(measured_numerators[b].sum()), int(measured_numerators[t].sum())
+    bt, tt = int(true_monthly[b].sum()), int(true_monthly[t].sum())
+    measured_rtm = rtm_from_totals(bn, tn, true_total, months, sensitivity, q)
+    true_rtm = rtm_from_totals(bt, tt, true_total, months)
+    baseline, test = bn / q / BASELINE_MONTHS, tn / q / TEST_MONTHS
+    result.update(rtm=measured_rtm, true_rtm=true_rtm,
+                  type3_rtm=measured_rtm and not true_rtm,
+                  true_only_rtm=true_rtm and not measured_rtm,
+                  both_rtm=measured_rtm and true_rtm,
+                  baseline=baseline, test=test,
+                  true_baseline=bt / BASELINE_MONTHS, true_test=tt / TEST_MONTHS,
+                  pc=percent_change(baseline, test))
+    return result
 
 
 def binomial_ci(k: int, n: int) -> tuple[float, float]:
@@ -428,6 +546,7 @@ def generate_common_cohort(
             "created_unix_time": time.time(),
             "chocolate_repo": str(chocolate_repo_path()),
             "simulator": "CHOCOLATES/simple_CHOCOLATES",
+            "generation_fingerprint": generation_fingerprint(),
         }
         write_json(paths["metadata"], metadata)
     else:
@@ -436,6 +555,7 @@ def generate_common_cohort(
             "n_patients": int(n_patients),
             "months": int(months),
             "days_per_month": int(days_per_month),
+            "master_seed": int(master_seed),
         }
         for key, value in expected.items():
             if int(metadata[key]) != value:
@@ -450,6 +570,10 @@ def generate_common_cohort(
         latent = np.load(paths["latent_msf"], mmap_mode="r+")
 
     completed = int(metadata.get("completed_patients", 0))
+    if completed < 0 or completed > n_patients:
+        raise ValueError("Cohort completion count is invalid.")
+    if completed < n_patients and metadata.get("generation_fingerprint") != generation_fingerprint():
+        raise ValueError("Cannot resume cohort generation with missing or changed simulator provenance.")
     if completed >= n_patients:
         if progress:
             progress(f"Cohort already complete: {n_patients:,} patients in {directory}.")
@@ -519,11 +643,19 @@ def load_cohort(cohort_dir: str | Path) -> tuple[dict, np.memmap, np.ndarray, np
     n_patients = int(metadata["n_patients"])
     days = int(metadata["days"])
     completed = int(metadata.get("completed_patients", 0))
-    if completed < n_patients:
+    if n_patients < 1 or days != int(metadata["months"]) * int(metadata["days_per_month"]):
+        raise ValueError("Cohort dimensions are invalid.")
+    if completed != n_patients:
         raise ValueError(f"Cohort is incomplete: {completed}/{n_patients} patients generated.")
+    if paths["daily_counts"].stat().st_size != n_patients * days * np.dtype(np.int16).itemsize:
+        raise ValueError("Daily cohort file size does not match the recorded dimensions.")
     daily = np.memmap(paths["daily_counts"], dtype=np.int16, mode="r", shape=(n_patients, days))
     latent = np.load(paths["latent_msf"], mmap_mode="r")
     seeds = np.load(paths["seeds"], mmap_mode="r")
+    if latent.shape != (n_patients,) or latent.dtype != np.dtype(np.float32):
+        raise ValueError("Latent-rate cohort array has the wrong shape or dtype.")
+    if seeds.shape != (n_patients,) or seeds.dtype != np.dtype(np.int64):
+        raise ValueError("Patient-seed cohort array has the wrong shape or dtype.")
     return metadata, daily, latent, seeds
 
 
@@ -561,18 +693,17 @@ def apply_detector(
     else:
         observed = detected
 
-    monthly = monthly_from_daily(observed, days_per_month=days_per_month).astype(np.int32)
+    monthly = monthly_from_daily(observed, days_per_month=days_per_month).astype(float)
     daily_for_eligibility = observed.astype(np.int32, copy=True)
 
     if correct_far and far_per_day > 0.0:
-        monthly_remover = int(np.round(far_per_day * days_per_month))
-        if monthly_remover > 0:
-            monthly = np.maximum(monthly - monthly_remover, 0).astype(np.int32)
+        monthly_remover = float(Fraction(str(far_per_day)).limit_denominator(1_000_000) * days_per_month)
+        monthly = np.maximum(monthly - monthly_remover, 0.0)
         daily_remover = int(np.round(far_per_day))
         if daily_remover > 0:
             daily_for_eligibility = np.maximum(daily_for_eligibility - daily_remover, 0).astype(np.int32)
 
-    return daily_for_eligibility.astype(np.int16), monthly.astype(np.int32)
+    return daily_for_eligibility.astype(np.int16), monthly
 
 
 def build_type1_diary(
@@ -621,6 +752,7 @@ def evaluate_patient(
     days_per_month: int,
     monthly_min: int,
     max_seizure_free_days: int,
+    fixed_first_start: int | None = None,
 ) -> dict[str, float | int | bool]:
     """Evaluate one patient under one condition."""
 
@@ -653,69 +785,50 @@ def evaluate_patient(
         max_seizure_free_days=max_seizure_free_days,
         days_per_month=days_per_month,
     )
-    reference = float(np.mean(monthly_counts))
-    if first_start < 0:
-        return {
-            "eligible": False,
-            "first_start": -1,
-            "rtm": False,
-            "pc": float("nan"),
-            "baseline": float("nan"),
-            "test": float("nan"),
-            "reference": reference,
-            "shock_start": shock_start,
-            "shock_msf": shock_msf,
-        }
-
-    baseline = float(np.mean(monthly_counts[first_start : first_start + BASELINE_MONTHS]))
-    test = float(
-        np.mean(
-            monthly_counts[
-                first_start + BASELINE_MONTHS : first_start + BASELINE_MONTHS + TEST_MONTHS
-            ]
-        )
-    )
-    return {
-        "eligible": True,
-        "first_start": int(first_start),
-        "rtm": rtm_occurs(baseline, test, reference),
-        "pc": percent_change(baseline, test),
-        "baseline": baseline,
-        "test": test,
-        "reference": reference,
-        "shock_start": shock_start,
-        "shock_msf": shock_msf,
-    }
+    if not spec.correct_far:
+        raise ValueError("The paired Type 3 protocol requires expected-alarm-corrected counts.")
+    true_monthly = monthly_from_daily(patient_daily, days_per_month)
+    paired = paired_rtm_at_window(monthly_counts, true_monthly, first_start,
+                                 spec.sensitivity, spec.far_per_day, days_per_month)
+    fixed_start = first_start if fixed_first_start is None else fixed_first_start
+    fixed = paired_rtm_at_window(monthly_counts, true_monthly, fixed_start,
+                                spec.sensitivity, spec.far_per_day, days_per_month)
+    return {"eligible": first_start >= 0, "first_start": int(first_start),
+            "shock_start": shock_start, "shock_msf": shock_msf, **paired,
+            "fixed_eligible": fixed_start >= 0, "fixed_first_start": fixed_start,
+            "fixed_rtm": fixed["rtm"], "fixed_pc": fixed["pc"],
+            "fixed_type3_rtm": fixed["type3_rtm"],
+            "fixed_baseline": fixed["baseline"]}
 
 
 def empty_condition_arrays(n_patients: int) -> dict[str, np.ndarray]:
     """Allocate compact per-patient condition arrays."""
 
-    return {
+    arrays = {
         "eligible": np.zeros(n_patients, dtype=bool),
         "first_start": np.full(n_patients, -1, dtype=np.int16),
         "rtm": np.zeros(n_patients, dtype=bool),
-        "pc": np.full(n_patients, np.nan, dtype=np.float32),
-        "baseline": np.full(n_patients, np.nan, dtype=np.float32),
-        "test": np.full(n_patients, np.nan, dtype=np.float32),
-        "reference": np.full(n_patients, np.nan, dtype=np.float32),
+        "pc": np.full(n_patients, np.nan, dtype=np.float64),
+        "baseline": np.full(n_patients, np.nan, dtype=np.float64),
+        "test": np.full(n_patients, np.nan, dtype=np.float64),
+        "reference": np.full(n_patients, np.nan, dtype=np.float64),
         "shock_start": np.full(n_patients, -1, dtype=np.int16),
         "shock_msf": np.full(n_patients, np.nan, dtype=np.float32),
     }
+    for key in ("true_rtm", "type3_rtm", "true_only_rtm", "both_rtm", "fixed_eligible",
+                "fixed_rtm", "fixed_type3_rtm"):
+        arrays[key] = np.zeros(n_patients, dtype=bool)
+    for key in ("true_reference", "true_baseline", "true_test", "fixed_pc", "fixed_baseline"):
+        arrays[key] = np.full(n_patients, np.nan, dtype=np.float64)
+    arrays["fixed_first_start"] = np.full(n_patients, -1, dtype=np.int16)
+    return arrays
 
 
 def fill_condition_arrays(arrays: dict[str, np.ndarray], row: int, result: dict[str, object]) -> None:
     """Insert one patient result into preallocated arrays."""
 
-    arrays["eligible"][row] = bool(result["eligible"])
-    arrays["first_start"][row] = int(result["first_start"])
-    arrays["rtm"][row] = bool(result["rtm"])
-    arrays["pc"][row] = float(result["pc"])
-    arrays["baseline"][row] = float(result["baseline"])
-    arrays["test"][row] = float(result["test"])
-    arrays["reference"][row] = float(result["reference"])
-    arrays["shock_start"][row] = int(result["shock_start"])
-    arrays["shock_msf"][row] = float(result["shock_msf"])
+    for key in arrays:
+        arrays[key][row] = result[key]
 
 
 def summarize_condition(spec: ConditionSpec, arrays: dict[str, np.ndarray], n_raw: int) -> dict[str, object]:
@@ -726,6 +839,14 @@ def summarize_condition(spec: ConditionSpec, arrays: dict[str, np.ndarray], n_ra
     rtm_count = int(np.sum(arrays["rtm"][eligible])) if n_eligible else 0
     rtm_fraction = float(rtm_count / n_eligible) if n_eligible else float("nan")
     rtm_lo, rtm_hi = binomial_ci(rtm_count, n_eligible) if n_eligible else (float("nan"), float("nan"))
+    paired_counts = {name: int(np.sum(arrays[key][eligible])) for name, key in
+                     (("true_rtm", "true_rtm"), ("type3", "type3_rtm"),
+                      ("true_only", "true_only_rtm"), ("both", "both_rtm"))}
+    neither = n_eligible - paired_counts["both"] - paired_counts["type3"] - paired_counts["true_only"]
+    type3_lo, type3_hi = binomial_ci(paired_counts["type3"], n_eligible)
+    fixed_eligible = arrays["fixed_eligible"]
+    n_fixed = int(np.sum(fixed_eligible))
+    fixed_mpc, fixed_mpc_lo, fixed_mpc_hi = median_with_ci(arrays["fixed_pc"][fixed_eligible])
     mpc, mpc_lo, mpc_hi = median_with_ci(arrays["pc"][eligible]) if n_eligible else (
         float("nan"),
         float("nan"),
@@ -745,6 +866,24 @@ def summarize_condition(spec: ConditionSpec, arrays: dict[str, np.ndarray], n_ra
         "n_eligible": n_eligible,
         "fraction_eligible": float(n_eligible / n_raw) if n_raw else float("nan"),
         "rtm_count": rtm_count,
+        "true_rtm_count": paired_counts["true_rtm"],
+        "type3_count": paired_counts["type3"],
+        "true_only_count": paired_counts["true_only"],
+        "both_count": paired_counts["both"],
+        "neither_count": neither,
+        "fraction_true_RTM": paired_counts["true_rtm"] / n_eligible if n_eligible else float("nan"),
+        "fraction_type3": paired_counts["type3"] / n_eligible if n_eligible else float("nan"),
+        "fraction_type3_ci_lo": type3_lo,
+        "fraction_type3_ci_hi": type3_hi,
+        "type3_share_measured_RTM": paired_counts["type3"] / rtm_count if rtm_count else float("nan"),
+        "net_measurement_difference_pp": 100 * (paired_counts["type3"] - paired_counts["true_only"]) / n_eligible if n_eligible else float("nan"),
+        "n_mpc": int(np.sum(np.isfinite(arrays["pc"][eligible]))),
+        "n_fixed": n_fixed,
+        "fixed_fraction_RTM": float(np.sum(arrays["fixed_rtm"][fixed_eligible])) / n_fixed if n_fixed else float("nan"),
+        "fixed_fraction_type3": float(np.sum(arrays["fixed_type3_rtm"][fixed_eligible])) / n_fixed if n_fixed else float("nan"),
+        "fixed_n_zero_baseline": int(np.sum(arrays["fixed_baseline"][fixed_eligible] == 0)),
+        "fixed_n_mpc": int(np.sum(np.isfinite(arrays["fixed_pc"][fixed_eligible]))),
+        "fixed_MPC": fixed_mpc, "fixed_MPC_ci_lo": fixed_mpc_lo, "fixed_MPC_ci_hi": fixed_mpc_hi,
         "fraction_RTM": rtm_fraction,
         "fraction_RTM_ci_lo": rtm_lo,
         "fraction_RTM_ci_hi": rtm_hi,
@@ -905,6 +1044,67 @@ def git_sha(repo_root: Path) -> str:
         return "unknown"
 
 
+def _evaluate_condition_chunk(payload: tuple) -> tuple[int, dict[str, np.ndarray]]:
+    cohort_dir, spec, start, stop, monthly_min, max_zero, fixed_starts = payload
+    metadata, daily, latent, seeds = load_cohort(cohort_dir)
+    arrays = empty_condition_arrays(stop - start)
+    for offset, row in enumerate(range(start, stop)):
+        result = evaluate_patient(
+            daily[row, :], float(latent[row]), int(seeds[row]), spec,
+            int(metadata["months"]), int(metadata["days_per_month"]), monthly_min, max_zero,
+            None if fixed_starts is None else int(fixed_starts[offset]))
+        fill_condition_arrays(arrays, offset, result)
+    return start, arrays
+
+
+def _condition_cache_metadata(
+    spec: ConditionSpec, metadata: dict, cohort_content: dict,
+    monthly_min: int, max_seizure_free_days: int,
+) -> dict[str, object]:
+    return {
+        "analysis_version": ANALYSIS_VERSION,
+        "condition": asdict(spec),
+        "monthly_min": monthly_min,
+        "max_seizure_free_days": max_seizure_free_days,
+        "source_sha256": file_sha256(__file__),
+        "numpy_version": np.__version__,
+        "cohort_metadata": metadata,
+        "cohort_content": cohort_content,
+        "simulator": simulator_fingerprint() if spec.type1_intervention else None,
+        "fixed_enrollment_dependency": None,
+    }
+
+
+def _read_condition_cache(
+    path: Path, expected_metadata: dict, n_patients: int,
+) -> dict[str, np.ndarray] | None:
+    """Read a complete compatible cache, or return None so it can be rebuilt."""
+
+    try:
+        with np.load(path, allow_pickle=False) as loaded:
+            if json.loads(str(loaded["cache_json"])) != expected_metadata:
+                return None
+            if json.loads(str(loaded["condition_json"])) != expected_metadata["condition"]:
+                return None
+            schema = empty_condition_arrays(0)
+            if set(loaded.files) != set(schema) | {"condition_json", "cache_json"}:
+                return None
+            arrays = {key: loaded[key] for key in schema}
+            if any(value.shape != (n_patients,) or value.dtype != schema[key].dtype
+                   for key, value in arrays.items()):
+                return None
+            months = int(expected_metadata["cohort_metadata"]["months"])
+            for prefix in ("", "fixed_"):
+                starts = arrays[prefix + "first_start"]
+                if (np.any(starts < -1)
+                        or np.any(starts > months - BASELINE_MONTHS - TEST_MONTHS)
+                        or not np.array_equal(arrays[prefix + "eligible"], starts >= 0)):
+                    return None
+            return arrays
+    except (OSError, ValueError, KeyError, EOFError, zipfile.BadZipFile):
+        return None
+
+
 def run_condition(
     cohort_dir: str | Path,
     output_dir: str | Path,
@@ -914,6 +1114,7 @@ def run_condition(
     max_seizure_free_days: int = DEFAULT_MAX_SEIZURE_FREE_DAYS,
     resume: bool = True,
     progress: Callable[[str], None] | None = print,
+    workers: int = 1,
 ) -> tuple[dict[str, object], list[dict[str, object]], list[dict[str, object]]]:
     """Run one condition against the shared cohort and save per-patient flags."""
 
@@ -926,33 +1127,56 @@ def run_condition(
     flags_dir.mkdir(parents=True, exist_ok=True)
     flags_path = flags_dir / f"{spec.name}.npz"
 
-    if resume and flags_path.exists():
-        loaded = np.load(flags_path)
-        arrays = {key: loaded[key] for key in loaded.files if key != "condition_json"}
+    if chunk_size < 1 or workers < 1:
+        raise ValueError("chunk_size and workers must be positive.")
+    cohort_content = cohort_fingerprint(cohort_dir)
+    cache_metadata = _condition_cache_metadata(
+        spec, metadata, cohort_content, monthly_min, max_seizure_free_days)
+    fixed_starts = None
+    if spec.rtm_type.startswith("type3"):
+        baseline_spec = default_condition_specs()[0]
+        expected_baseline = _condition_cache_metadata(
+            baseline_spec, metadata, cohort_content, monthly_min, max_seizure_free_days)
+        baseline = _read_condition_cache(flags_dir / "baseline_perfect.npz", expected_baseline, n_patients)
+        if baseline is None:
+            raise ValueError("Perfect-detector enrollment cache is missing, incompatible or incomplete; "
+                             "rerun baseline_perfect with the same cohort and eligibility rules.")
+        fixed_starts = baseline["first_start"]
+        cache_metadata["fixed_enrollment_dependency"] = {
+            "cache_metadata_sha256": hashlib.sha256(
+                json.dumps(expected_baseline, sort_keys=True).encode()).hexdigest(),
+            "first_start_sha256": hashlib.sha256(fixed_starts.tobytes()).hexdigest(),
+            "eligible_sha256": hashlib.sha256(baseline["eligible"].tobytes()).hexdigest(),
+        }
+        del baseline
+    cache_json = json.dumps(cache_metadata, sort_keys=True)
+    arrays = _read_condition_cache(flags_path, cache_metadata, n_patients) if resume else None
+    if arrays is not None:
         if progress:
             progress(f"Loaded existing condition flags for {spec.name}.")
     else:
         arrays = empty_condition_arrays(n_patients)
-        for start in range(0, n_patients, chunk_size):
-            stop = min(n_patients, start + chunk_size)
-            for row in range(start, stop):
-                result = evaluate_patient(
-                    daily[row, :],
-                    latent_msf=float(latent[row]),
-                    seed=int(seeds[row]),
-                    spec=spec,
-                    months=months,
-                    days_per_month=days_per_month,
-                    monthly_min=monthly_min,
-                    max_seizure_free_days=max_seizure_free_days,
-                )
-                fill_condition_arrays(arrays, row, result)
-            if progress:
-                progress(f"{spec.name}: processed {stop:,}/{n_patients:,} patients.")
+        payloads = [(str(cohort_dir), spec, start, min(n_patients, start + chunk_size),
+                     monthly_min, max_seizure_free_days,
+                     None if fixed_starts is None else fixed_starts[start:start + chunk_size])
+                    for start in range(0, n_patients, chunk_size)]
+        executor = ProcessPoolExecutor(max_workers=workers) if workers > 1 else None
+        try:
+            results = executor.map(_evaluate_condition_chunk, payloads) if executor else map(_evaluate_condition_chunk, payloads)
+            for start, chunk in results:
+                stop = start + len(chunk["eligible"])
+                for key in arrays:
+                    arrays[key][start:stop] = chunk[key]
+                if progress and (stop == n_patients or stop % (20 * chunk_size) == 0):
+                    progress(f"{spec.name}: processed {stop:,}/{n_patients:,} patients.")
+        finally:
+            if executor:
+                executor.shutdown(wait=True)
         np.savez_compressed(
             flags_path,
             **arrays,
             condition_json=np.asarray(json.dumps(asdict(spec), sort_keys=True)),
+            cache_json=np.asarray(cache_json),
         )
 
     summary = summarize_condition(spec, arrays, n_raw=n_patients)
@@ -966,6 +1190,7 @@ def run_all_conditions(
     chunk_size: int = 512,
     resume: bool = True,
     progress: Callable[[str], None] | None = print,
+    workers: int = 1,
 ) -> dict[str, Path]:
     """Run all planned RTM123 conditions and write summary artifacts."""
 
@@ -984,6 +1209,7 @@ def run_all_conditions(
             chunk_size=chunk_size,
             resume=resume,
             progress=progress,
+            workers=workers,
         )
         summaries.append(summary)
         first_window_rows.extend(window_rows)
@@ -1004,6 +1230,15 @@ def run_all_conditions(
         paths["manifest"],
         {
             "completed": True,
+            "analysis_version": ANALYSIS_VERSION,
+            "analysis_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            "numpy_version": np.__version__,
+            "cohort_content": cohort_fingerprint(cohort_dir),
+            "cohort_generation_fingerprint": metadata.get("generation_fingerprint"),
+            "transient_simulator": simulator_fingerprint() if any(s.type1_intervention for s in specs) else None,
+            "type3_definition": "measured RTM and not true-count RTM in the same detector-selected participant and trial window",
+            "reference": "finite true full-diary monthly mean; scaled by sensitivity for corrected measured counts",
+            "fixed_comparison": "perfect-detector enrollment and baseline windows retained; zero measured baselines excluded only from MPC",
             "cohort_dir": str(Path(cohort_dir).resolve()),
             "output_dir": str(destination.resolve()),
             "conditions": [asdict(spec) for spec in specs],
@@ -1060,15 +1295,29 @@ def make_tables(input_dir: str | Path) -> dict[str, Path]:
                 "delta_fraction_RTM_vs_baseline": fraction_rtm - base_fraction_rtm,
                 "MPC": mpc,
                 "delta_MPC_vs_baseline": mpc - base_mpc,
+                "fraction_true_RTM": row["fraction_true_RTM"],
+                "fraction_type3": row["fraction_type3"],
+                "type3_share_measured_RTM": row["type3_share_measured_RTM"],
+                "net_measurement_difference_pp": row["net_measurement_difference_pp"],
             }
         )
 
     paths = {
         "condition_summary_with_deltas": directory / "condition_summary_with_deltas.csv",
         "paper_table": directory / "paper_table.csv",
+        "paired_classification": directory / "paired_classification.csv",
+        "fixed_enrollment": directory / "fixed_enrollment_summary.csv",
     }
     write_csv(paths["condition_summary_with_deltas"], enriched)
     write_csv(paths["paper_table"], paper_rows)
+    paired_keys = ["condition", "n_eligible", "both_count", "type3_count", "true_only_count", "neither_count",
+                   "rtm_count", "true_rtm_count", "fraction_RTM", "fraction_true_RTM", "fraction_type3",
+                   "fraction_type3_ci_lo", "fraction_type3_ci_hi", "type3_share_measured_RTM", "net_measurement_difference_pp"]
+    write_csv(paths["paired_classification"], [{key: row[key] for key in paired_keys} for row in rows])
+    fixed_keys = ["condition", "n_fixed", "fixed_fraction_RTM", "fixed_fraction_type3", "fixed_n_zero_baseline",
+                  "fixed_n_mpc", "fixed_MPC", "fixed_MPC_ci_lo", "fixed_MPC_ci_hi"]
+    write_csv(paths["fixed_enrollment"], [{key: row[key] for key in fixed_keys} for row in rows
+                                        if row["rtm_type"] == "baseline" or row["rtm_type"].startswith("type3")])
     return paths
 
 
@@ -1092,7 +1341,12 @@ def make_figures(input_dir: str | Path) -> dict[str, Path]:
     if not table_path.exists():
         make_tables(directory)
     rows = read_csv_dicts(table_path)
-    labels = [row["label"] for row in rows]
+    short_labels = {"baseline_perfect": "Reference", "type1_transient_msf": "Transient rate",
+                    "type2_threshold_8": "Threshold 8", "type3_sensitivity_90": "Sens. 90%",
+                    "type3_sensitivity_80": "Sens. 80%", "type3_sensitivity_70": "Sens. 70%",
+                    "type3_far_1_per_month": "FAR 1/month", "type3_far_1_per_week": "FAR 1/week",
+                    "type3_far_1_per_day": "FAR 1/day"}
+    labels = [short_labels.get(row["condition"], row["label"]) for row in rows]
     x = np.arange(len(rows), dtype=float)
     rtm_values = np.asarray([100.0 * plot_value(row["fraction_RTM"]) for row in rows], dtype=float)
     mpc_values = np.asarray([plot_value(row["MPC"]) for row in rows], dtype=float)
@@ -1113,27 +1367,39 @@ def make_figures(input_dir: str | Path) -> dict[str, Path]:
             colors.append("#7C3AED")
 
     plt.style.use("seaborn-v0_8-whitegrid")
-    fig, axes = plt.subplots(nrows=3, ncols=1, figsize=(12, 10), sharex=True)
+    plt.rcParams.update({"font.size": 9, "pdf.fonttype": 42, "ps.fonttype": 42})
+    fig, grid = plt.subplots(nrows=2, ncols=2, figsize=(11, 8))
+    axes = grid.ravel()
     axes[0].bar(x, eligible_values, color=colors, alpha=0.88)
     axes[0].set_ylabel("Eligible (%)")
-    axes[0].set_title("Eligibility yield")
-    axes[1].bar(x, rtm_values, color=colors, alpha=0.88)
-    axes[1].set_ylabel("RTM fraction (%)")
-    axes[1].set_title("Fraction of eligible patients with RTM")
-    axes[2].bar(x, mpc_values, color=colors, alpha=0.88)
-    axes[2].axhline(0, color="#111827", linewidth=0.8)
-    axes[2].set_ylabel("MPC (%)")
-    axes[2].set_title("Placebo-style median percentage change")
-    axes[2].set_xticks(x)
-    axes[2].set_xticklabels(labels, rotation=35, ha="right")
+    axes[0].set_title("A  Eligibility yield", loc="left")
+    true_rtm = np.array([100*plot_value(row["fraction_true_RTM"]) for row in rows])
+    axes[1].bar(x-0.18, rtm_values, width=0.36, color="#4B5563", label="Measured counts")
+    axes[1].bar(x+0.18, true_rtm, width=0.36, color="#AAB5C4", label="True counts")
+    axes[1].set_ylabel("Eligible participants (%)")
+    axes[1].set_title("B  Observed and true-count RTM", loc="left")
+    axes[1].legend(fontsize=8)
+    type3 = np.array([100*plot_value(row["fraction_type3"]) for row in rows])
+    true_only = np.array([100*plot_value(row["true_only_count"])/plot_value(row["n_eligible"]) if plot_value(row["n_eligible"]) else np.nan for row in rows])
+    axes[2].bar(x-0.18, type3, width=0.36, color="#7C3AED", label="Measured only (Type 3)")
+    axes[2].bar(x+0.18, true_only, width=0.36, color="#AAB5C4", label="True only")
+    axes[2].set_ylabel("Eligible participants (%)")
+    axes[2].set_title("C  Paired classification disagreements", loc="left")
+    axes[2].legend(fontsize=8)
+    axes[3].bar(x, mpc_values, color=colors, alpha=0.88)
+    axes[3].axhline(0, color="#111827", linewidth=0.8)
+    axes[3].set_ylabel("Median percentage reduction (%)")
+    axes[3].set_title("D  Apparent improvement without treatment", loc="left")
 
     for ax in axes:
+        ax.set_xticks(x)
+        ax.set_xticklabels(labels, rotation=40, ha="right", fontsize=8)
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
         ax.grid(True, axis="y", color="#D1D5DB", linewidth=0.8)
         ax.grid(False, axis="x")
 
-    fig.suptitle("Same cohort, small changes producing RTM type 1/2/3 patterns", y=0.995)
+    fig.suptitle("Common underlying population; enrollment re-evaluated by condition", y=0.995, fontsize=12)
     fig.tight_layout(rect=(0, 0, 1, 0.975))
     png_path = directory / "rtm123_summary.png"
     pdf_path = directory / "rtm123_summary.pdf"

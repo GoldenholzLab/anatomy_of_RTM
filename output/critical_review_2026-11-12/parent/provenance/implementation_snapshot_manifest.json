@@ -1,0 +1,223 @@
+{
+  "archive": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/output/critical_review_2026-11-12/parent/provenance/implementation_snapshot_2026-11-13.tar.gz",
+  "archive_sha256": "cae5f4d85c69c38e7472c4093c2e0f3fe7a476cc5cefc883dc8e107c718f7983",
+  "bytes": 1099490,
+  "members": [
+    {
+      "path": "README.md",
+      "sha256": "020ceaef7eb2714330df8d8a227f6b22729481c9246f842ac5ae747e1644ca4a",
+      "bytes": 5153
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "5505386ae2c727384c0b62a6289ad1b945ea5bdf7bf57e1116214928ac273f0f",
+      "bytes": 1074
+    },
+    {
+      "path": "notebooks/for_the_paper.ipynb",
+      "sha256": "13007ffcdfed6715da8c14416f1747bab61bda97da46a03b87f0c26e4957391b",
+      "bytes": 7107
+    },
+    {
+      "path": "rtm_anatomy/__init__.py",
+      "sha256": "54da2bdab871deb9d3a77ea4dc670d965633fb9ff94300f5e87bf7373f850b67",
+      "bytes": 41
+    },
+    {
+      "path": "rtm_anatomy/rtm123.py",
+      "sha256": "fd9266049bb14272258d8084da240cbf2546283e368ea33b6a55a2ad383c0f54",
+      "bytes": 57536
+    },
+    {
+      "path": "tests/test_rtm123.py",
+      "sha256": "e7471a1590493ca9159c73d07e3bab19a1154f41da624a5065c86adc8817f2a0",
+      "bytes": 17551
+    },
+    {
+      "path": "scripts/rtm123/05_make_explainer_figure.py",
+      "sha256": "e4722fdbb2c950c020e7b2ef2fb7220cb8b6a126007ce1d4d0de7a969a500377",
+      "bytes": 8466
+    },
+    {
+      "path": "scripts/rtm123/04_make_figures.py",
+      "sha256": "3e37808fd5c2fbabb094168763052323ede80654dcfc860c8ec1e3ea6bea5c07",
+      "bytes": 763
+    },
+    {
+      "path": "scripts/rtm123/02_run_conditions.py",
+      "sha256": "495888bf22e0884de079d96cc2f5d8c6d809bee86595f9287c24a4eb5f37f22e",
+      "bytes": 1181
+    },
+    {
+      "path": "scripts/rtm123/01_generate_common_cohort.py",
+      "sha256": "0b5a9a0ecda41146e4a5377d56153c7732c59cdedf4e2f2debf3d13eddedf93c",
+      "bytes": 1557
+    },
+    {
+      "path": "scripts/rtm123/03_make_tables.py",
+      "sha256": "e4efa8cda86cc3f281f54639775a97de68cbfb3788b910c03b5d0a346552dd0c",
+      "bytes": 761
+    },
+    {
+      "path": "scripts/replay_paired_type3.py",
+      "sha256": "3c623ad1f2e2b0ef979d93909d80de68e5895d18c26dcb3324b6d92336614cf0",
+      "bytes": 8150
+    },
+    {
+      "path": "scripts/validate_paired_type3.py",
+      "sha256": "2ca58b8afcc7f86aa6c88f38406363c86b08f70e95d24dfa25ae72a989678bcd",
+      "bytes": 8780
+    },
+    {
+      "path": "scripts/review_diagnostics.py",
+      "sha256": "af618853863d5894075b210b91641672e0edbf48c44f95a641ddeb0e9cec856c",
+      "bytes": 10746
+    },
+    {
+      "path": "scripts/address_review_reporting.py",
+      "sha256": "18f51a3a1a3348a03ed69f414d4e9062b35b3646bad7d5ac609819907983a71c",
+      "bytes": 35253
+    },
+    {
+      "path": "outputs/rtm123_type3_1m/run_manifest.json",
+      "sha256": "f5e2d5c94fd0159981392d23e9c3ba8b0919b1ca348db23fe6a1801911b688ca",
+      "bytes": 4756
+    },
+    {
+      "path": "outputs/rtm123_1m/cohort_metadata.json",
+      "sha256": "45cd0dcda6f806952e70e650f4d6309066aa6a0714fc9da346887049492e9e52",
+      "bytes": 341
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/provenance/realSim_turbo.py",
+      "sha256": "b038553df164160290b427e577ba53cb6b983db38f00a281f9a773a91a1d6b99",
+      "bytes": 18052
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/diagnostics/same_window_true_entry.csv",
+      "sha256": "2a8a1a69297958455efaef3fd355ecb840194b1d5779a9cad9fac4697991c56f",
+      "bytes": 879
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/diagnostics/expected_reference_sensitivity.csv",
+      "sha256": "22138864ed3298082d041e8b458e7440dae5750931c276c3ebfdf539f60c0437",
+      "bytes": 673
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/diagnostics/screen_timing.csv",
+      "sha256": "a4ffc3569d1077b1712408e4c8b6e902071c37cba94ce61a04ac57d0c640d2e1",
+      "bytes": 2019
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/diagnostics/fixed_paired_classifications.csv",
+      "sha256": "ca49611d98efdf963be40f3fad921d9019a803dc29a9e5b645705bc065e8b826",
+      "bytes": 1093
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/diagnostics/diagnostics.json",
+      "sha256": "b1863f357ca8a1e66b87fd984092a5bded7439e4676412d108277072e24b390b",
+      "bytes": 2634
+    },
+    {
+      "path": "scripts/revise_anatomy_manuscript.py",
+      "sha256": "a8a606912a5563829874d2227fee2dc399a854acba5ffc118d350a929b100b53",
+      "bytes": 26705
+    },
+    {
+      "path": "scripts/prepare_seizure_submission.py",
+      "sha256": "633c392b4e9335e329a0622ed63e8e8ed1fed2b3c7247139b33da29c5999bee3",
+      "bytes": 16111
+    },
+    {
+      "path": "scripts/build_seizure_figures.py",
+      "sha256": "4012a4f3bfc55911330557ec970663206d047c1df108dfa06000c5424279997a",
+      "bytes": 4682
+    },
+    {
+      "path": "outputs/rtm123_type3_1m/condition_summary.csv",
+      "sha256": "a3a37d0c2805ad71ab97227ddecbce05d0f6dd5a957b630646d68c1d0846b06a",
+      "bytes": 5444
+    },
+    {
+      "path": "outputs/rtm123_type3_1m/fixed_enrollment_summary.csv",
+      "sha256": "ffe9b4ad55e43e6ec20c81866e4eb7cd49e65a9d93a60a0a81eda97a45c46ec8",
+      "bytes": 1045
+    },
+    {
+      "path": "outputs/rtm123_type3_1m/type1_overlap_summary.csv",
+      "sha256": "79f86b7ee2e598660a8211cb33c783bee576cdd72753d6afbff49fe726847ff4",
+      "bytes": 1435
+    },
+    {
+      "path": "anatomy_of_RTM_Seizure.docx",
+      "sha256": "6119f8107c62b4de9f48c852894f795cbcbee88bfc9804ef68da64bd63b40ce0",
+      "bytes": 503628
+    },
+    {
+      "path": "anatomy_of_RTM_Seizure_Supplement.docx",
+      "sha256": "cd7195edc9e75b6a171a6b4ca9eb4f57fa02d597b90ffa4bc8a19617f0699110",
+      "bytes": 37323
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/review_resolution.txt",
+      "sha256": "09a4087b82fa0897ac89295c45410dc25c06aeab11426e912019ec62149782e7",
+      "bytes": 11896
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/resolution_ledger.json",
+      "sha256": "9cefbb5da93536112eca0c15fe7315eda2cd7ee46630ffa04d907b088b205dd6",
+      "bytes": 7557
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/resolution_status.json",
+      "sha256": "6bde575ece3b801e187a1550a57d466c2409faf2db79aff9aa6630ab2fe2897c",
+      "bytes": 1862
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/provenance/snapshot_readme.txt",
+      "sha256": "f6accc9f0915eb82bb43ea8e9a04a4ce5befea8eaa730576a5b8c6c074173c3b",
+      "bytes": 2150
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/provenance/source_provenance.json",
+      "sha256": "2ed05ecd698b6fb28145ef89428ec8cb32af3210b34401bb3aba5913ab44bf2b",
+      "bytes": 629
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/primary_sources/verified_related_preprints.ris",
+      "sha256": "8126a5d0fe99d65086f4cbc614444cff919ed7d319099319af776efbd9b60cd4",
+      "bytes": 708
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/primary_sources/verified_zotero_csl.json",
+      "sha256": "e38c2d4e2d817567011f2feaa0dde5f77f42dbedece5c2738a1a7495a657a5d9",
+      "bytes": 5140
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/consolidated_draft/anatomy_of_RTM_Seizure_critical_review.docx",
+      "sha256": "953cf78224b523ed8d4b7ea7efeb533e1fc9f653be7b3aff444145d905dcc316",
+      "bytes": 506980
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/consolidated_draft/anatomy_of_RTM_Seizure_Supplement_critical_review.docx",
+      "sha256": "4c07db19873a5d082476a8adffdc41ea261052fdf4eadf80923813522cf820ec",
+      "bytes": 47649
+    },
+    {
+      "path": "output/critical_review_2026-11-12/parent/consolidated_draft/structural_audit.json",
+      "sha256": "e3d14874876f28799f63f72033073c745ffce12f5add5b08da9c68e7884126f6",
+      "bytes": 1507
+    }
+  ],
+  "retained_cohort_and_participant_arrays_included": false,
+  "public_release_performed": false,
+  "original_cohort_generator_identity": "unknown",
+  "external_simulator_license": "No license file located in local external checkout; redistribution terms require confirmation before public release.",
+  "diagnostic_environment": {
+    "python": "3.13.2 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 12:55:35) [Clang 14.0.6 ]",
+    "numpy": "2.2.5",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.0",
+    "platform": "macOS-26.7.3-arm64-arm-64bit-Mach-O"
+  }
+}

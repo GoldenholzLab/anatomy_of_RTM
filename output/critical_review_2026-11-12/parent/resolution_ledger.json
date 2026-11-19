@@ -1,0 +1,198 @@
+{
+  "review_date": "2026-11-13",
+  "numbered_findings_reviewed": 30,
+  "grouped_issues": [
+    {
+      "issue": "enrollment_composition",
+      "review_findings": [
+        "Opus R1",
+        "Fable F5"
+      ],
+      "decision": "accepted",
+      "location": "Main abstract and Results; Table S7",
+      "resolution": "Full-cohort true-entry split added. Retain the detector-selected primary denominator; subgroup prevalence answers a different question.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "reference_sensitivity",
+      "review_findings": [
+        "Opus R2",
+        "Sol SOL-02"
+      ],
+      "decision": "accepted with qualification",
+      "location": "Results; Table S8",
+      "resolution": "Full-cohort conditional-expectation reference sensitivity added. This changes the estimand and does not establish a coding error.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "bidirectional_disagreement",
+      "review_findings": [
+        "Opus R3",
+        "Fable F10"
+      ],
+      "decision": "accepted",
+      "location": "Abstract, Results and Table S3",
+      "resolution": "Added true-only prevalence and net difference. Measured-only prevalence is not a net detector effect.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "screen_timing",
+      "review_findings": [
+        "Fable F2"
+      ],
+      "decision": "accepted with qualification",
+      "location": "Results and Tables S9-S10",
+      "resolution": "Added first-screen and later-screen results. No causal decomposition or weighted decomposition of medians claimed.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "random_window",
+      "review_findings": [
+        "Fable F3"
+      ],
+      "decision": "partly accepted",
+      "location": "Results and Table S11",
+      "resolution": "Added same-person random-window comparator. Rejected causal subtraction and arithmetic-overstatement interpretations.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "related_work",
+      "review_findings": [
+        "Fable F1"
+      ],
+      "decision": "accepted",
+      "location": "Methods 2.1 and Discussion 4.2-4.3",
+      "resolution": "Verified three primary records, imported the two approved preprints, inserted live citations and refreshed the bibliography in Word. Cover-letter disclosure remains for submission preparation.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "provenance",
+      "review_findings": [
+        "Astra R4",
+        "Sol SOL-01",
+        "Opus R4",
+        "Fable F4"
+      ],
+      "decision": "accepted as release requirement",
+      "location": "Availability text, supplementary methods and local provenance snapshot",
+      "resolution": "Preserved exact current implementation locally and disclosed unknown historical generator identity. Local archive is not a public immutable release; retained cohort is not in the archive.",
+      "document_changes_complete": true,
+      "public_release_pending": true
+    },
+    {
+      "issue": "median_intervals_and_ties",
+      "review_findings": [
+        "Astra R3",
+        "Sol SOL-04",
+        "Opus R5",
+        "Fable F9"
+      ],
+      "decision": "accepted",
+      "location": "Tables S5-S6, table note and supplementary methods",
+      "resolution": "Added computed median intervals and explicit seed/configuration disclosure. Retained the median estimator and explained discrete ties.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "transient_strata",
+      "review_findings": [
+        "Astra R2",
+        "Sol SOL-03",
+        "Opus R6",
+        "Fable F7"
+      ],
+      "decision": "accepted",
+      "location": "Methods, Results, Figure 1 caption and Table S4",
+      "resolution": "Added all overlap/direction strata, rate-ratio quantiles and never-eligible context. Distinguished bidirectional experiment from upward-change illustration.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "cycle_configuration",
+      "review_findings": [
+        "Astra R1",
+        "Fable F8"
+      ],
+      "decision": "accepted",
+      "location": "Methods 2.1, limitations and supplementary methods",
+      "resolution": "Disclosed sparse daily cycle settings and untested robustness to other cycle distributions. Stochastic variability and clustering remain.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "sensitivity_thresholds",
+      "review_findings": [
+        "Fable F6"
+      ],
+      "decision": "accepted",
+      "location": "Methods 2.3",
+      "resolution": "Stated independent binomial thinning and application of thresholds to unscaled detected counts. No extra threshold-normalized experiment needed for the stated descriptive design.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "rounded_daily_correction",
+      "review_findings": [
+        "Opus R7",
+        "Fable F11"
+      ],
+      "decision": "accepted",
+      "location": "Methods 2.3",
+      "resolution": "Explicitly stated zero daily alarm correction at one alarm/month and one alarm/week.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "trial_rule_attribution",
+      "review_findings": [
+        "Opus R8"
+      ],
+      "decision": "accepted",
+      "location": "Methods 2.2",
+      "resolution": "Distinguished Krauss 25-day and Chung 21-day rules and 30-day versus four-week units. Verified against registry and primary article.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "labels_and_rounding",
+      "review_findings": [
+        "Opus R9",
+        "Fable F11"
+      ],
+      "decision": "accepted",
+      "location": "Supplement labels, table notes and figure captions",
+      "resolution": "Aligned condition labels, removed undefined mSF, explained type labels/reference illustration/colors and rounding. Retained correct distinct quantities that both round to 41.6%, with their denominators.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "window_wording_and_prior_citation",
+      "review_findings": [
+        "Opus R10",
+        "Fable F11"
+      ],
+      "decision": "accepted",
+      "location": "Methods 2.2 and Introduction",
+      "resolution": "Corrected start months 0 through 31 and added a live citation to existing reference 1.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    },
+    {
+      "issue": "author_and_declarations",
+      "review_findings": [
+        "Fable F12"
+      ],
+      "decision": "accepted and author-confirmed",
+      "location": "Author line, contributions, disclosures, AI statement and document metadata",
+      "resolution": "Author confirmed M. Brandon Westover and both Harvard and Stanford affiliations. Updated the name in all three manuscript positions, AI declaration and reviewed-document metadata. Highlights were not changed.",
+      "document_changes_complete": true,
+      "public_release_pending": false
+    }
+  ]
+}

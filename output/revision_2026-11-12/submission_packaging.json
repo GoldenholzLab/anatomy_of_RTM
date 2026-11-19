@@ -1,0 +1,18 @@
+{
+  "source_reviewed_manuscript": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/anatomy_of_RTM_revised.docx",
+  "manuscript": "/Users/dgoldenh/Documents/GitHub/anatomy_of_RTM/anatomy_of_RTM_Seizure.docx",
+  "abstract_words": 207,
+  "main_words": 1809,
+  "figures": 2,
+  "tables": 1,
+  "references": 18,
+  "highlights_characters": [
+    81,
+    81,
+    81,
+    82
+  ],
+  "guide_url": "https://www.sciencedirect.com/journal/seizure-european-journal-of-epilepsy/publish/guide-for-authors",
+  "guide_verified": "2026-11-12 via browser after user completed verification",
+  "live_field_instructions_sha256_before_Word_refresh": "8b133a14385f56e9723f963a61c240304b531689e1f6dde03ab0590943ebbe9e"
+}

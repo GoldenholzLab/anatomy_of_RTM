@@ -1,0 +1,45 @@
+[Title] Supplementary paired classifications and fixed enrollment results
+[] All counts describe synthetic participants from the Anatomy simulation. The four paired categories use each condition's enrolled participants and its selected trial windows. Type 3 is the measured-only category. Fixed enrollment retains the perfect-detector participants and their baseline windows. These comparisons do not separate additive causal components.
+=== TABLE 1 ===
+Condition || Eligible n || Both RTM n || Type 3 n || True only n || Neither n
+Baseline: perfect detector, 4/month || 649,098 || 349,143 || 0 || 0 || 299,955
+Type 1: transient 2-month mSF change || 756,179 || 440,818 || 0 || 0 || 315,361
+Type 2: eligibility threshold 8/month || 404,268 || 234,163 || 0 || 0 || 170,105
+Sensitivity 90%, FAR 0/day || 621,144 || 319,707 || 24,125 || 19,056 || 258,256
+Sensitivity 80%, FAR 0/day || 589,758 || 302,023 || 34,506 || 24,404 || 228,825
+Sensitivity 70%, FAR 0/day || 551,890 || 282,937 || 42,608 || 26,499 || 199,846
+FAR 1/month, sensitivity 100% || 695,712 || 338,773 || 54,257 || 25,240 || 277,442
+FAR 1/week, sensitivity 100% || 769,320 || 334,498 || 159,768 || 35,208 || 239,846
+FAR 1/day, sensitivity 100% || 985,321 || 279,589 || 409,581 || 55,966 || 240,185
+=== END TABLE 1 ===
+[Figurecaption] Table S1. Paired classifications among all condition-selected participants
+[] The four category counts sum to eligible n in every row. True-count eligibility is not applied as an additional filter.
+[] 
+=== TABLE 2 ===
+Condition || Type 3 % || 95% Wilson CI || Share of measured RTM % || Net difference pp
+Baseline: perfect detector, 4/month || 0.0 || 0.0 to 0.0 || 0.0 || 0.0
+Type 1: transient 2-month mSF change || 0.0 || 0.0 to 0.0 || 0.0 || 0.0
+Type 2: eligibility threshold 8/month || 0.0 || 0.0 to 0.0 || 0.0 || 0.0
+Sensitivity 90%, FAR 0/day || 3.9 || 3.8 to 3.9 || 7.0 || 0.8
+Sensitivity 80%, FAR 0/day || 5.9 || 5.8 to 5.9 || 10.3 || 1.7
+Sensitivity 70%, FAR 0/day || 7.7 || 7.7 to 7.8 || 13.1 || 2.9
+FAR 1/month, sensitivity 100% || 7.8 || 7.7 to 7.9 || 13.8 || 4.2
+FAR 1/week, sensitivity 100% || 20.8 || 20.7 to 20.9 || 32.3 || 16.2
+FAR 1/day, sensitivity 100% || 41.6 || 41.5 to 41.7 || 59.4 || 35.9
+=== END TABLE 2 ===
+[Figurecaption] Table S2. Type 3 prevalence, share of measured RTM and net measurement difference
+[] The net difference equals measured-only minus true-only prevalence. Confidence intervals describe Monte Carlo precision under the model. Perfect detection has no disagreement by construction; any small positive Wilson upper bound is an interval-formula property.
+[] 
+=== TABLE 3 ===
+Condition || Fixed n || RTM % || Type 3 % || Zero B n || MPC n || MPC %
+Baseline: perfect detector, 4/month || 649,098 || 53.8 || 0.0 || 0 || 649,098 || 26.7
+Sensitivity 90%, FAR 0/day || 649,098 || 52.8 || 3.3 || 0 || 649,098 || 26.7
+Sensitivity 80%, FAR 0/day || 649,098 || 51.5 || 4.5 || 0 || 649,098 || 26.7
+Sensitivity 70%, FAR 0/day || 649,098 || 50.0 || 5.4 || 8 || 649,090 || 26.3
+FAR 1/month, sensitivity 100% || 649,098 || 51.7 || 3.7 || 0 || 649,098 || 25.9
+FAR 1/week, sensitivity 100% || 649,098 || 47.5 || 6.1 || 9 || 649,089 || 23.3
+FAR 1/day, sensitivity 100% || 649,098 || 41.6 || 9.4 || 17,608 || 631,490 || 17.6
+=== END TABLE 3 ===
+[Figurecaption] Table S3. Fixed perfect-detector enrollment and baseline windows
+[] RTM and Type 3 percentages use all fixed participants. Zero B n counts zero measured baselines. MPC excludes those baselines and uses MPC n. The people and baseline windows are held fixed, so these rows do not represent enrollment using the imperfect detector. RTM, regression to the mean; MPC, median percentage reduction; FAR, false-alarm rate; CI, confidence interval; pp, percentage points.
+[sectPr]

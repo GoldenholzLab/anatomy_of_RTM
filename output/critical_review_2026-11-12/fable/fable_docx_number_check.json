@@ -1,0 +1,52 @@
+{
+ "cells_and_claims_checked": 209,
+ "problems": [],
+ "rounding_notes": [
+  "type3_sensitivity_90: Table 1 gives 55.4 - 54.5 = 0.9; Table S2 net difference is 0.8",
+  "type3_sensitivity_80: Table 1 gives 57.1 - 55.3 = 1.8; Table S2 net difference is 1.7",
+  "type3_far_1_per_week: Table 1 gives 64.2 - 48.1 = 16.1; Table S2 net difference is 16.2",
+  "type3_far_1_per_day: Table 1 gives 69.9 - 34.1 = 35.8; Table S2 net difference is 35.9"
+ ],
+ "counts": {
+  "abstract_words": 207,
+  "abstract_words_claimed": 207,
+  "main_text_words_with_headings": 1809,
+  "main_text_words_without_headings": 1758,
+  "main_text_words_claimed": 1809,
+  "references_in_bibliography": 18,
+  "highlight_lengths_chars": [
+   81,
+   81,
+   81,
+   82
+  ],
+  "distinct_reference_numbers_cited_in_text": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18
+  ]
+ },
+ "fixed_enrollment_true_only_pct": {
+  "type3_sensitivity_90": 4.28,
+  "type3_sensitivity_80": 6.8,
+  "type3_sensitivity_70": 9.12,
+  "type3_far_1_per_month": 5.82,
+  "type3_far_1_per_week": 12.34,
+  "type3_far_1_per_day": 21.6
+ }
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "superseded_phrases_absent": [
+    "from selection and measurement alone",
+    "dominated by RTM",
+    "are available in the anatomy_of_RTM repository"
+  ],
+  "corrected_phrases_present": [
+    "resampled cycle parameters and cluster status",
+    "pending public release",
+    "Fractional expected counts were retained",
+    "same participant and window"
+  ]
+}

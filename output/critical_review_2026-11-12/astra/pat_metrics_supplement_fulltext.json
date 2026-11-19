@@ -1,0 +1,27 @@
+{
+  "acronym_list": [
+    "CI",
+    "FAR",
+    "MPC",
+    "RTM"
+  ],
+  "avg_paragraph_length": 801.0,
+  "avg_sentence_length": 44.5,
+  "flesch_kincaid_grade": 18.4,
+  "flesch_reading_ease": 42.2,
+  "hedge_density_per_1k": 0.0,
+  "long_sentences_pct": 16.7,
+  "max_sentence_length": 212,
+  "paragraph_count": 1,
+  "passive_voice_pct": 16.7,
+  "sentence_count": 18,
+  "undefined_acronym_candidates": [
+    "CI",
+    "FAR",
+    "MPC",
+    "RTM"
+  ],
+  "undefined_acronym_count": 4,
+  "unique_acronyms": 4,
+  "word_count": 801
+}

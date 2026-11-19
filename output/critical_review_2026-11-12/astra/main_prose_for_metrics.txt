@@ -1,0 +1,85 @@
+1. Introduction
+
+Regression to the mean (RTM) is a general threat to clinical-trial interpretation when participants are selected during unusually high baseline values and outcomes are defined as change from that baseline. The design is common in disorders with fluctuating symptoms or events, where apparent improvement may occur even without treatment [1–7].
+
+RTM describes the tendency for an extreme observation to be followed by a value closer to the long-run mean [1–3]. Although the label is often treated as one phenomenon, the observed pattern can arise from different clinical, selection, and measurement processes.
+
+We distinguish three operational forms of RTM (Figure 1). Type 1 describes return after a temporary state worsening. Type 2 describes return associated with selection on natural variability. Measurement error can alter the counts used for eligibility and outcome assessment [8–12]. We define Type 3 more narrowly as RTM present on measured counts but absent on true counts for the same participant and baseline/test window. Selection and measurement effects can coexist; these definitions do not partition observed RTM into additive causal components.
+
+Previous seizure-trial simulations quantified eligibility-related RTM. We reused a common underlying simulated population while varying state, entry or measurement inputs one at a time. Eligibility and baseline timing were re-evaluated under each condition. We examined whether these changes produced apparent improvement without treatment and quantified measurement-only Type 3 through paired measured and true-count classifications.
+
+Figure 1. Operational RTM definitions. The first two columns illustrate return after temporary worsening and selection on natural variability. The Type 3 example meets RTM on measured counts but not true counts for the same person and window. B1 and B2 are baseline months; T1 to T3 are test months; ref is the reference rate. These examples do not partition observed RTM into additive causal components.
+
+2. Methods
+
+2.1. Simulation cohort
+
+We generated 1,000,000 synthetic patients with CHOCOLATES, an open-source simulator of heterogeneous seizure rates, clustering, cycles and the association between frequency and variability [8]. Each patient had 36 months of daily counts, with 30 days per month. The same underlying histories and patient-specific seeds were reused across conditions. The original cohort was retained; the paired classification analysis was added during manuscript revision and was not prespecified.
+
+2.2. Trial design and eligibility
+
+Eligibility was assessed in rolling 2-month baseline windows beginning at month 0 and ending at month 31, leaving three subsequent test months. We used the first eligible window. The reference eligibility rule reflected focal-epilepsy trials: mean baseline frequency of at least 4 events/month, at least 3 events in each baseline month, and no baseline event-free interval longer than 25 days [1,13,14]. Patients with no eligible window were excluded from RTM and percentage-change summaries but remained in eligibility-yield denominators.
+
+The common underlying population was fixed, while eligibility and the first qualifying baseline window were re-evaluated after each condition transform. Thus, enrolled membership and trial timing could change. A separate measurement sensitivity analysis retained both membership and baseline windows from the perfect-detector condition. This fixed-enrollment comparison describes measurement changes in the same people and windows; it does not represent enrollment using the imperfect detector.
+
+2.3. Operational RTM mechanisms
+
+The reference condition used 100% sensitivity and no false alarms. For the transient-state condition, one random consecutive two-month interval per patient was replaced with a newly simulated segment at a newly sampled rate, after which the original diary resumed. The sampled rate could be higher or lower. The replacement also resampled cycle parameters and cluster status, so it represents a temporary change in the seizure process rather than an isolated mean-rate change. We stratified results by overlap with baseline or test and by the direction of the sampled rate change. For the selection condition, the mean-frequency threshold changed from 4 to 8 events/month. Measurement conditions separately reduced sensitivity to 90%, 80% or 70% without false alarms, or added independent Poisson alarms at 1/month, 1/week or 1/day with full sensitivity. The known expected monthly alarm count was subtracted and negative corrected counts were set to zero [12]. Fractional expected counts were retained. For the 25-day rule only, daily recorded counts were reduced by the rounded expected daily alarm count and floored at zero. These idealized corrections do not identify individual false alarms or guarantee unbiased counts after flooring.
+
+2.4. Outcomes and reporting
+
+There was no active treatment effect. Observed RTM required a baseline rate above the reference and a test rate strictly closer to it [1]. The finite reference was the mean true monthly count over the same 36-month condition-specific history, including its trial window. Corrected measured counts were compared with this reference multiplied by sensitivity; true counts used the unscaled reference. This internal finite-history design differs from a separate reference diary. Integer cross-products and rational correction factors made exact ties fail the strict RTM criterion. Apparent improvement was median percentage change (MPC), positive for seizure-frequency reduction.
+
+For every condition-selected participant, we applied the RTM rule to measured and true counts at the same selected baseline/test window, without an additional true-count eligibility filter. The four mutually exclusive groups were RTM on both scales, measured only, true only, or neither. Type 3 was the measured-only group. Its prevalence used all selected participants as denominator; its share of measured RTM used measured RTM cases. The net measured-minus-true difference equals measured-only minus true-only prevalence and is a separate quantity.
+
+Observed RTM used all selected participants. MPC excluded zero measured baselines, which have undefined percentage change, and we report these exclusions for fixed enrollment. Wilson 95% confidence intervals describe Type 3 prevalence, and approximate order-statistic intervals describe the median. These intervals quantify Monte Carlo precision under the assumed model, not model uncertainty. No hypothesis tests or randomized treatment contrasts were performed.
+
+This descriptive simulation used no human participants or identifiable data and was not preregistered. We report the generating process, condition transforms, selection algorithm, paired definitions, seeds and computational scale. The revision protocol, source and output hashes, and reproduction instructions accompany the revised analysis files. Public release of the revised files remains pending.
+
+3. Results
+
+3.1. Reference condition
+
+With perfect detection and the 4-event/month threshold, 649,098 of 1,000,000 patients (64.9%) became eligible. Among eligible patients, observed RTM was 53.8% and MPC was 26.7% (Table 1; Figure 2). Measured and true-count classifications agreed for every participant, giving zero Type 3 cases.
+
+3.2. Transient-state mechanism
+
+With the temporary rate change, eligibility was 75.6%, observed RTM 58.3% and MPC 36.8%. When the replaced interval overlapped baseline only, RTM was 95.1% and MPC 92.6%; when it overlapped neither baseline nor test, corresponding values were 51.0% and 25.9%. State changes could affect who qualified and which window became baseline. With perfect detection, all measured RTM in this condition was also present on true counts.
+
+3.3. Selection mechanism
+
+Raising the entry threshold from 4 to 8 events/month reduced eligibility to 40.4%, with observed RTM of 57.9% and MPC of 29.4%. The underlying histories and absence of treatment were unchanged. Measured and true-count classifications remained identical.
+
+3.4. Measurement mechanism
+
+At 70% sensitivity without false alarms, eligibility was 55.2%, observed RTM 59.0% and MPC 33.3%. Type 3 affected 7.7% of eligible participants. At full sensitivity and one false alarm/day, eligibility was 98.5%, observed RTM 69.9% and MPC 46.0%. Type 3 affected 41.6% of eligible participants and represented 59.4% of measured RTM cases. Table 1 and Figure 2 distinguish these outcomes.
+
+Figure 2. Enrollment and paired RTM outcomes under each condition. A, eligibility yield among 1,000,000 potential participants. B, observed and true-count RTM among the same condition-selected participants and trial windows. C, measured-only Type 3 and true-only classifications, both using all selected participants as denominator. D, median percentage reduction from baseline to test without treatment. The reference uses true full-history counts, scaled by sensitivity for measured counts. FAR, false-alarm rate; sens., sensitivity. All plotted values are descriptive model outputs.
+
+At one false alarm/day, 409,581 selected participants had measured-only RTM and 55,966 had true-only RTM. The net measured-minus-true difference was 35.9 percentage points, distinct from Type 3 prevalence. With perfect-detector enrollment and baseline windows retained, observed RTM was 50.0% at 70% sensitivity and 41.6% at one false alarm/day. Corresponding MPCs were 26.3% and 17.6%, based on 649,090 and 631,490 positive measured baselines. Full paired counts and fixed-enrollment denominators are in the supplementary tables.
+
+4. Discussion
+
+4.1. Interpretation
+
+Changing one simulation input at a time showed how state, entry and measurement conditions altered apparent improvement without treatment. This controls the input being varied; it does not isolate independent causal RTM components. Detector errors changed enrollment and trial timing as well as measured trajectories. Type 3 identifies the paired measured-only classification within a selected person and window. It is neither the whole observed-RTM proportion under an imperfect detector nor the change in that proportion between conditions.
+
+Device-derived endpoints can reduce reporting errors, but sensitivity, false-alarm rates and correction rules become part of eligibility and outcome definitions [9–12]. Measurement-only cases quantify one consequence under an assumed truth model. Measurement can also remove RTM classifications that are present on true counts, so Type 3 prevalence is not the net measured-minus-true RTM difference. A detector therefore needs evaluation within its intended trial design, beyond event-level performance alone.
+
+Our simulation included no treatment expectations or contextual care effects. Apparent improvement arose under the modeled seizure variability, transient rate changes, selection and measurement rules. Psychological and contextual effects may also contribute in real trials [4,15]. In an asthma experiment, placebo interventions and no intervention produced similar objective lung-function changes, whereas subjective improvement differed [16]. That comparison did not separate RTM from other untreated changes. Studies of subjective symptoms address additional responses to treatment context [17,18]. Within-arm improvement alone therefore cannot identify its cause.
+
+4.2. Trial-design implications
+
+Design simulations should vary the entry threshold, baseline duration, within-person variability, sensitivity, false alarms, missingness and correction rules. Protocols should state how these enter eligibility and endpoint calculations. Comparisons should distinguish a common potential population with condition-specific enrollment from fixed enrolled membership and fixed trial windows. Paired classifications require a stated truth model and compatible reference scales. Reduced observed RTM alone does not demonstrate greater trial efficiency.
+
+4.3. Relevance beyond epilepsy
+
+The numerical estimates are specific to the seizure-diary model, rolling selection design, internal finite-history reference and correction rules. They should not be transported directly to another study or disease. The definitions can be applied to other fluctuating outcomes, but measurement-only Type 3 requires paired measured and true-count classifications, or an explicitly justified reference standard. Direct numerical comparison with a fixed-baseline study or a study using a separate long-term diary would mix designs.
+
+4.4. Strengths and limitations
+
+The common underlying population and reproducible seeds allow controlled changes to simulation inputs. Several limitations remain. CHOCOLATES is synthetic and its empirical calibration diaries may contain reporting errors, so treating generated counts as biological truth is an idealization. The transient replacement was not a data-derived illness model. Detector performance was constant across people and time; daily sampling cannot address within-day cycles or time-dependent errors. The 36-month reference is finite and includes the trial window. Monthly flooring can raise expected corrected counts above the sensitivity-scaled true reference. Flooring and the rounded daily interval correction can affect selection and classification. Type 3 depends on these modeling choices and is not a separate biological cause. Fixed-enrollment comparisons do not provide an additive causal decomposition. The analysis assessed within-arm apparent improvement, not bias in a randomized treatment contrast, statistical power or optimal trial efficiency.
+
+5. Conclusion
+
+Transient rate changes, eligibility selection and detector errors can alter apparent improvement in simulated epilepsy trials without treatment. Measurement-only Type 3 RTM occurs when measured counts meet the RTM criterion and true counts do not for the same selected participant and window. Joint simulation of eligibility and measurement can distinguish this category from overall observed RTM while preserving the limits of within-arm inference.

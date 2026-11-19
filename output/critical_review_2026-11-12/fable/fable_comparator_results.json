@@ -1,0 +1,57 @@
+{
+ "perfect_selected_window": {
+  "n": 649098,
+  "pct_rtm": 53.78895020474567,
+  "matches_saved_flags": true,
+  "pct_baseline_above_ref": 73.97218909933477,
+  "pct_rtm_given_above": 72.71509855212516,
+  "mpc": 26.66666666666667
+ },
+ "perfect_enrolled_people_random_window": {
+  "n": 649098,
+  "pct_rtm": 25.83400349407948,
+  "pct_baseline_above_ref": 45.36526071563924,
+  "pct_rtm_given_above": 56.946665987468805,
+  "mpc_positive_baselines": 0.0,
+  "n_zero_baseline": 7720
+ },
+ "all_patients_random_window": {
+  "n": 1000000,
+  "pct_rtm": 24.6242,
+  "pct_baseline_above_ref": 42.9678,
+  "pct_rtm_given_above": 57.30849612965988,
+  "mpc_positive_baselines": 4.065040650406493,
+  "n_zero_baseline": 135300
+ },
+ "perfect_first_window_month0": {
+  "n": 330389,
+  "pct_of_enrolled": 50.89971005918983,
+  "pct_rtm": 38.337232777120306,
+  "mpc": 14.583333333333337
+ },
+ "perfect_later_window": {
+  "n": 318709,
+  "pct_of_enrolled": 49.10028994081017,
+  "pct_rtm": 69.80693987305034,
+  "mpc": 40.0
+ },
+ "single_screen_design": {
+  "pct_eligible_of_all": 33.0389,
+  "pct_rtm": 38.337232777120306,
+  "mpc": 14.583333333333337
+ },
+ "far_1_per_day_selected_people": {
+  "n": 985321,
+  "pct_true_rtm_at_selected_window": 34.05539920492915,
+  "pct_true_rtm_at_random_window": 24.689720405837285
+ },
+ "cohort": {
+  "latent_msf_median": 3.4182558059692383,
+  "latent_msf_mean": 6.579367160797119,
+  "observed_36mo_mean_median": 2.861111111111111,
+  "observed_36mo_mean_mean": 6.799985222222223,
+  "pct_latent_msf_ge_4": 44.533899999999996,
+  "pct_zero_seizures_in_36mo": 0.8036,
+  "daily_count_max": 144
+ }
+}
